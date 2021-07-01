@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/capless/static/css/main.fa22ae51.chunk.css",
+    "main.js": "/capless/static/js/main.3580fb3c.chunk.js",
+    "main.js.map": "/capless/static/js/main.3580fb3c.chunk.js.map",
+    "runtime-main.js": "/capless/static/js/runtime-main.cb0a51a6.js",
+    "runtime-main.js.map": "/capless/static/js/runtime-main.cb0a51a6.js.map",
+    "static/js/2.88716116.chunk.js": "/capless/static/js/2.88716116.chunk.js",
+    "static/js/2.88716116.chunk.js.map": "/capless/static/js/2.88716116.chunk.js.map",
+    "index.html": "/capless/index.html",
+    "precache-manifest.86f0436baf2ed65db2661beff735afe0.js": "/capless/precache-manifest.86f0436baf2ed65db2661beff735afe0.js",
+    "service-worker.js": "/capless/service-worker.js",
+    "static/css/main.fa22ae51.chunk.css.map": "/capless/static/css/main.fa22ae51.chunk.css.map",
+    "static/js/2.88716116.chunk.js.LICENSE.txt": "/capless/static/js/2.88716116.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/capless/static/media/illustration-section-02.63d0555d.svg",
+    "static/media/feature-tile-icon-01.svg": "/capless/static/media/feature-tile-icon-01.0f9928d7.svg",
+    "static/media/feature-tile-icon-02.svg": "/capless/static/media/feature-tile-icon-02.bd39f304.svg",
+    "static/media/feature-tile-icon-03.svg": "/capless/static/media/feature-tile-icon-03.66f37ba5.svg",
+    "static/media/feature-tile-icon-04.svg": "/capless/static/media/feature-tile-icon-04.836acd10.svg",
+    "static/media/feature-tile-icon-05.svg": "/capless/static/media/feature-tile-icon-05.fa9ba00b.svg",
+    "static/media/feature-tile-icon-06.svg": "/capless/static/media/feature-tile-icon-06.6a177696.svg",
+    "static/media/features-split-image-01.png": "/capless/static/media/features-split-image-01.d9cb99ce.png",
+    "static/media/features-split-image-02.png": "/capless/static/media/features-split-image-02.3c569239.png",
+    "static/media/features-split-image-03.png": "/capless/static/media/features-split-image-03.87e4d053.png",
+    "static/media/logo.svg": "/capless/static/media/logo.2810a88b.svg",
+    "static/media/video-placeholder.jpg": "/capless/static/media/video-placeholder.a622fc5d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb0a51a6.js",
+    "static/js/2.88716116.chunk.js",
+    "static/css/main.fa22ae51.chunk.css",
+    "static/js/main.3580fb3c.chunk.js"
+  ]
+}
