@@ -115,7 +115,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>About Us</Link>
+                      <ScrollLink to="aboutUs" spy={true} smooth={true} onClick={closeMenu}>About Us</ScrollLink>
                     </li>
                   </ul>
                   {!hideSignin &&
