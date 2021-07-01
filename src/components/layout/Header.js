@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import Logo from './partials/Logo';
 import CompanyName from './partials/CompanyName'
 
@@ -114,7 +115,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="#0" onClick={closeMenu}>About Us</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -122,7 +123,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <ScrollLink to="waitlist" spy={true} smooth={true} className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Join Waitlist</ScrollLink>
                       </li>
                     </ul>}
                 </div>

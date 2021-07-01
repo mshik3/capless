@@ -17,11 +17,11 @@ const Logo = ({
       {...props}
       className={classes}
     >
-      <h3 className="m-0">
+      <h4 className="m-0">
         <Link to="/">
             Capless.ai
         </Link>
-      </h3>
+      </h4>
     </div>
   );
 }

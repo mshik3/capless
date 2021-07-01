@@ -47,7 +47,7 @@ const Cta = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div id="waitlist" className="container">
         <div
           className={innerClasses}
         >
