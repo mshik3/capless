@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
+import CompanyName from './partials/CompanyName'
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -86,6 +87,7 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           <Logo />
+          <CompanyName />
           {!hideNav &&
             <>
               <button
