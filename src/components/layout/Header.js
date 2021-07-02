@@ -115,6 +115,9 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
+                      <a href="./app">Go to App</a>
+                    </li>
+                    <li>
                       <ScrollLink to="aboutUs" spy={true} smooth={true} onClick={closeMenu}>About Us</ScrollLink>
                     </li>
                   </ul>
