@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03ca37eee3233c047dbd36defc43252b",
+    "revision": "1885ea9e9729d3e006fc1cfc65e14ace",
     "url": "/index.html"
   },
   {
-    "revision": "bf2e311d76962f5d3a36",
-    "url": "/static/css/main.9b3ac610.chunk.css"
+    "revision": "a32750be8cb7457ce310",
+    "url": "/static/css/main.f1290685.chunk.css"
   },
   {
     "revision": "295e3c4cdc7df7effdae",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.b1b2ae14.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bf2e311d76962f5d3a36",
-    "url": "/static/js/main.12e86a7c.chunk.js"
+    "revision": "a32750be8cb7457ce310",
+    "url": "/static/js/main.4ac7bc9e.chunk.js"
   },
   {
     "revision": "b8840c8b1ec4a6507c09",
     "url": "/static/js/runtime-main.4edb5cec.js"
+  },
+  {
+    "revision": "31c2edec3b9696184ea617c6081975d6",
+    "url": "/static/media/Capless.31c2edec.jpeg"
   },
   {
     "revision": "3ce357e71a836a86691b904396a8955c",
