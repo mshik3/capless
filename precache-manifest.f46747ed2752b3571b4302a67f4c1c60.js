@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2aa0c58e5c52e04ad6a86405033faa91",
+    "revision": "76d1bc69006931b25d8c3dbaddc97e39",
     "url": "/index.html"
   },
   {
-    "revision": "22b246ace2a7436ab4a7",
-    "url": "/static/css/main.f1290685.chunk.css"
+    "revision": "78d610e2ca8e1dbb768b",
+    "url": "/static/css/main.ed1299f1.chunk.css"
   },
   {
     "revision": "8473eb2a1ae1d2d5b493",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.bb3aa578.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "22b246ace2a7436ab4a7",
-    "url": "/static/js/main.edd2bafe.chunk.js"
+    "revision": "78d610e2ca8e1dbb768b",
+    "url": "/static/js/main.e02e9483.chunk.js"
   },
   {
     "revision": "b8840c8b1ec4a6507c09",
@@ -34,6 +34,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "31c2edec3b9696184ea617c6081975d6",
     "url": "/static/media/Capless.31c2edec.jpeg"
+  },
+  {
+    "revision": "78aa50293760c68bc1dada250e9e1a72",
+    "url": "/static/media/LightIcon.78aa5029.png"
+  },
+  {
+    "revision": "b2064e79aedc1f77dbc740ce2466c863",
+    "url": "/static/media/LightLogo.b2064e79.png"
   },
   {
     "revision": "e32a0972b49714fafef410b5cd2bd1f7",
