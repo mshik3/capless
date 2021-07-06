@@ -69,7 +69,7 @@ const Testimonial = ({
                     height={150}
                     className={"image-preview"}/>
                   <p className="text-sm mb-0">
-                    Some words about our leader
+                    Some words about our CEO
                       </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
@@ -108,12 +108,12 @@ const Testimonial = ({
             <div className="tiles-item reveal-from-left" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
-                <Image
-                    src={require(`./../../assets/images/team_images/Brian.jpeg`)}
-                    alt="Brian"
-                    width={150}
-                    height={150}
-                    className={"image-preview"}/>
+                  <Image
+                      src={require(`./../../assets/images/team_images/Brian.jpeg`)}
+                      alt="Brian"
+                      width={150}
+                      height={150}
+                      className={"image-preview"}/>
                   <p className="text-sm mb-0">
                     Some words about our CIO
                       </p>
