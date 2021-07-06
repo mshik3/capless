@@ -62,7 +62,7 @@ const Testimonial = ({
             <div className="tiles-item reveal-from-right" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
-                <Image
+                  <Image
                     src={require(`./../../assets/images/team_images/Abhinav.jpeg`)}
                     alt="Abhinav"
                     width={150}
@@ -70,7 +70,7 @@ const Testimonial = ({
                     className={"image-preview"}/>
                   <p className="text-sm mb-0">
                     Some words about our CEO
-                      </p>
+                        </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                   <span className="testimonial-item-name text-color-high">Abhinav Subramaniam</span>
@@ -85,7 +85,7 @@ const Testimonial = ({
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
-                <Image
+                  <Image
                     src={require(`./../../assets/images/team_images/Mustafa.jpeg`)}
                     alt="Mustafa"
                     width={150}
