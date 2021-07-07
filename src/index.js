@@ -12,7 +12,7 @@ import './assets/scss/style.scss';
 const history = createBrowserHistory();
 
 ReactDOM.render(
-  <HashRouter basename={process.env.PUBLIC_URL} history={history}>
+  <HashRouter history={history}>
     <App />
   </HashRouter>,
   document.getElementById('root')
