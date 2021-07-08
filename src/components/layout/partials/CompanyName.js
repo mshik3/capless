@@ -21,7 +21,7 @@ const Logo = ({
       <h4 className="m-0">
       <Link to="/">
           <Image
-            src={require('./../../../assets/images/LightLogo.png')}
+            src={require('./../../../assets/images/DarkLogo.png')}
             alt="Capless"
             width={150} />
         </Link>

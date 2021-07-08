@@ -59,8 +59,9 @@ const Hero = ({
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">
-            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              The boardroom for <span className="text-color-primary">startups</span> and  <span className="text-color-primary">VCs</span>
+            <h1 className="mt-0 mb-8 reveal-from-bottom" data-reveal-delay="200">
+              {/* The boardroom for <span className="text-color-primary">startups</span> and  <span className="text-color-primary">VCs</span> */}
+              A <span className="text-color-primary">fundraising</span> app for the next <span className="text-color-primary">unicorn</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
