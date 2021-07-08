@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.ed1299f1.chunk.css",
-    "main.js": "/static/js/main.54571f93.chunk.js",
-    "main.js.map": "/static/js/main.54571f93.chunk.js.map",
+    "main.css": "/static/css/main.22c06506.chunk.css",
+    "main.js": "/static/js/main.318b8333.chunk.js",
+    "main.js.map": "/static/js/main.318b8333.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4edb5cec.js",
     "runtime-main.js.map": "/static/js/runtime-main.4edb5cec.js.map",
-    "static/js/2.58ec4658.chunk.js": "/static/js/2.58ec4658.chunk.js",
-    "static/js/2.58ec4658.chunk.js.map": "/static/js/2.58ec4658.chunk.js.map",
+    "static/js/2.bb3aa578.chunk.js": "/static/js/2.bb3aa578.chunk.js",
+    "static/js/2.bb3aa578.chunk.js.map": "/static/js/2.bb3aa578.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3f700e0d25a85a46e965163a63bff380.js": "/precache-manifest.3f700e0d25a85a46e965163a63bff380.js",
+    "precache-manifest.8d65d9b8892eb3fd1ba7241596d3115e.js": "/precache-manifest.8d65d9b8892eb3fd1ba7241596d3115e.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.ed1299f1.chunk.css.map": "/static/css/main.ed1299f1.chunk.css.map",
-    "static/js/2.58ec4658.chunk.js.LICENSE.txt": "/static/js/2.58ec4658.chunk.js.LICENSE.txt",
+    "static/css/main.22c06506.chunk.css.map": "/static/css/main.22c06506.chunk.css.map",
+    "static/js/2.bb3aa578.chunk.js.LICENSE.txt": "/static/js/2.bb3aa578.chunk.js.LICENSE.txt",
     "static/media/Abhinav.jpeg": "/static/media/Abhinav.2ff48a08.jpeg",
     "static/media/Brian.jpeg": "/static/media/Brian.9d13688b.jpeg",
     "static/media/Capless.jpeg": "/static/media/Capless.31c2edec.jpeg",
-    "static/media/LightIcon.png": "/static/media/LightIcon.78aa5029.png",
-    "static/media/LightLogo.png": "/static/media/LightLogo.b2064e79.png",
+    "static/media/DarkIcon.png": "/static/media/DarkIcon.3f6b714f.png",
+    "static/media/DarkLogo.png": "/static/media/DarkLogo.90a5004d.png",
     "static/media/Mustafa.jpeg": "/static/media/Mustafa.e32a0972.jpeg",
     "static/media/style.scss": "/static/media/illustration-section-02.63d0555d.svg",
     "static/media/feature-tile-icon-01.svg": "/static/media/feature-tile-icon-01.0f9928d7.svg",
@@ -31,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4edb5cec.js",
-    "static/js/2.58ec4658.chunk.js",
-    "static/css/main.ed1299f1.chunk.css",
-    "static/js/main.54571f93.chunk.js"
+    "static/js/2.bb3aa578.chunk.js",
+    "static/css/main.22c06506.chunk.css",
+    "static/js/main.318b8333.chunk.js"
   ]
 }
