@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "91c26d2903d4981d8607ef2b398fd2d5",
+    "revision": "c9fc56dc0cdeeece0dd08b45a1d2b08e",
     "url": "/index.html"
   },
   {
-    "revision": "df5b2336ee9dbeed8ad6",
-    "url": "/static/css/main.8f52ab62.chunk.css"
+    "revision": "9071c47fd135cc5582c2",
+    "url": "/static/css/main.22c06506.chunk.css"
   },
   {
-    "revision": "1590f1db754e2a42aa28",
-    "url": "/static/js/2.58ec4658.chunk.js"
+    "revision": "b2a5431a34213b6115d5",
+    "url": "/static/js/2.c95337b4.chunk.js"
   },
   {
     "revision": "117d65892edc8adcd29d4a0d57b5a80a",
-    "url": "/static/js/2.58ec4658.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c95337b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df5b2336ee9dbeed8ad6",
-    "url": "/static/js/main.d9c81db7.chunk.js"
+    "revision": "9071c47fd135cc5582c2",
+    "url": "/static/js/main.c6c5880a.chunk.js"
   },
   {
     "revision": "b8840c8b1ec4a6507c09",
@@ -64,35 +64,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/feature-tile-icon-03.66f37ba5.svg"
   },
   {
-    "revision": "836acd100a942420f8ab4e6c5e4162d8",
-    "url": "/static/media/feature-tile-icon-04.836acd10.svg"
-  },
-  {
-    "revision": "fa9ba00b178abc7bd2e02bd986e91fe3",
-    "url": "/static/media/feature-tile-icon-05.fa9ba00b.svg"
-  },
-  {
-    "revision": "6a1776963deb39d710bae80bb449aebe",
-    "url": "/static/media/feature-tile-icon-06.6a177696.svg"
-  },
-  {
-    "revision": "d9cb99ceb6a66250792ed78f5765325b",
-    "url": "/static/media/features-split-image-01.d9cb99ce.png"
-  },
-  {
-    "revision": "3c569239f88160018f79029ba5dc227d",
-    "url": "/static/media/features-split-image-02.3c569239.png"
-  },
-  {
-    "revision": "87e4d053756c60c9f421195d8eafdbfe",
-    "url": "/static/media/features-split-image-03.87e4d053.png"
-  },
-  {
     "revision": "ea6949039d6554ebf2cf109f333f5811",
     "url": "/static/media/illustration-section-01.ea694903.svg"
   },
   {
     "revision": "63d0555d90c053eea1a1a7469d004661",
     "url": "/static/media/illustration-section-02.63d0555d.svg"
+  },
+  {
+    "revision": "a06b6a4ce282e61accb91c1682146dc9",
+    "url": "/static/media/key_tag_one_image.a06b6a4c.png"
+  },
+  {
+    "revision": "6e22a8c1bb5c4712d27b6038e1791777",
+    "url": "/static/media/key_tag_three_image.6e22a8c1.png"
+  },
+  {
+    "revision": "522830d2f7043223deb76269ebb8c3fc",
+    "url": "/static/media/key_tag_two_image.522830d2.png"
   }
 ]);
