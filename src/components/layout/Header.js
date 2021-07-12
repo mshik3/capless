@@ -117,7 +117,7 @@ const Header = ({
                       <a href="./#/app">Go to App</a>
                     </li>
                     <li>
-                      <ScrollLink to="aboutUs" spy={true} smooth={true} onClick={closeMenu}>About Us</ScrollLink>
+                      <a href="./#/aboutcapless">About Us</a>
                     </li>
                   </ul>
                   {!hideSignin &&

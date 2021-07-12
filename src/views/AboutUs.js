@@ -7,17 +7,14 @@ import Testimonial from '../components/sections/Testimonial';
 import TheTeam from '../components/sections/TheTeam';
 import Cta from '../components/sections/Cta';
 
-const Home = () => {
+const AboutUs = () => {
 
   return (
     <>
-      <Hero className="illustration-section-01" />
-      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
-      {/* <Testimonial topDivider /> */}
-      {/* <TheTeam /> */}
+      <FeaturesTiles />
       <Cta split invertColor/>
     </>
   );
 }
 
-export default Home;
+export default AboutUs;
