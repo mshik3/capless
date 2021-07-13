@@ -199,6 +199,15 @@ img.has-shadow {
     }
 }
 
+.logoColumn {
+	flex: 33.33%;
+	padding: 1px;
+}
+
+.logoRow {
+	display:flex
+}
+
 // Spacing, margin
 .m-0 {
 	margin: 0;

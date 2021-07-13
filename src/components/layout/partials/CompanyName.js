@@ -20,11 +20,21 @@ const Logo = ({
     >
       <h4 className="m-0">
       <Link to="/">
-          <Image
-            src={require('./../../../assets/images/DarkLogo.png')}
-            alt="Capless"
-            width={150} />
-        </Link>
+        <div className="logoRow">
+            <div className="logoColumn">
+                <Image
+                    src={require('./../../../assets/images/logo_images/DarkLogoText.png')}
+                    alt="Capless"
+                    width={200} />
+            </div>
+            <div className="logoColumn">
+                <Image
+                    src={require('./../../../assets/images/logo_images/DarkIcon.png')}
+                    alt="Capless Icon"
+                    width={40} />
+            </div>
+        </div>
+      </Link>
       </h4>
     </div>
   );
