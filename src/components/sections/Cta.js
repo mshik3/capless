@@ -6,12 +6,18 @@ import Input from '../elements/Input';
 
 const propTypes = {
   ...SectionProps.types,
-  split: PropTypes.bool
+  split: PropTypes.bool,
+  header: PropTypes.string,
+  message: PropTypes.string,
+  cta_type: PropTypes.string
 }
 
 const defaultProps = {
   ...SectionProps.defaults,
-  split: false
+  split: false,
+  header: "",
+  message: "",
+  cta_type: "waitlist"
 }
 
 const Cta = ({
@@ -47,16 +53,16 @@ const Cta = ({
       {...props}
       className={outerClasses}
     >
-      <div id="waitlist" className="container">
-        <div
+      <div className="container">
+        <div id={props.cta_type}
           className={innerClasses}
         >
           <div className="cta-slogan">
             <h3 className="m-0">
-              Join our waitlist!
+              {props.header}
               </h3>
             <h5>
-              We'll be opening up to new members soon. Enter your email below to get notified when space opens up. 
+              {props.message}
             </h5>
           </div>
           <div className="cta-action">

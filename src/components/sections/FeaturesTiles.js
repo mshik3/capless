@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
+import GenericSection from './GenericSection';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 
@@ -43,10 +44,6 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
-  const sectionHeader = {
-    paragraph: 'Humans are naturally curious to answer the “whys” and the “whats” of the world. As we begin this journey we develop passions, goals, and we strive to solve evidenced problems with resilience. These qualities are the building blocks of innovation. However, innovation can not occur without means. As founders begin their journey to create a company that could change the world their first obstacle tends to be fundraising. The 3 to 6 months they spend to raise funds takes away from the time they could be using to grow. With over 100 million startups created every year investors can be overwhelmed with potential opportunities. As they begin to assess relevance, opportunity, and their match with these startups they could miss out on other emerging companies. Hence the importance of creating handshakes between investors and founders as efficiently as possible'
-  };
-
   const sectionHeaderTwo = {
     title: 'Our Goals',
     paragraph: 'The team at Capless has recognized that the inefficiencies in dealflow and the opportunity costs of time spent fundraising are key barriers to growth.'
@@ -59,9 +56,15 @@ const FeaturesTiles = ({
     >
       <div id="aboutUs" className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <GenericSection >
+            <p>Humans are naturally curious to answer the “whys” and the “whats” of the world. As we begin this journey we develop passions, goals, and we strive to solve evidenced problems with resilience. These qualities are the building blocks of innovation.</p>
+            <p><b>However, innovation can not occur without means.</b></p>
+            <p>As founders begin their journey to create a company that could change the world their first obstacle tends to be fundraising. The 3 to 6 months they spend to raise funds takes away from the time they could be using to grow. </p>
+            <p>With over 100 million startups created every year investors can be overwhelmed with potential opportunities. As they begin to assess relevance, opportunity, and their match with these startups they could miss out on other emerging companies.</p>
+            <p>Hence the importance of creating handshakes between investors and founders as efficiently as possible.</p>
+          </GenericSection>
 
-          <SectionHeader data={sectionHeaderTwo} className="center-content" />
+          <SectionHeader className="center-content" data={sectionHeaderTwo}/>
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-bottom">

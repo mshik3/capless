@@ -11,11 +11,11 @@ const Home = () => {
 
   return (
     <>
-      <Hero className="illustration-section-01" />
-      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
+      <Hero hasBgColor={true} invertColor={false} />
+      <FeaturesSplit invertMobile topDivider={false} imageFill />
       {/* <Testimonial topDivider /> */}
       {/* <TheTeam /> */}
-      <Cta split invertColor/>
+      <Cta split invertColor header="Join our waitlist!" message="We'll be opening up to new members soon. Enter your email below to get notified when space opens up."/>
     </>
   );
 }
