@@ -38,9 +38,9 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute path="/app" component={AppView} layout={LayoutDefault} />
-          <AppRoute path="/aboutcapless" component={AboutUs} layout={LayoutDefault} />
+          <AppRoute exact path={process.env.PUBLIC_URL + '/'} component={Home} layout={LayoutDefault} />
+          <AppRoute path={process.env.PUBLIC_URL + '/app'} component={AppView} layout={LayoutDefault} />
+          <AppRoute path={process.env.PUBLIC_URL + '/aboutcapless'} component={AboutUs} layout={LayoutDefault} />
         </Switch>
       )} />
   );
