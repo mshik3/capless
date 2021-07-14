@@ -114,7 +114,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <a href="./#/aboutcapless">About Us</a>
+                      <a href="./aboutcapless">About Us</a>
                     </li>
                   </ul>
                   {!hideSignin &&

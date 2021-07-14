@@ -39,8 +39,8 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute exact path="/app" component={AppView} layout={LayoutDefault} />
-          <AppRoute exact path="/aboutcapless" component={AboutUs} layout={LayoutDefault} />
+          <AppRoute path="/app" component={AppView} layout={LayoutDefault} />
+          <AppRoute path="/aboutcapless" component={AboutUs} layout={LayoutDefault} />
         </Switch>
       )} />
   );
