@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <>
       <FeaturesTiles />
-      <Cta split invertColor cta_type="journey" header="Join our Journey!" message="Capless is continuing to grow everyday! Join our newsletter to hear about our latest updates."/>
+      <Cta split invertColor cta_type="journey" header="Join our journey!" message="Capless is continuing to grow everyday! Subscribe to our newsletter to hear about our latest updates."/>
     </>
   );
 }

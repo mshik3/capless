@@ -44,9 +44,13 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
+  const sectionHeader = {
+    title: 'Capless has recognized that the inefficiencies in dealflow and the opportunity cost of time spent fundraising are key barriers to growth'
+  };
+
   const sectionHeaderTwo = {
     title: 'Our Goals',
-    paragraph: 'The team at Capless has recognized that the inefficiencies in dealflow and the opportunity costs of time spent fundraising are key barriers to growth.'
+    paragraph: 'We’re on a mission to make the fundraising process simple, passive, and seamless'
   };
 
   return (
@@ -56,12 +60,11 @@ const FeaturesTiles = ({
     >
       <div id="aboutUs" className="container">
         <div className={innerClasses}>
+        < SectionHeader className="center-content" data={sectionHeader}/>
           <GenericSection >
-            <p>Humans are naturally curious to answer the “whys” and the “whats” of the world. As we begin this journey we develop passions, goals, and we strive to solve evidenced problems with resilience. These qualities are the building blocks of innovation.</p>
-            <p><b>However, innovation can not occur without means.</b></p>
             <p>As founders begin their journey to create a company that could change the world their first obstacle tends to be fundraising. The 3 to 6 months they spend to raise funds takes away from the time they could be using to grow. </p>
             <p>With over 100 million startups created every year investors can be overwhelmed with potential opportunities. As they begin to assess relevance, opportunity, and their match with these startups they could miss out on other emerging companies.</p>
-            <p>Hence the importance of creating handshakes between investors and founders as efficiently as possible.</p>
+            <p>However, innovation can not occur without means. Capless is here to create handshakes between investors and founders as efficiently as possible.</p>
           </GenericSection>
 
           <SectionHeader className="center-content" data={sectionHeaderTwo}/>
@@ -80,11 +83,8 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  Shorten traditional fundraising timelines
                     </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
                 </div>
               </div>
             </div>
@@ -102,11 +102,8 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  Take the work out of deal sourcing
                     </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
                 </div>
               </div>
             </div>
@@ -124,11 +121,8 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  Give founders their time back
                     </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
                 </div>
               </div>
             </div>

@@ -66,7 +66,7 @@ const Hero = ({
             </h1>
             <div>
               <p className="reveal-from-bottom" data-reveal-delay="1000">
-              Capless provides a stream of potential fundraising opportunities between startups and investors that are tailored to each party based on our intelligent matching algorithm
+              Capless provides a stream of potential fundraising opportunities between startups and investors that are curated based on our intelligent matching algorithm
                 </p>
             </div>
           </div>

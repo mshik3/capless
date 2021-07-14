@@ -50,7 +50,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: "Capless provides you the dealflows you're looking for, daily",
+    title: "Capless intelligently sources deals to create more invenstor-founder fundraising meetings",
     paragraph: ''
   };
 
@@ -107,7 +107,7 @@ const FeaturesSplit = ({
                 </p>
                 <br></br>
                 <p className="m-0">
-                Capless aims to streamline this process for founders by creating warmer introductions than typical cold emails. By matching with a Investor firm on our application it becomes that much easier to chat, field questions, share information, and schedule your very first meeting.
+                Capless aims to streamline this process for founders by creating warmer introductions than typical cold emails. By matching with an investor on our application it becomes that much easier to chat, field questions, share information, and schedule your very first meeting.
                 </p>
               </div>
               <div className={
@@ -136,7 +136,7 @@ const FeaturesSplit = ({
                 Investors traditionally rely on sourcing their deals from organic traffic, referrals, and manual searches. However, the key to finding the next big thing is in further diversified and differentiated forms of deal flow.
                 </p>
                 <br></br>
-                <p className="m-0">By providing a list of new opportunities for Investors that are personally curated based on compatibility specifications, Capless will be able to provide a new passive method of deal flow.</p>
+                <p className="m-0">By providing a list of new opportunities for investors that are personally curated based on compatibility specifications, Capless will be able to provide a new passive method of deal flow.</p>
               </div>
               <div className={
                 classNames(
