@@ -27,14 +27,13 @@
 }
 
 .container-hero {
-	height: 100%;
 	max-width: $container--width + ( $container--padding__mobile * 2 );
 	padding-left: ($container--padding__mobile - $container--width) / 2;
 
 
 	h1 {
-		font-size: 30px;
-		line-height: 40px;
+		font-size: 40px;
+		line-height: 45px;
 	}
 
 	p {
@@ -42,7 +41,7 @@
 	}
 
 	// Settings for desktop
-	@include media( '>small' ) {
+	@include media( '>medium' ) {
 		padding-left: $container--padding__desktop;
 		padding-right: $container--padding__desktop;
 

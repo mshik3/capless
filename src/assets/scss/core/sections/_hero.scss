@@ -1,11 +1,10 @@
 .hero {
-	height: 100vh;
+	height: 30%;
 	text-align: left;
 	.section-inner {
 		padding-top: $hero--padding-t__mobile;
 		padding-bottom: $hero--padding-b__mobile;
 	}
-
 
 	p {
 		margin-top: 100px;
@@ -14,6 +13,11 @@
 
 	.section-header {
 		padding-bottom: 0px !important;
+	}
+
+	// Only desktop will make initial section full screen dynamically
+	@include media( '>medium' ) {
+		height: 100vh;
 	}
 
 }
