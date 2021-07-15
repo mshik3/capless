@@ -91,6 +91,7 @@ const FeaturesSplit = ({
                   alt="Features split 01"
                   width={528}
                   height={396} />
+                  <a href="https://storyset.com/work">Work illustrations by Storyset</a>
               </div>
             </div>
 
@@ -121,6 +122,7 @@ const FeaturesSplit = ({
                   alt="Features split 02"
                   width={528}
                   height={396} />
+                  <a href="https://storyset.com/online">Online illustrations by Storyset</a>
               </div>
             </div>
 
@@ -149,6 +151,7 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   width={528}
                   height={396} />
+                  <a href="https://storyset.com/work">Work illustrations by Storyset</a>
               </div>
             </div>
 

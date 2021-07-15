@@ -30,7 +30,6 @@
 	max-width: $container--width + ( $container--padding__mobile * 2 );
 	padding-left: ($container--padding__mobile - $container--width) / 2;
 
-
 	h1 {
 		font-size: 40px;
 		line-height: 45px;
@@ -44,11 +43,15 @@
 	@include media( '>medium' ) {
 		padding-left: $container--padding__desktop;
 		padding-right: $container--padding__desktop;
-
+		padding-top: 50px;
 		h1 {
 			font-size: 75px;
 			line-height: 75px;
 		}
+	}
+
+	@include media( '>large' ) {
+		padding-top: 80px;
 	}
 }
 

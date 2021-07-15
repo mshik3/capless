@@ -7,6 +7,11 @@
 	.section-header {
 		padding-bottom: $features-split-header--padding__mobile;
 	}
+
+	a {
+		color: get-color(dark, 3);
+		font-size: small;
+	}
 }
 
 @include media( '>medium' ) {
