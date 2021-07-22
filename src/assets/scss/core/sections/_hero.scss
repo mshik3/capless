@@ -15,11 +15,10 @@
 		padding-bottom: 0px !important;
 	}
 
-	// Only desktop will make initial section full screen dynamically
-	@include media( '>medium' ) {
+	// If screen can fit a 560x560 square, then make height based on full screen
+	@media only screen and (min-width: 560px) and (min-height: 560px) {
 		height: 100vh;
 	}
-
 }
 
 .hero-inner {
