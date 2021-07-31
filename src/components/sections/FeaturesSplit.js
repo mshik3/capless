@@ -50,7 +50,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: "Capless intelligently sources deals to create more invenstor-founder fundraising meetings",
+    title: "Capless intelligently sources deals to create more investor-founder fundraising meetings",
     paragraph: ''
   };
 
@@ -91,7 +91,6 @@ const FeaturesSplit = ({
                   alt="Features split 01"
                   width={528}
                   height={396} />
-                  <a href="https://storyset.com/work">Work illustrations by Storyset</a>
               </div>
             </div>
 
@@ -122,7 +121,6 @@ const FeaturesSplit = ({
                   alt="Features split 02"
                   width={528}
                   height={396} />
-                  <a href="https://storyset.com/online">Online illustrations by Storyset</a>
               </div>
             </div>
 
@@ -151,7 +149,6 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   width={528}
                   height={396} />
-                  <a href="https://storyset.com/work">Work illustrations by Storyset</a>
               </div>
             </div>
 

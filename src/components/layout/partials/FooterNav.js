@@ -30,6 +30,9 @@ const FooterNav = ({
         <li>
           <Link to="#0">Support</Link>
         </li>
+        <li>
+          <a href="https://storyset.com/work">Work illustrations by Storyset</a>
+        </li>
       </ul>
     </nav>
   );
