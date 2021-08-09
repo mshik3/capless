@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Image from '../elements/Image';
 
 const propTypes = {
@@ -13,7 +12,7 @@ const defaultProps = {
 
 const ProfilePreview = ({name}) => {
   return (
-    <div className="profile-preview reveal-from-top" data-reveal-delay="200">
+    <div className="profile-preview">
       <div className = "profile-preview-header">
       <Image
 	      src={require(`./../../assets/images/profile_images/${name}.jpeg`)}

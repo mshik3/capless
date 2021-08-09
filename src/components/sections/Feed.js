@@ -10,15 +10,9 @@ const Feed = () => {
       <div className={outerClasses}>
         <h3>Your daily feed</h3>
         <div>
-          <ProfilePreview className="container-preview-profile" name={startUps[0]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[1]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[2]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[3]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[4]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[5]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[6]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[7]}/>
-          <ProfilePreview className="container-preview-profile" name={startUps[8]}/>
+          {startUps.map((startUpName) => {
+            return <ProfilePreview className="container-preview-profile" name={startUpName}/>
+          })}
         </div>
       </div>
     </>
