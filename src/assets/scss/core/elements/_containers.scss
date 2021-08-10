@@ -52,8 +52,9 @@
 }
 
 .container-feed {
-	margin-top: 130px;
 	padding-left: ($container--padding__desktop - $container--width) / 2;
+	margin-left: $side-bar--width;
+	margin-right: $side-bar--width;
 }
 
 [class*=container] {

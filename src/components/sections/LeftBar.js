@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import SideBarSection from '../elements/SideBarSection';
 
 const LeftBar = () => {
- 	const outerClasses = classNames('left-bar');
+ 	const outerClasses = classNames('side-bar left-bar');
  	const options = ["Daily Feed", "Company profile", "My Profile", "Settings", "Upgrade"];
   return (
     <>

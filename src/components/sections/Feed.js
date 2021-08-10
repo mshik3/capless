@@ -8,7 +8,6 @@ const Feed = () => {
   return (
     <>
       <div className={outerClasses}>
-        <h3>Your daily feed</h3>
         <div>
           {startUps.map((startUpName) => {
             return <ProfilePreview className="container-preview-profile" name={startUpName}/>

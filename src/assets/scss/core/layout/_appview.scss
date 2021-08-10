@@ -1,0 +1,45 @@
+// App View
+.app-view {
+	display: flex;
+	margin: 0 auto;
+	margin-top: 80px;
+	max-width: $container--width;
+}
+
+// Side Bar sections
+.side-bar {
+	text-align: center;
+	width: $side-bar--width;
+	margin-top: 30px;
+	border-radius: 15px;
+	position: fixed;
+}
+
+.right-bar {
+	transform: translateX($container--width - $side-bar--width);
+}
+
+.side-bar-section {
+	display: flex;
+	height: 52px;
+
+	img { 
+		width: 36px;
+		height: 36px;
+		margin-right: 10px;
+	}
+
+	p {
+		text-align: left;
+		vertical-align: middle;
+	}
+}
+
+.ad {
+	width: $side-bar--width;
+	height: 100px;
+    background-color: #eee;
+	line-height: 100px;
+	margin-bottom: 30px;
+}
+
