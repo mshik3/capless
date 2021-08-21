@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero hasBgColor={true} invertColor={false} />
+      <Hero hasBgColor={false} invertColor={false} />
       <FeaturesSplit invertMobile topDivider={false} imageFill />
       {/* <Testimonial topDivider /> */}
       {/* <TheTeam /> */}

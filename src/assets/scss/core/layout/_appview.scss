@@ -11,8 +11,11 @@
 	text-align: center;
 	width: $side-bar--width;
 	margin-top: 30px;
-	border-radius: 15px;
 	position: fixed;
+}
+
+.left-bar {
+	transform: translateX(-50px);
 }
 
 .right-bar {
@@ -20,13 +23,22 @@
 }
 
 .side-bar-section {
+	padding: 0px;
 	display: flex;
 	height: 52px;
+	width: 100%;
+	line-height: 52px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	background-color: get-color(light, 1);
 
 	img { 
 		width: 36px;
 		height: 36px;
-		margin-right: 10px;
+		margin: 6px;
 	}
 
 	p {
@@ -35,10 +47,19 @@
 	}
 }
 
+.side-bar-section:hover {
+    background-color: #E1E4E7;
+}
+
+.side-bar-section:active {
+    background-color: #D5D8DA;
+	outline: none;
+}
+
 .ad {
 	width: $side-bar--width;
 	height: 100px;
-    background-color: #eee;
+    background-color: #D5D8DA;
 	line-height: 100px;
 	margin-bottom: 30px;
 }

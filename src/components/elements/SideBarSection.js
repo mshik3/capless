@@ -12,10 +12,10 @@ const defaultProps = {
 
 const SideBarSection = ({name}) => {
   return (
-    <div className="side-bar-section">
+    <button className="side-bar-section">
       <Image src={require(`./../../assets/images/side_bar_images/Settings.jpeg`)}/>
       <p className="side-bar-name">{name}</p>
-    </div>
+    </button>
   );
 }
 
