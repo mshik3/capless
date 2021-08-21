@@ -2,7 +2,7 @@
 .container-sm,
 .container-xs,
 .container-hero,
-.container-feed {
+.container-app {
 	width: 100%;
 	margin: 0 auto;
 	padding-left: $container--padding__mobile;
@@ -51,7 +51,7 @@
 	}
 }
 
-.container-feed {
+.container-app {
 	padding-left: ($container--padding__desktop - $container--width) / 2;
 	margin-left: $side-bar--width;
 	margin-right: $side-bar--width;

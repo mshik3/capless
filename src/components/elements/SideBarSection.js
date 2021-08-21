@@ -10,9 +10,9 @@ const defaultProps = {
   name: ''
 }
 
-const SideBarSection = ({name}) => {
+const SideBarSection = ({name, callBack}) => {
   return (
-    <button className="side-bar-section">
+    <button className="side-bar-section" onClick={() => callBack(name)}>
       <Image src={require(`./../../assets/images/side_bar_images/Settings.jpeg`)}/>
       <p className="side-bar-name">{name}</p>
     </button>
