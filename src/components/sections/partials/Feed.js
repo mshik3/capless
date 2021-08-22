@@ -8,7 +8,7 @@ const Feed = ({callBack}) => {
   return (
     <>
       <div>
-        {startUps.map((startUpName) => {
+        {startUps.map((startUpName, index) => {
           return <ProfilePreview callBack={callBack} className="container-preview-profile" name={startUpName} isInterested={interested[index]}/>
         })}
       </div>

@@ -12,7 +12,7 @@ const defaultProps = {
 }
 
 
-const ProfilePreview = ({name, isIntereested, callBack}) => {
+const ProfilePreview = ({name, isInterested, callBack}) => {
   return (
     <div className="profile-preview" onClick={() => callBack("Company profile")}>
       <div className = "profile-preview-header">
