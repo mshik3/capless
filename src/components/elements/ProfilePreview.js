@@ -10,16 +10,17 @@ const defaultProps = {
   name: ''
 }
 
-const ProfilePreview = ({name, isInterested}) => {
+
+const ProfilePreview = ({name, isInterested, callBack}) => {
   return (
-    <div className="profile-preview">
+    <div className="profile-preview" onClick={() => callBack("Company profile")}>
       <div className = "profile-preview-header">
       <Image
-	      src={require(`./../../assets/images/profile_images/${name}.jpeg`)}
-	      alt="Profile"
-	      width={60}
-	      height={60}
-	      className={"image-preview"}/>
+        src={require(`./../../assets/images/profile_images/${name}.jpeg`)}
+        alt="Profile"
+        width={60}
+        height={60}
+        className={"image-preview"}/>
         <h4 className="profile-name">{name}</h4>
         {isInterested &&
           <p className="profile-interested">Interested</p>

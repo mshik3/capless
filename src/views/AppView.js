@@ -25,7 +25,7 @@ class AppView extends Component {
       <>
         <div className="container app-view">
           <LeftBar callBack={this.selectContent}/>
-          <AppContent currentContent={this.state.currentContent}/>
+          <AppContent callBack={this.selectContent} currentContent={this.state.currentContent}/>
           <RightBar/>
         </div>
       </>

@@ -5,8 +5,13 @@
 	border-radius: 15px;
 	height: 260px;
 	background-color: #fff;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
 	position: relative;
+}
+
+.profile-preview:hover {
+	cursor:pointer;
+	box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 10px;
 }
 
 .image-preview {
