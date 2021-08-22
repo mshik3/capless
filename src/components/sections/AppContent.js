@@ -12,7 +12,7 @@ const AppContent = ({currentContent}) => {
   };
 
 
- 	const outerClasses = classNames('container-sm container-app ta-c');
+ 	const outerClasses = classNames('container-lg container-app ta-c');
   return (
     <>
       <div className={outerClasses}>

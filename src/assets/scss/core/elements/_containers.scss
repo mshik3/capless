@@ -1,5 +1,6 @@
 .container,
 .container-sm,
+.container-lg,
 .container-xs,
 .container-hero,
 .container-app {
@@ -16,6 +17,10 @@
 
 .container {
 	max-width: $container--width + ( $container--padding__desktop * 2 );
+}
+
+.container-lg {
+	max-width: $container--width-lg + ( $container--padding__desktop * 2 );
 }
 
 .container-sm {
@@ -67,6 +72,10 @@
     .container-sm {
 		max-width: $container--width-sm;
     }
+
+	.container-lg {
+		max-width: $container--width-lg;
+	}
 
 	.container-xs {
 		max-width: $container--width-xs;

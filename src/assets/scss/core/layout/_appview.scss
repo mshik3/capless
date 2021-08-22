@@ -3,7 +3,7 @@
 	display: flex;
 	margin: 0 auto;
 	margin-top: 80px;
-	max-width: $container--width;
+	max-width: $container--width-lg;
 }
 
 // Side Bar sections
@@ -19,7 +19,7 @@
 }
 
 .right-bar {
-	transform: translateX($container--width - $side-bar--width);
+	transform: translateX($container--width-lg - $side-bar--width);
 }
 
 .side-bar-section {
