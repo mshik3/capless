@@ -10,7 +10,7 @@ const defaultProps = {
   name: ''
 }
 
-const ProfilePreview = ({name}) => {
+const ProfilePreview = ({name, isInterested}) => {
   return (
     <div className="profile-preview">
       <div className = "profile-preview-header">
@@ -21,9 +21,12 @@ const ProfilePreview = ({name}) => {
 	      height={60}
 	      className={"image-preview"}/>
         <h4 className="profile-name">{name}</h4>
+        {isInterested &&
+          <p className="profile-interested">Interested</p>
+        }
       </div>
       <p>Build the next unicorn partnership with an algorithm tailored for you</p>
-      <div className="fun-facts-container">
+      <div className="fun-facts-containe">
         <div className="column">
           <h5 className="facts-header">Series A</h5>
         </div>
