@@ -20,7 +20,7 @@ const ProfilePreview = ({name}) => {
 	      width={60}
 	      height={60}
 	      className={"image-preview"}/>
-        <h4 className="profile-name">{name} - brian you a bitch</h4>
+        <h4 className="profile-name">{name}</h4>
       </div>
       <p>Build the next unicorn partnership with an algorithm tailored for you</p>
       <div className="fun-facts-container">
