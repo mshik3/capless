@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from '../../elements/Image';
+import ActionButtons from '../../elements/ActionButtons';
 
 const CompanyProfile = () => {
   return (
@@ -43,6 +44,9 @@ const CompanyProfile = () => {
             <p className="member-info">Mustafa Shikora</p>
             <p className="member-info"><b>CTO & Co-Founder</b></p>
           </div>
+        </div>
+        <div className="action-bar">
+          <ActionButtons/>
         </div>
       </div>
     </>
