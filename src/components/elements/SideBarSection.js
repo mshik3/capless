@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from './Image';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   name: PropTypes.string
@@ -10,12 +11,12 @@ const defaultProps = {
   name: ''
 }
 
-const SideBarSection = ({name, callBack}) => {
+const SideBarSection = ({name, path}) => {
   return (
-    <button className="side-bar-section" onClick={() => callBack(name)}>
+    <Link className="side-bar-section" to={path}>
       <Image src={require(`./../../assets/images/side_bar_images/Settings.jpeg`)}/>
       <p className="side-bar-name">{name}</p>
-    </button>
+    </Link>
   );
 }
 

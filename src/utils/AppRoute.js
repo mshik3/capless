@@ -4,17 +4,14 @@ import { Route } from 'react-router-dom';
 const AppRoute = ({
   component: Component,
   layout: Layout,
-  ...rest
+  ...componentProps
 }) => {
-
-  Layout = (Layout === undefined) ? props => (<>{props.children}</>) : Layout;
 
   return (
     <Route
-      {...rest}
-      render={props => (
+      render={() => (
         <Layout>
-          <Component {...props} />
+          <Component {...componentProps} />
         </Layout>
       )} />
   );
