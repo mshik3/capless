@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import MessageSection from '../elements/MessageSection';
 
-const RightBar = () => {
- 	const outerClasses = classNames('side-bar right-bar');
+const MessageBar = ({side}) => {
+ 	const outerClasses = classNames(`side-bar ${side}`);
  	const messages = ["SV Angel", "Sequoia Capital", "Accel", "Kleiner Perkins", "Andreessen Horowitz"];
   return (
     <>
@@ -21,4 +21,4 @@ const RightBar = () => {
   );
 }
 
-export default RightBar;
+export default MessageBar;

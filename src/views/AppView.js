@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 // import sections
 import AppContent from '../components/sections/AppContent';
-import LeftBar from '../components/sections/LeftBar';
-import RightBar from '../components/sections/RightBar';
+import ContentBar from '../components/sections/ContentBar';
+import MessageBar from '../components/sections/MessageBar';
 
 function AppView(props) {
   return (
     <>
       <div className="container app-view">
-        <LeftBar/>
+        <ContentBar side={"left-bar"}/>
         <AppContent props={props}/>
-        <RightBar/>
+        <MessageBar side={"right-bar"}/>
       </div>
     </>
   );

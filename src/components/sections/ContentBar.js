@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import SideBarSection from '../elements/SideBarSection';
 
-const LeftBar = () => {
-  const outerClasses = classNames('side-bar left-bar');
+const ContentBar = ({side}) => {
+  const outerClasses = classNames(`side-bar ${side}`);
   const paths = ["/feed", "/company", "/profile", "/settings", "/upgrade"];
   const options = ["Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"];
 
@@ -20,4 +20,4 @@ const LeftBar = () => {
   );
 }
 
-export default LeftBar;
+export default ContentBar;
