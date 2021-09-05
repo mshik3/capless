@@ -3,14 +3,15 @@ import classNames from 'classnames';
 import Feed from './partials/Feed';
 import CompanyProfile from './partials/CompanyProfile';
 
-const AppContent = ({currentContent}) => {
+const AppContent = ({props}) => {
+  let currentContent = props.content;
+  let contentParams = props.computedMatch.params; // Parameters taken from URL
 
   // "Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"
   const contentMap = {
     "Daily Feed": <Feed/>,
-    "Company Profile": <CompanyProfile/>
+    "Company Profile": <CompanyProfile params={contentParams}/>
   };
-
 
  	const outerClasses = classNames('container-lg container-app ta-c');
   return (

@@ -15,7 +15,7 @@ const defaultProps = {
 
 const ProfilePreview = ({name, isInterested}) => {
   return (
-    <Link to={"/company"}>
+    <Link to={`/company/${name}`}>
       <div className="profile-preview">
         <div className = "profile-preview-header">
         <Image

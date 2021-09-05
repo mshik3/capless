@@ -5,13 +5,11 @@ import LeftBar from '../components/sections/LeftBar';
 import RightBar from '../components/sections/RightBar';
 
 function AppView(props) {
-
-
   return (
     <>
       <div className="container app-view">
         <LeftBar/>
-        <AppContent currentContent={props.content}/>
+        <AppContent props={props}/>
         <RightBar/>
       </div>
     </>

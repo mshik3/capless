@@ -4,7 +4,7 @@ import SideBarSection from '../elements/SideBarSection';
 
 const LeftBar = () => {
   const outerClasses = classNames('side-bar left-bar');
-  const paths = ["feed", "company", "profile", "settings", "upgrade"];
+  const paths = ["/feed", "/company/Capless", "/profile", "/settings", "/upgrade"];
   const options = ["Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"];
 
   return (
