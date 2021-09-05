@@ -5,10 +5,10 @@ import CompanyProfile from './partials/CompanyProfile';
 
 const AppContent = ({currentContent, callBack}) => {
 
-  // "Daily Feed", "Company profile", "My Profile", "Settings", "Upgrade"
+  // "Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"
   const contentMap = {
     "Daily Feed": <Feed callBack={callBack}/>,
-    "Company profile": <CompanyProfile/>
+    "Company Profile": <CompanyProfile/>
   };
 
 

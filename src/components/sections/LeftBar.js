@@ -4,7 +4,7 @@ import SideBarSection from '../elements/SideBarSection';
 
 const LeftBar = ({callBack}) => {
  	const outerClasses = classNames('side-bar left-bar');
- 	const options = ["Daily Feed", "Company profile", "My Profile", "Settings", "Upgrade"];
+ 	const options = ["Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"];
   return (
     <>
       <div className={outerClasses}>
