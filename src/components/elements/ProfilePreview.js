@@ -14,8 +14,15 @@ const defaultProps = {
 
 
 const ProfilePreview = ({name, isInterested}) => {
+  const linkObject = {
+    pathname: '/company',
+    state: {
+      name: name
+    }
+  }
+
   return (
-    <Link to={`/company/${name}`}>
+    <Link to={linkObject}>
       <div className="profile-preview">
         <div className = "profile-preview-header">
         <Image

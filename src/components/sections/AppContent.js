@@ -5,7 +5,7 @@ import CompanyProfile from './partials/CompanyProfile';
 
 const AppContent = ({props}) => {
   let currentContent = props.content;
-  let contentParams = props.computedMatch.params; // Parameters taken from URL
+  let contentParams = props.location.state; // Parameters taken from link state
 
   // "Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"
   const contentMap = {
