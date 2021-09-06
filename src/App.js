@@ -5,6 +5,7 @@ import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
 
 // Layouts
+import LayoutApp from './layouts/LayoutApp';
 import LayoutDefault from './layouts/LayoutDefault';
 
 // Views 
@@ -39,7 +40,7 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path={process.env.PUBLIC_URL + '/'} component={Home} layout={LayoutDefault} />
-          <AppRoute path={process.env.PUBLIC_URL + '/feed'} component={AppView} layout={LayoutDefault} content={"Daily Feed"}/>
+          <AppRoute path={process.env.PUBLIC_URL + '/feed'} component={AppView} layout={LayoutApp} content={"Daily Feed"}/>
           <AppRoute path={process.env.PUBLIC_URL + '/company'} component={AppView} layout={LayoutDefault} content={"Company Profile"}/>
           <AppRoute path={process.env.PUBLIC_URL + '/aboutcapless'} component={AboutUs} layout={LayoutDefault} />
         </Switch>

@@ -4,15 +4,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
+    "react-notifications-menu": "^1.0.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
-    "react-scroll": "^1.8.2"
+    "react-scroll": "^1.8.2",
+    "rsuite": "^4.10.2"
   },
   "scripts": {
     "predeploy": "npm run build",

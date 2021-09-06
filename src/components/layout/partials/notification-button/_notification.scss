@@ -1,0 +1,141 @@
+
+$nav-size: 60px;
+$text-color: #000000;
+$bg:  #ffffff;
+$bg-accent: #a1a5ac;
+$border: 1px solid #474a4d;
+$border-radius: 8px;
+$speed: 500ms; 
+
+.notifications {
+  width: calc($nav-size * 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-left {
+  width: 30px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin: 6px;
+  display: flex;
+  transition: filter 300ms;
+}
+.icon-left:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.icon-left svg { 
+  fill: $text-color;
+  width: 30px;
+  height: 30px;
+}
+
+.icon-button {
+  width: 50px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+}
+.icon-button:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.icon-button svg { 
+  fill: $text-color;
+  width: 30px;
+  height: 30px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 80px;
+  width: 500px;
+  transform: translateX(-45%);
+  background-color: $bg;
+  border: $border;
+  border-radius: $border-radius;
+  padding: .2rem;
+  overflow: hidden;
+  transition: max-height $speed ease;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-item {
+  height: 50px;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: $border-radius;
+  transition: background $speed;
+  padding: 0.5rem !important;
+  font-size: 90%;
+  color: #000000;
+}
+
+.menu-item .icon-button {
+  flex-grow:1;
+  margin-right: 0.5rem;
+}
+
+.menu-item .icon-button:hover {
+  filter: none;
+}
+
+.menu-item:hover {
+  background-color: #acaeb6;
+}
+
+.menu-item p {
+  flex-grow: 3;
+  margin-bottom: 0 !important;
+  padding-left: 5px;
+}
+
+.icon-right {
+  flex-grow:1;
+  margin-left: auto;
+}
+
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all $speed ease;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all $speed ease;
+}
+
+.notification-footer {
+  display:flex;
+  justify-content: center;
+  border-top: #000;
+}
+
+.notification-footer a {
+  font-size: 80%;
+  color: #006DAF !important;
+}
+
+.notification-header p {
+  margin: 10px 0 10px 10px;
+}
+
+.notification-footer a:hover {
+  cursor: pointer;
+}
