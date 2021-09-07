@@ -10,8 +10,9 @@ import LayoutDefault from './layouts/LayoutDefault';
 
 // Views 
 import Home from './views/Home';
-import AppView from './views/AppView';
 import AboutUs from './views/AboutUs';
+import AppView from './views/AppView';
+import MessageView from './views/MessageView';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -40,9 +41,10 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path={process.env.PUBLIC_URL + '/'} component={Home} layout={LayoutDefault} />
+          <AppRoute path={process.env.PUBLIC_URL + '/aboutcapless'} component={AboutUs} layout={LayoutDefault} />
           <AppRoute path={process.env.PUBLIC_URL + '/feed'} component={AppView} layout={LayoutApp} content={"Daily Feed"}/>
           <AppRoute path={process.env.PUBLIC_URL + '/company'} component={AppView} layout={LayoutApp} content={"Company Profile"}/>
-          <AppRoute path={process.env.PUBLIC_URL + '/aboutcapless'} component={AboutUs} layout={LayoutDefault} />
+          <AppRoute path={process.env.PUBLIC_URL + '/messages'} component={MessageView} layout={LayoutApp} content={"Daily Feed"}/>
         </Switch>
       )} />
   );

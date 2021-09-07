@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from './Image';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   name: PropTypes.string
@@ -12,10 +13,10 @@ const defaultProps = {
 
 const MessageSection = ({name}) => {
   return (
-    <button className="side-bar-section">
+    <Link className="side-bar-section" to="/messages">
       <Image src={require(`./../../assets/images/side_bar_images/Messages.png`)}/>
       <p className="side-bar-name">{name}</p>
-    </button>
+    </Link>
   );
 }
 
