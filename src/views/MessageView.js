@@ -1,7 +1,7 @@
 import React from 'react';
 // import sections
 import AppContent from '../components/sections/AppContent';
-import ContentBar from '../components/sections/ContentBar';
+import MiniCompanyProfile from '../components/sections/messages/MiniCompanyProfile';
 import MessageBar from '../components/sections/MessageBar';
 
 function MessageView(props) {
@@ -10,7 +10,7 @@ function MessageView(props) {
       <div className="container app-view">
         <MessageBar side={"left-bar"}/>
         <AppContent props={props}/>
-        <ContentBar side={"right-bar"}/>
+        <MiniCompanyProfile name={"Capless"}/>
       </div>
     </>
   );
