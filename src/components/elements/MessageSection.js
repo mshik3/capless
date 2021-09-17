@@ -11,9 +11,17 @@ const defaultProps = {
   name: ''
 }
 
-const MessageSection = ({name}) => {
+const MessageSection = ({name, company}) => {
+  const linkObject = {
+    pathname: "/messages",
+    state: {
+      name,
+      company
+    }
+  }
+
   return (
-    <Link className="side-bar-section" to="/messages">
+    <Link className="side-bar-section" to={linkObject}>
       <Image src={require(`./../../assets/images/side_bar_images/Messages.png`)}/>
       <p className="side-bar-name">{name}</p>
     </Link>
