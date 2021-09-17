@@ -3,7 +3,7 @@ import Image from '../../elements/Image';
 import classNames from 'classnames';
 
 const MiniCompanyProfile = ({name}) => {
-  const outerClasses = classNames(`side-bar right-bar`);
+  const outerClasses = classNames(`side-bar left-bar`);
 
   return (
     <>

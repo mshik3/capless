@@ -8,9 +8,9 @@ function MessageView(props) {
   return (
     <>
       <div className="container app-view">
-        <MessageBar side={"left-bar"}/>
-        <AppContent props={props}/>
         <MiniCompanyProfile name={"Capless"}/>
+        <AppContent props={props}/>
+        <MessageBar side={"right-bar"}/>
       </div>
     </>
   );
