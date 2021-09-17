@@ -4,7 +4,7 @@ import MessageSection from '../elements/MessageSection';
 
 const MessageBar = ({side}) => {
  	const outerClasses = classNames(`side-bar ${side}`);
- 	const names = ["Brian Thompson", "Abhinav Subramaniam", "Brad Pitt", "Jessica Jones", "Mustafa Shikora"];
+ 	const names = ["Mustafa Shikora", "Grant Morris", "Abhinav Subramaniam", "Brad Pitt", "Jessica Jones"];
  	const companies = ["SV Angel", "Sequoia Capital", "Accel", "Kleiner Perkins", "Andreessen Horowitz"];
   return (
     <>
