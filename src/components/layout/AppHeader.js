@@ -9,6 +9,7 @@ import {ReactComponent as CompanyProfileIcon} from '../../assets/images/icons/co
 import {ReactComponent as UserAccountProfileIcon} from '../../assets/images/icons/user-account-profile.svg'
 import {ReactComponent as HomeIcon} from '../../assets/images/icons/home.svg'
 import {ReactComponent as SettingsIcon} from '../../assets/images/icons/settings.svg'
+import {ReactComponent as MessagesIcon} from '../../assets/images/icons/messages.svg'
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -114,6 +115,11 @@ const Header = ({
                     <li>
                       <Link className="nav-bar-icon" to="/company">
                         <CompanyProfileIcon className="nav-bar-icon"/>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="nav-bar-icon" to="/messages">
+                        <MessagesIcon className="nav-bar-icon"/>
                       </Link>
                     </li>
                     <li>
