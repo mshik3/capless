@@ -21,6 +21,13 @@
 	}
 }
 
+.hero-background-image {
+	background-image: url("../../../../assets/images/wave-background.svg");
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .hero-inner {
 
 	// Affects only hero full
