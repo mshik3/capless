@@ -152,3 +152,14 @@
 		height: $header-height__desktop;
 	}
 }
+
+
+.nav-bar-icon {
+	padding: 0 0 !important;
+	margin-left: 10px;
+}
+
+.nav-bar-icon:hover {
+	cursor:pointer;
+	fill: get-color(primary, 3);
+}

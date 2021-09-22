@@ -14,10 +14,13 @@ function Notifications(props) {
 
   return (
     <li className="notifications">
-      <button className="icon-button" onClick={() => setOpen(!open)}>
-        {props.icon}
-      </button>
-
+      <img className="notification-button"
+        src={require("../../../../assets/images/icons/notifications-none.svg")}
+        onMouseOver={e => (e.currentTarget.src = require('../../../../assets/images/icons/notifications-active.svg'))}
+        onMouseOut={e => (e.currentTarget.src = require('../../../../assets/images/icons/notifications-none.svg'))}
+        onClick={() => setOpen(!open)}
+        alt="Notifications"
+      />
       {open && props.children}
     </li>
   );

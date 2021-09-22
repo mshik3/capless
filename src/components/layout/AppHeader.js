@@ -1,9 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ReactComponent as BellIcon } from "./partials/notification-button/icons/bell.svg";
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { Notifications, DropdownMenu } from './partials/notification-button/Notifications'
 import CompanyName from './partials/CompanyName'
+import {ReactComponent as CompanyProfileIcon} from '../../assets/images/icons/company.svg'
+import {ReactComponent as UserAccountProfileIcon} from '../../assets/images/icons/user-account-profile.svg'
+import {ReactComponent as HomeIcon} from '../../assets/images/icons/home.svg'
+import {ReactComponent as SettingsIcon} from '../../assets/images/icons/settings.svg'
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -97,10 +102,26 @@ const Header = ({
                   <ul className={classNames('list-reset text-xs', navPosition && `header-nav-${navPosition}`)}
                   >
                     <li>
-                      <a href="./#/aboutcapless">About Us</a>
+                      <Link className="nav-bar-icon" to="/feed">
+                        <HomeIcon className="nav-bar-icon"/>
+                      </Link>
                     </li>
                     <li>
-                      {/* <ScrollLink to="waitlist" spy={true} smooth={true} className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Join Waitlist</ScrollLink> */}
+                      <Link className="nav-bar-icon" to="/profile">
+                        <UserAccountProfileIcon className="nav-bar-icon"/>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="nav-bar-icon" to="/company">
+                        <CompanyProfileIcon className="nav-bar-icon"/>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="nav-bar-icon" to="/settings">
+                        <SettingsIcon className="nav-bar-icon"/>
+                      </Link>
+                    </li>
+                    <li>
                       <Notifications icon={<BellIcon />}>
                         <DropdownMenu></DropdownMenu>
                       </Notifications>
