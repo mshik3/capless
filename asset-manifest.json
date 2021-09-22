@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f7c0bdd.chunk.css",
-    "main.js": "/static/js/main.ae1810c6.chunk.js",
-    "main.js.map": "/static/js/main.ae1810c6.chunk.js.map",
+    "main.css": "/static/css/main.afc9aace.chunk.css",
+    "main.js": "/static/js/main.cf1b707a.chunk.js",
+    "main.js.map": "/static/js/main.cf1b707a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2619689c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2619689c.js.map",
     "static/js/2.bb22965a.chunk.js": "/static/js/2.bb22965a.chunk.js",
     "static/js/2.bb22965a.chunk.js.map": "/static/js/2.bb22965a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5b7759d1a8b9df86c3a88b5ea314c206.js": "/precache-manifest.5b7759d1a8b9df86c3a88b5ea314c206.js",
+    "precache-manifest.257bfdb8b837af7ecca8230979946d6a.js": "/precache-manifest.257bfdb8b837af7ecca8230979946d6a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.2f7c0bdd.chunk.css.map": "/static/css/main.2f7c0bdd.chunk.css.map",
+    "static/css/main.afc9aace.chunk.css.map": "/static/css/main.afc9aace.chunk.css.map",
     "static/js/2.bb22965a.chunk.js.LICENSE.txt": "/static/js/2.bb22965a.chunk.js.LICENSE.txt",
     "static/media/Abhinav.jpeg": "/static/media/Abhinav.2ff48a08.jpeg",
     "static/media/Brian.jpeg": "/static/media/Brian.9d13688b.jpeg",
@@ -24,7 +24,7 @@
     "static/media/check.svg": "/static/media/check.a4874880.svg",
     "static/media/company.2cacf1b3.svg": "/static/media/company.2cacf1b3.svg",
     "static/media/cross.svg": "/static/media/cross.e72d7787.svg",
-    "static/media/style.scss": "/static/media/illustration-section-02.63d0555d.svg",
+    "static/media/style.scss": "/static/media/wave-background.087a1466.svg",
     "static/media/feature-tile-icon-01.svg": "/static/media/feature-tile-icon-01.0f9928d7.svg",
     "static/media/feature-tile-icon-02.svg": "/static/media/feature-tile-icon-02.bd39f304.svg",
     "static/media/feature-tile-icon-03.svg": "/static/media/feature-tile-icon-03.66f37ba5.svg",
@@ -41,7 +41,7 @@
   "entrypoints": [
     "static/js/runtime-main.2619689c.js",
     "static/js/2.bb22965a.chunk.js",
-    "static/css/main.2f7c0bdd.chunk.css",
-    "static/js/main.ae1810c6.chunk.js"
+    "static/css/main.afc9aace.chunk.css",
+    "static/js/main.cf1b707a.chunk.js"
   ]
 }
