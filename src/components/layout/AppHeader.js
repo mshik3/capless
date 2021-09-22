@@ -81,6 +81,13 @@ const Header = ({
     className
   );
 
+  const linkObject = {
+    pathname: '/company',
+    state: {
+      name: "Capless"
+    }
+  }
+
   return (
     <header
       {...props}
@@ -113,7 +120,7 @@ const Header = ({
                       </Link>
                     </li>
                     <li>
-                      <Link className="nav-bar-icon" to="/company">
+                      <Link className="nav-bar-icon" to={linkObject}>
                         <CompanyProfileIcon className="nav-bar-icon"/>
                       </Link>
                     </li>
