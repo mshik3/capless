@@ -53,7 +53,7 @@
   .fun-facts-container {
     display: table;
     width: 95%;
-    padding: 2.5%;
+    position: relative;
   }
   
   .facts-header {
@@ -91,6 +91,7 @@
   
   .team-image {
     margin: 10%;
+    margin-top: 5%;
     width: 80%;
     height: 80%;
     border-radius: 30%;
@@ -100,12 +101,6 @@
   .member-info {
     text-align: center !important;
     margin: 5px;
-  }
-  
-  .company-profile-div {
-    left: 600px;
-    top: 20px;
-    position: absolute;
   }
   
   .company-profile-preview {

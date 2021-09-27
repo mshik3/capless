@@ -29,7 +29,7 @@ const CompanyProfile = ({params}) => {
           </div>
           <div className="column column-last">
             <h5 className="facts-header">220+</h5>
-            <p className="facts-content">countries and regions with Airbnb listings (as of Sept. 30, 2020)</p>
+            <p className="facts-content">countries and regions with Airbnb listings</p>
           </div>
         </div>
         <h2 className="divider">Team Members</h2>
