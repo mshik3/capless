@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.afc9aace.chunk.css",
-    "main.js": "/static/js/main.950e760a.chunk.js",
-    "main.js.map": "/static/js/main.950e760a.chunk.js.map",
+    "main.css": "/static/css/main.c3ebdc41.chunk.css",
+    "main.js": "/static/js/main.c53ad664.chunk.js",
+    "main.js.map": "/static/js/main.c53ad664.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2619689c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2619689c.js.map",
-    "static/js/2.bb22965a.chunk.js": "/static/js/2.bb22965a.chunk.js",
-    "static/js/2.bb22965a.chunk.js.map": "/static/js/2.bb22965a.chunk.js.map",
+    "static/js/2.a7315be3.chunk.js": "/static/js/2.a7315be3.chunk.js",
+    "static/js/2.a7315be3.chunk.js.map": "/static/js/2.a7315be3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1328953776cf527ed581402c5c001e23.js": "/precache-manifest.1328953776cf527ed581402c5c001e23.js",
+    "precache-manifest.a11740862cf09382c72d52947b3fd261.js": "/precache-manifest.a11740862cf09382c72d52947b3fd261.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.afc9aace.chunk.css.map": "/static/css/main.afc9aace.chunk.css.map",
-    "static/js/2.bb22965a.chunk.js.LICENSE.txt": "/static/js/2.bb22965a.chunk.js.LICENSE.txt",
+    "static/css/main.c3ebdc41.chunk.css.map": "/static/css/main.c3ebdc41.chunk.css.map",
+    "static/js/2.a7315be3.chunk.js.LICENSE.txt": "/static/js/2.a7315be3.chunk.js.LICENSE.txt",
     "static/media/Abhinav.jpeg": "/static/media/Abhinav.2ff48a08.jpeg",
     "static/media/Brian.jpeg": "/static/media/Brian.9d13688b.jpeg",
     "static/media/Capless.jpeg": "/static/media/Capless.31c2edec.jpeg",
     "static/media/DarkLogoText.png": "/static/media/DarkLogoText.e801d6c8.png",
     "static/media/Messages.png": "/static/media/Messages.2ee0ceba.png",
     "static/media/Mustafa.jpeg": "/static/media/Mustafa.e32a0972.jpeg",
-    "static/media/Settings.jpeg": "/static/media/Settings.684620a4.jpeg",
     "static/media/arrows-right-left.svg": "/static/media/arrows-right-left.b97c4d62.svg",
     "static/media/bell.c9e9f8be.svg": "/static/media/bell.c9e9f8be.svg",
     "static/media/check.svg": "/static/media/check.a4874880.svg",
@@ -40,8 +39,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2619689c.js",
-    "static/js/2.bb22965a.chunk.js",
-    "static/css/main.afc9aace.chunk.css",
-    "static/js/main.950e760a.chunk.js"
+    "static/js/2.a7315be3.chunk.js",
+    "static/css/main.c3ebdc41.chunk.css",
+    "static/js/main.c53ad664.chunk.js"
   ]
 }
