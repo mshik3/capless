@@ -18,7 +18,7 @@ const MiniCompanyProfile = ({name}) => {
             <h4 className="profile-name">{name}</h4>
         </div>
         <p>Build the next unicorn partnership with an algorithm tailored for you</p>
-        <div className="fun-facts-container">
+        <div className="fun-facts-container-mini">
             <div className="column">
                 <h5 className="facts-header">Series A</h5>
             </div>
