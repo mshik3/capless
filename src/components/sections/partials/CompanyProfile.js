@@ -3,6 +3,11 @@ import Image from '../../elements/Image';
 import ActionButtons from '../../elements/ActionButtons';
 
 const CompanyProfile = ({params}) => {
+  if (!params) {
+    params = {
+      name: "Capless",
+    }
+  }
   return (
     <>
       <div className="company-profile">

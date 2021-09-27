@@ -1,16 +1,17 @@
 import React from 'react';
 // import sections
-import AppContent from '../components/sections/AppContent';
 import MiniCompanyProfile from '../components/sections/messages/MiniCompanyProfile';
+import Conversation from '../components/sections/partials/Conversation';
 import MessageBar from '../components/sections/MessageBar';
 
 function MessageView(props) {
+  let contentParams = props.location.state; // Parameters taken from link state
   return (
     <>
-      <div className="container app-view">
+      <div className="container-lg message-app-view">
         <MiniCompanyProfile name={"Capless"}/>
-        <AppContent props={props}/>
-        <MessageBar side={"right-bar"}/>
+        <Conversation params={contentParams}/>
+        <MessageBar/>
       </div>
     </>
   );

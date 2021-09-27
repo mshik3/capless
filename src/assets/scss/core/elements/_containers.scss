@@ -4,7 +4,6 @@
 .container-xs,
 .container-hero,
 .container-app {
-	width: 100%;
 	margin: 0 auto;
 	padding-left: $container--padding__mobile;
 	padding-right: $container--padding__mobile;
@@ -29,6 +28,11 @@
 
 .container-xs {
 	max-width: $container--width-xs + ( $container--padding__desktop * 2 );
+}
+
+.container-app {
+	max-width: $container--width + ( $container--padding__desktop * 2 );
+	margin-top: 110px;
 }
 
 .container-hero {

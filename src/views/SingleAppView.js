@@ -2,22 +2,20 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Import Content
-import Feed from './partials/Feed';
-import CompanyProfile from './partials/CompanyProfile';
-import Conversation from './partials/Conversation';
+import Feed from '../components/sections/partials/Feed';
+import CompanyProfile from '../components/sections/partials/CompanyProfile';
 
-const AppContent = ({props}) => {
+function SingleAppView(props) {
   let currentContent = props.content;
   let contentParams = props.location.state; // Parameters taken from link state
 
   // "Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"
   const contentMap = {
     "Daily Feed": <Feed/>,
-    "Company Profile": <CompanyProfile params={contentParams}/>,
-    "Conversation": <Conversation params={contentParams}/>
+    "Company Profile": <CompanyProfile params={contentParams}/>
   };
 
- 	const outerClasses = classNames('container-lg container-app ta-c');
+ 	const outerClasses = classNames('container-app');
   return (
     <>
       <div className={outerClasses}>
@@ -27,4 +25,4 @@ const AppContent = ({props}) => {
   );
 }
 
-export default AppContent;
+export default SingleAppView
