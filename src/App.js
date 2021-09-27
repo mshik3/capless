@@ -44,7 +44,7 @@ const App = () => {
           <AppRoute path={process.env.PUBLIC_URL + '/aboutcapless'} component={AboutUs} layout={LayoutDefault} />
           <AppRoute path={process.env.PUBLIC_URL + '/feed'} component={SingleAppView} layout={LayoutApp} content={"Daily Feed"}/>
           <AppRoute path={process.env.PUBLIC_URL + '/company'} component={SingleAppView} layout={LayoutApp} content={"Company Profile"}/>
-          <AppRoute path={process.env.PUBLIC_URL + '/messages'} component={MessageView} layout={LayoutApp} content={"Conversation"}/>
+          <AppRoute path={process.env.PUBLIC_URL + '/messages'} component={MessageView} layout={LayoutApp} />
         </Switch>
       )} />
   );
