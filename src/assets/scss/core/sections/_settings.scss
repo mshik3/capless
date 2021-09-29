@@ -1,0 +1,34 @@
+.settings {
+  position: relative;
+  margin-top: 30px;
+  padding: 5px;
+  margin-left: 10%;
+  width: 80%;
+}
+
+.settings-row {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.settings-row:hover {
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 10px;
+}
+
+#name {
+  position: absolute;
+}
+
+#three-dots {
+  position: absolute;
+  right: 15px;
+  font-size: 50px;
+  line-height: 20px;
+}

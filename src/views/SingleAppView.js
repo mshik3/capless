@@ -4,6 +4,7 @@ import classNames from 'classnames';
 // Import Content
 import Feed from '../components/sections/partials/Feed';
 import CompanyProfile from '../components/sections/partials/CompanyProfile';
+import Settings from '../components/sections/partials/Settings';
 
 function SingleAppView(props) {
   let currentContent = props.content;
@@ -12,7 +13,8 @@ function SingleAppView(props) {
   // "Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"
   const contentMap = {
     "Daily Feed": <Feed/>,
-    "Company Profile": <CompanyProfile params={contentParams}/>
+    "Company Profile": <CompanyProfile params={contentParams}/>,
+    "Settings": <Settings/>
   };
 
  	const outerClasses = classNames('container-app');
