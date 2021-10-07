@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Image from '../../elements/Image';
 
 const Conversation = ({params}) => {
   if (!params) {
@@ -54,6 +55,7 @@ const Conversation = ({params}) => {
     <>
       <div className="conversation">
         <div className="conversation-header">
+          <Image src={require(`../../../assets/images/message_contacts/${companyRep}.jpeg`)}/>
           <p className="name">{companyRep}</p>
           <p className="company">{company}</p>
         </div>

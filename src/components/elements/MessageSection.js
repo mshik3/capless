@@ -22,8 +22,9 @@ const MessageSection = ({name, company}) => {
 
   return (
     <Link className="side-bar-section" to={linkObject}>
-      <Image src={require(`./../../assets/images/side_bar_images/Messages.png`)}/>
+      <Image src={require(`./../../assets/images/message_contacts/${name}.jpeg`)}/>
       <p className="side-bar-name">{name}</p>
+      <p className="side-bar-company">{company}</p>
     </Link>
   );
 }
