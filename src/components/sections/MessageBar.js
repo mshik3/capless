@@ -9,9 +9,6 @@ const MessageBar = () => {
   return (
     <>
       <div className={outerClasses}>
-        <div className={"ad"}>
-          <p>This is an ad</p>
-        </div>
         <div>
           {names.map((name, index) => {
             return <MessageSection name={name} company={companies[index]}/>
