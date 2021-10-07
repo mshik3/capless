@@ -2,8 +2,8 @@ import React from 'react';
 import ProfilePreview from '../../elements/ProfilePreview';
 
 const Feed = () => {
- 	const startUps = ["Capless", "AskNed", "BottleUp", "Elevatr", "EverCharg", "Flash", "GreenSpork", "Iterate", "TeamSync"];
-  const interested = [false, true, false, true, false, false, false, false, false];
+  const startUps = ["Capless", "AskNed", "BottleUp", "Elevatr", "EverCharg", "Flash", "GreenSpork", "Iterate", "TeamSync", "SmartAssist"];
+  const interested = [false, true, false, true, false, false, false, false, false, false];
   return (
     <>
       <div className="profile-preview-grid">
