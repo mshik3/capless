@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.497c47da.chunk.css",
-    "main.js": "/static/js/main.023bfb87.chunk.js",
-    "main.js.map": "/static/js/main.023bfb87.chunk.js.map",
+    "main.css": "/static/css/main.e256f0cb.chunk.css",
+    "main.js": "/static/js/main.1bd5a13a.chunk.js",
+    "main.js.map": "/static/js/main.1bd5a13a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2619689c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2619689c.js.map",
-    "static/js/2.81fa68f9.chunk.js": "/static/js/2.81fa68f9.chunk.js",
-    "static/js/2.81fa68f9.chunk.js.map": "/static/js/2.81fa68f9.chunk.js.map",
+    "static/js/2.90ae6e37.chunk.js": "/static/js/2.90ae6e37.chunk.js",
+    "static/js/2.90ae6e37.chunk.js.map": "/static/js/2.90ae6e37.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.91975ad63fdd200d3ce18d8c2316f404.js": "/precache-manifest.91975ad63fdd200d3ce18d8c2316f404.js",
+    "precache-manifest.48be59f8db1a6f6f37ba8dc76ebbaf93.js": "/precache-manifest.48be59f8db1a6f6f37ba8dc76ebbaf93.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.497c47da.chunk.css.map": "/static/css/main.497c47da.chunk.css.map",
-    "static/js/2.81fa68f9.chunk.js.LICENSE.txt": "/static/js/2.81fa68f9.chunk.js.LICENSE.txt",
+    "static/css/main.e256f0cb.chunk.css.map": "/static/css/main.e256f0cb.chunk.css.map",
+    "static/js/2.90ae6e37.chunk.js.LICENSE.txt": "/static/js/2.90ae6e37.chunk.js.LICENSE.txt",
     "static/media/Abhi Subramaniam.jpeg": "/static/media/Abhi Subramaniam.31209b5f.jpeg",
     "static/media/Abhinav.jpeg": "/static/media/Abhinav.2ff48a08.jpeg",
     "static/media/Andrew Rivera.jpeg": "/static/media/Andrew Rivera.bdda032d.jpeg",
@@ -30,12 +30,10 @@
     "static/media/Mustafa Shikora.jpeg": "/static/media/Mustafa Shikora.2f3293c6.jpeg",
     "static/media/Mustafa.jpeg": "/static/media/Mustafa.e32a0972.jpeg",
     "static/media/Paul Nelson.jpeg": "/static/media/Paul Nelson.9754f2ca.jpeg",
-    "static/media/Revenue.png": "/static/media/Revenue.43c3dd58.png",
     "static/media/Robert Perez.jpeg": "/static/media/Robert Perez.04953f39.jpeg",
     "static/media/SmartAssist.jpeg": "/static/media/SmartAssist.ae6fe9ba.jpeg",
     "static/media/Stage.png": "/static/media/Stage.c8bce6e6.png",
     "static/media/Susan Harris.jpeg": "/static/media/Susan Harris.5ce918a1.jpeg",
-    "static/media/Team.png": "/static/media/Team.40519216.png",
     "static/media/arrows-right-left.svg": "/static/media/arrows-right-left.b97c4d62.svg",
     "static/media/bell.c9e9f8be.svg": "/static/media/bell.c9e9f8be.svg",
     "static/media/check.svg": "/static/media/check.a4874880.svg",
@@ -57,8 +55,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2619689c.js",
-    "static/js/2.81fa68f9.chunk.js",
-    "static/css/main.497c47da.chunk.css",
-    "static/js/main.023bfb87.chunk.js"
+    "static/js/2.90ae6e37.chunk.js",
+    "static/css/main.e256f0cb.chunk.css",
+    "static/js/main.1bd5a13a.chunk.js"
   ]
 }
