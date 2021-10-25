@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 // Import Content
 import Feed from '../components/sections/partials/Feed';
-import CompanyProfile from '../components/sections/partials/CompanyProfile';
+import CompanyProfile from '../components/sections/companyprofile/CompanyProfile';
 import Settings from '../components/sections/partials/Settings';
 
 function SingleAppView(props) {

@@ -3,11 +3,6 @@
     margin-top: 30px;
     padding: 5px;
     width: 100%;
-    border-radius: 15px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    background-color: #fff;
-	  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
 
   .company-profile h2 {
@@ -19,6 +14,42 @@
     text-align: left;
     padding-left: 10px;
     color: #777;
+  }
+
+  .profile-card {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    min-height: 300px;
+
+    h3 {
+      margin: 0px;
+    }
+  }
+
+  .small-card {
+    width: 32%;
+    margin-right: 2%;
+  }
+
+  .medium-card {
+    width: 66%;
+    margin-right: 2%;
+  }
+
+  .large-card {
+    width: 100%;
+  }
+
+  .card-last {
+    margin-right: 0px !important;
+  }
+
+  .card-row {
+    display:flex;
+    height: 300px;
+    margin-bottom: 20px;
   }
   
   .company-profile-header {
@@ -42,7 +73,7 @@
     font-size: 50px;
   }
   
-  .divider {
+  .card-header {
     font-size: 28px;
     padding-left: 10px;
     text-align: left;
@@ -90,12 +121,12 @@
   }
   
   .team-image {
-    margin: 10%;
-    margin-top: 5%;
-    width: 80%;
-    height: 80%;
-    border-radius: 30%;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 30%;
+    height: 30%;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .member-info {
@@ -132,8 +163,6 @@
     left: -1px;
     background-color: white;
     border-radius: 15px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
