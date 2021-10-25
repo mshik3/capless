@@ -7,8 +7,7 @@ const RevenueCard = ({classes}) => {
       <>
         <div className = {classNames(classes)}>
           <h3 className="card-header">Annual Revenue</h3>
-          <p><b>$10M / year</b></p>
-          <Image className="card-image" src={require(`../../../assets/images/company_cards_images/Revenue.png`)} width="50%"/>
+          <h4 className="revenue-info">$10M</h4>
         </div>
       </>
   )

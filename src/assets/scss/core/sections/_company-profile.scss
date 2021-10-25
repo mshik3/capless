@@ -81,6 +81,28 @@
     color: #222;
   }
 
+  .revenue-info {
+    padding-top: 60px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(20, 167, 69);
+  }
+
+  .team-size-info {
+    padding-top: 60px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(21, 10, 163);
+  }
+
+  .secondary-card-info {
+    font-size: 28px;
+    text-align: center;
+    color: #999;
+  }
+
   .card-image {
     margin: auto;
   }
@@ -116,6 +138,7 @@
   
   .team-members-container {
     display: table;
+    margin-top: 20px;
   }
   
   .team-column {

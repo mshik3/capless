@@ -7,8 +7,7 @@ const TeamSizeCard = ({classes}) => {
       <>
         <div className = {classNames(classes)}>
           <h3 className="card-header">Team Size</h3>
-          <p>200+ employees</p>
-          <Image className="card-image" src={require(`../../../assets/images/company_cards_images/Team.png`)} width="70%"/>
+          <h4 className="team-size-info">200+</h4>
         </div>
       </>
   )
