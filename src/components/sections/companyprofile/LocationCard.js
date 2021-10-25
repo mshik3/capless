@@ -7,7 +7,7 @@ const LocationCard = ({classes}) => {
       <>
         <div className = {classNames(classes)}>
           <h3 className="card-header">Location</h3>
-          <p>Chicago</p>
+          <Image className="card-image" src={require(`../../../assets/images/company_cards_images/Location.png`)} width="80%"/>
         </div>
       </>
   )

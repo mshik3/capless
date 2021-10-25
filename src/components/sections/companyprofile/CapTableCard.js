@@ -7,7 +7,7 @@ const CapTableCard = ({classes}) => {
       <>
         <div className = {classNames(classes)}>
           <h3 className="card-header">Cap Table</h3>
-          <p>The cap table</p>
+          <Image className="card-image" src={require(`../../../assets/images/company_cards_images/CapTable.png`)} width="80%"/>
         </div>
       </>
   )

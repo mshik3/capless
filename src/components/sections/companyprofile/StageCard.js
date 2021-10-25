@@ -7,7 +7,7 @@ const StageCard = ({classes}) => {
       <>
         <div className = {classNames(classes)}>
           <h3 className="card-header">Stage</h3>
-          <p>Pre-Seed</p>
+          <Image className="card-image" src={require(`../../../assets/images/company_cards_images/Stage.png`)} width="60%"/>
         </div>
       </>
   )
