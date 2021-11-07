@@ -13,7 +13,7 @@ const Conversation = ({params}) => {
   const [companyRep, updateCompanyRep] = useState(params.name);
   const [company, updateCompany] = useState(params.company);
   // Threads structure maps companies to specific conversations with those companies: {company: [{name: "", message: ""}]}
-  const [threads, updateThreads] = useState({"Fund Me": [{name: "Rebecca Sanford", message: "Hey Paul, it looks like Pear’s has had some recent growth! I’d love to learn more about your business model. Have a couple minutes to chat?"}]});
+  const [threads, updateThreads] = useState({"Fund Me": [{name: "Rebecca Sanford", message: "Hey Paul, it looks like Pear’s had some recent growth! I’d love to learn more about your business model. Have a couple minutes to chat?"}]});
 
   // Update state when params change from new URL
   if (params.name !== companyRep) {

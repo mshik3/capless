@@ -7,7 +7,7 @@ const RevenueCard = ({classes}) => {
       <>
         <div className = {classNames(classes)}>
           <h3 className="card-header">Annual Revenue</h3>
-          <h4 className="revenue-info">$10M</h4>
+          <h4 className="revenue-info">$700k</h4>
         </div>
       </>
   )

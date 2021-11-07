@@ -84,7 +84,7 @@ const Header = ({
   const linkObject = {
     pathname: '/company',
     state: {
-      name: "Capless"
+      name: "Pear Products"
     }
   }
 

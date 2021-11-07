@@ -7,7 +7,7 @@ const TeamSizeCard = ({classes}) => {
       <>
         <div className = {classNames(classes)}>
           <h3 className="card-header">Team Size</h3>
-          <h4 className="team-size-info">200+</h4>
+          <h4 className="team-size-info">20-50</h4>
         </div>
       </>
   )

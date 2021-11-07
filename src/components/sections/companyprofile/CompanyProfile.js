@@ -13,7 +13,7 @@ import FastFactCard from './FastFactCard';
 const CompanyProfile = ({params}) => {
   if (!params) {
     params = {
-      name: "Capless",
+      name: "Pear Products",
     }
   }
   return (
@@ -35,9 +35,9 @@ const CompanyProfile = ({params}) => {
           <TeamMembersCard classes={['profile-card', 'large-card']} />
         </div>
         <div className="card-row">
-          <FastFactCard classes={['profile-card', 'small-card']} header="5.6 million" content="active listings worldwide (as of Sept. 30, 2020)"/>
-          <FastFactCard classes={['profile-card', 'small-card']} header="100,000" content="cities with active Airbnb listings (as of Sept. 30, 2020)"/>
-          <FastFactCard classes={['profile-card', 'small-card', 'card-last']} header="220+" content="countries and regions with Airbnb listings" />
+          <FastFactCard classes={['profile-card', 'small-card']} header="130 " content="Retail Partnerships nationally"/>
+          <FastFactCard classes={['profile-card', 'small-card']} header="6" content="Cities with active partnerships"/>
+          <FastFactCard classes={['profile-card', 'small-card', 'card-last']} header="1 Million+" content="People served nationally" />
         </div>
         <div className="action-bar">
           <ActionButtons/>
