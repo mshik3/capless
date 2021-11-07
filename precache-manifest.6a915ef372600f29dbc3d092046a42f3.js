@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5bff650c7b40673c3e7b1170e35a065",
+    "revision": "a7e66300173ccb2ecc4c7f6e4e6421d7",
     "url": "/index.html"
   },
   {
-    "revision": "ffa5b3b0540f36d90cc9",
-    "url": "/static/css/main.947c1f21.chunk.css"
+    "revision": "03050048963d0eac028c",
+    "url": "/static/css/main.af43b354.chunk.css"
   },
   {
-    "revision": "d3981babe3c00413631c",
-    "url": "/static/js/2.115fbd71.chunk.js"
+    "revision": "ca0cd98d2677f87f495a",
+    "url": "/static/js/2.78664935.chunk.js"
   },
   {
     "revision": "0def066106b5692cd5c135dcafc5767d",
-    "url": "/static/js/2.115fbd71.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.78664935.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ffa5b3b0540f36d90cc9",
-    "url": "/static/js/main.36aa09a4.chunk.js"
+    "revision": "03050048963d0eac028c",
+    "url": "/static/js/main.bcb66bf8.chunk.js"
   },
   {
     "revision": "77904f2f15d04443ca64",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2ff48a0817445100ccd974a837a43303",
     "url": "/static/media/Abhinav.2ff48a08.jpeg"
+  },
+  {
+    "revision": "802573dd78aa61f678806d7c743be51e",
+    "url": "/static/media/Accel.802573dd.png"
   },
   {
     "revision": "bdda032d23147bf116f4e7eebc38665d",
@@ -40,16 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Ashley Nguyen.e010f653.jpeg"
   },
   {
+    "revision": "f942e2fab0caff2c4fff7bb8e042941d",
+    "url": "/static/media/Auth0.f942e2fa.png"
+  },
+  {
     "revision": "9d13688b75d90b534c772c4046f8d841",
     "url": "/static/media/Brian.9d13688b.jpeg"
   },
   {
     "revision": "b019586dc6181f3e066495948f3d6601",
     "url": "/static/media/CapTable.b019586d.png"
-  },
-  {
-    "revision": "31c2edec3b9696184ea617c6081975d6",
-    "url": "/static/media/Capless.31c2edec.jpeg"
   },
   {
     "revision": "31209b5f90b793c3f86b1af528eb0874",
@@ -72,12 +76,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Grant Morris.398cc1fb.jpeg"
   },
   {
+    "revision": "32e6347c303f9d92fcea82d6d71536ec",
+    "url": "/static/media/HOVER.32e6347c.png"
+  },
+  {
+    "revision": "1ae057d22f23cdd34eb7b74cbe7696c0",
+    "url": "/static/media/Hiya.1ae057d2.png"
+  },
+  {
     "revision": "fb40ed4fab2a85daa4c244bbcc554271",
     "url": "/static/media/James Smith.fb40ed4f.jpeg"
   },
   {
     "revision": "9c07a6ae67f4e748b723cb02c56fea59",
     "url": "/static/media/Jonathan Nolan.9c07a6ae.jpeg"
+  },
+  {
+    "revision": "42067be21bf2f3de8228bb93e8fdf12c",
+    "url": "/static/media/Kleiner Perkins.42067be2.png"
   },
   {
     "revision": "87c81839b8fde0ad88347bbb7716efbd",
@@ -101,7 +117,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "16885924292d400f8f86a33e86b3a077",
-    "url": "/static/media/Pear Products.16885924.jpeg"
+    "url": "/static/media/Pear Products.16885924.png"
   },
   {
     "revision": "2f3293c685db7119f7cc95cdca035718",
@@ -116,12 +132,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Robert Perez.04953f39.jpeg"
   },
   {
-    "revision": "ae6fe9ba315153f824869bcb8b50fda8",
-    "url": "/static/media/SmartAssist.ae6fe9ba.jpeg"
+    "revision": "fe049bf1e5e7a722c56c3e3177fb15b6",
+    "url": "/static/media/Sequoia Capital.fe049bf1.png"
+  },
+  {
+    "revision": "8be4afd5eb5f679b91d1a7095ac98f93",
+    "url": "/static/media/Shield AI.8be4afd5.png"
   },
   {
     "revision": "c8bce6e6388abd0dff33b79ec82852a0",
     "url": "/static/media/Stage.c8bce6e6.png"
+  },
+  {
+    "revision": "6bdea5466d5b96b3b6221a82094a8392",
+    "url": "/static/media/Unite Us.6bdea546.png"
+  },
+  {
+    "revision": "34e0c22e51cf8916a8a0aefcad3b3d3f",
+    "url": "/static/media/Venture Standard.34e0c22e.png"
+  },
+  {
+    "revision": "260b6d4db47c3124f501ad1dc684e453",
+    "url": "/static/media/Wrench.260b6d4d.png"
   },
   {
     "revision": "b97c4d6222ef4f4a7c44d4d30700a8e1",
