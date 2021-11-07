@@ -15,7 +15,7 @@ const HeaderCard = ({params}) => {
           <h1 className="company-profile-name">{params.name}</h1>
         </div>
         <h2 className="card-header">About Us</h2>
-        <p>Capless was born in 2021 when two Hosts welcomed three guests to their San Francisco home, and has since grown to 4 million Hosts who have welcomed more than 900 million guest arrivals in almost every country across the globe. Every day, Hosts offer one-of-a-kind stays and unique Experiences that make it possible for guests to experience the world in a more authentic, connected way.</p>
+        <p>Pear Products is a software technology company focused on providing the solution to the world's lack of accessibility to natural, non-modified, and locally sourced fruits and vegetables. Pear aims to tackle food shortage with logistic analysis and algorithmic supply chain orientation. Learn more about Pear below!</p>
         </div>
       </>
   )
