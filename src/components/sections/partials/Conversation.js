@@ -4,8 +4,8 @@ import Image from '../../elements/Image';
 const Conversation = ({params}) => {
   if (!params) {
     params = {
-      name: "Mustafa Shikora",
-      company: "SV Angel"
+      name: "Rebecca Sanford",
+      company: "Fund Me"
     }
   }
 
@@ -13,7 +13,7 @@ const Conversation = ({params}) => {
   const [companyRep, updateCompanyRep] = useState(params.name);
   const [company, updateCompany] = useState(params.company);
   // Threads structure maps companies to specific conversations with those companies: {company: [{name: "", message: ""}]}
-  const [threads, updateThreads] = useState({});
+  const [threads, updateThreads] = useState({"Fund Me": [{name: "Rebecca Sanford", message: "Hey Paul, it looks like Pear’s has had some recent growth! I’d love to learn more about your business model. Have a couple minutes to chat?"}]});
 
   // Update state when params change from new URL
   if (params.name !== companyRep) {
@@ -29,15 +29,15 @@ const Conversation = ({params}) => {
       const message = event.target.value;
       event.preventDefault();
       document.getElementById("text-bar").value = "";
-      var name = "Brian Thompson";
+      var name = "Rebecca Sanford";
       // Initialize threads[company] if empty
       if (!threads[company]) {
         threads[company] = []
       } else {
         // Toggle name back between two for demo purposes
         let latestName = threads[company][threads[company].length - 1].name;
-        if (latestName === "Brian Thompson") {
-          name = companyRep;
+        if (latestName === companyRep) {
+          name = "Paul Nelson";
         }
       }
       // Append text input to thread for current company
