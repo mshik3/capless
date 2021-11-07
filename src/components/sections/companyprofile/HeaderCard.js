@@ -11,7 +11,7 @@ const HeaderCard = ({params}) => {
       <>
         <div className = "profile-card">
         <div className = "company-profile-header">
-          <Image className={"company-profile-image"} src={require(`../../../assets/images/profile_images/${params.name}.jpeg`)}/>
+          <Image className={"company-profile-image"} src={require(`../../../assets/images/profile_images/${params.name}.png`)}/>
           <h1 className="company-profile-name">{params.name}</h1>
         </div>
         <h2 className="card-header">About Us</h2>

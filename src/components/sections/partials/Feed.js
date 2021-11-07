@@ -2,7 +2,7 @@ import React from 'react';
 import ProfilePreview from '../../elements/ProfilePreview';
 
 const Feed = () => {
-  const startUps = ["Capless", "AskNed", "BottleUp", "Elevatr", "EverCharg", "Flash", "GreenSpork", "Iterate", "TeamSync", "SmartAssist"];
+  const startUps = ["Venture Standard", "Sequoia Capital", "Accel", "Kleiner Perkins", "Hiya", "Auth0", "HOVER", "Wrench", "Unite Us", "Shield AI"];
   const interested = [false, true, false, true, false, false, false, false, false, false];
   return (
     <>

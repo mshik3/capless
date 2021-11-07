@@ -10,7 +10,7 @@ const MiniCompanyProfile = ({name}) => {
       <div className={outerClasses}>
         <div className = "mini-company-profile-header">
             <Image
-            src={require(`./../../../assets/images/profile_images/${name}.jpeg`)}
+            src={require(`./../../../assets/images/profile_images/${name}.png`)}
             alt="Profile"
             width={60}
             height={60}

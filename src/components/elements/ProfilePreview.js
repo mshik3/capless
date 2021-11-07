@@ -26,7 +26,7 @@ const ProfilePreview = ({name, isInterested}) => {
       <div className="profile-preview">
         <div className = "profile-preview-header">
         <Image
-          src={require(`./../../assets/images/profile_images/${name}.jpeg`)}
+          src={require(`./../../assets/images/profile_images/${name}.png`)}
           alt="Profile"
           width={60}
           height={60}

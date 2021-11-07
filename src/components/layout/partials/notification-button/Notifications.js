@@ -1,8 +1,8 @@
 import "./_notification.scss"
 
 import React, { Component } from 'react';
-import AskNed from './../../../../assets/images/profile_images/AskNed.jpeg'
-import BottleUp from './../../../../assets/images/profile_images/BottleUp.jpeg'
+import AskNed from './../../../../assets/images/profile_images/Venture Standard.png'
+import BottleUp from './../../../../assets/images/profile_images/Hiya.png'
 
 import NotificationFooter from './NotificationFooter'
 import { useState, useEffect, useRef } from 'react';
