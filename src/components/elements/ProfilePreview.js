@@ -13,11 +13,14 @@ const defaultProps = {
 }
 
 
-const ProfilePreview = ({name, isInterested}) => {
+const ProfilePreview = ({name, series, industry, revenue, isInterested}) => {
   const linkObject = {
     pathname: '/company',
     state: {
-      name: name
+      name,
+      series,
+      industry,
+      revenue
     }
   }
 
@@ -39,13 +42,13 @@ const ProfilePreview = ({name, isInterested}) => {
         <p>Build the next unicorn partnership with an algorithm tailored for you</p>
         <div className="fun-facts-containe">
           <div className="column">
-            <h5 className="facts-header">Series A</h5>
+            <h5 className="facts-header">{series}</h5>
           </div>
           <div className="column">
-            <h5 className="facts-header">Bio Tech</h5>
+            <h5 className="facts-header">{industry}</h5>
           </div>
           <div className="column column-last">
-            <h5 className="facts-header">$20 Million</h5>
+            <h5 className="facts-header">{revenue}</h5>
           </div>
         </div>
         <ActionButtons/>
