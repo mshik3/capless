@@ -23,10 +23,10 @@ const MiniCompanyProfile = ({name}) => {
                 <h5 className="facts-header">Series A</h5>
             </div>
             <div className="column">
-                <h5 className="facts-header">Bio Tech</h5>
+                <h5 className="facts-header">Agritech</h5>
             </div>
             <div className="column column-last">
-                <h5 className="facts-header">$20 Million</h5>
+                <h5 className="facts-header">$85 Million</h5>
             </div>
         </div>
     </div>

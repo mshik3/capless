@@ -2,7 +2,7 @@ import React from 'react';
 import Image from '../../elements/Image';
 import ActionButtons from '../../elements/ActionButtons';
 import HeaderCard from './HeaderCard';
-import RevenueCard from './RevenueCard';
+import FundSizeCard from './FundSizeCard';
 import CapTableCard from './CapTableCard';
 import StageCard from './StageCard';
 import TeamSizeCard from './TeamSizeCard';
@@ -10,11 +10,11 @@ import LocationCard from './LocationCard';
 import TeamMembersCard from './TeamMembersCard';
 import FastFactCard from './FastFactCard';
 
-const CompanyProfile = ({params}) => {
+const VCProfile = ({params}) => {
   if (!params) {
     params = {
-      name: "Pear Products",
-      aboutUs: "Pear Products is a software technology company focused on providing the solution to the world's lack of accessibility to natural, non-modified, and locally sourced fruits and vegetables. Pear aims to tackle food shortage with logistic analysis and algorithmic supply chain orientation. Learn more about Pear below!"
+      name: "Venture Standard",
+      aboutUs: "Venture Standard is an agriculture technology focused investment firm with a history of providing its portfolio companies with a strong and dependable network, future funding options, and access to a wide talent pool to work with. Learn more about Venture Standard's mission below!"
     }
   }
   return (
@@ -22,7 +22,7 @@ const CompanyProfile = ({params}) => {
       <div className="company-profile">
         <HeaderCard params={params} />
         <div className="card-row">
-          <RevenueCard classes={['profile-card', 'small-card']} />
+          <FundSizeCard classes={['profile-card', 'small-card']} />
           <CapTableCard classes={['profile-card', 'medium-card', 'card-last']} />
         </div>
         <div className="card-row">
@@ -48,4 +48,4 @@ const CompanyProfile = ({params}) => {
   );
 }
 
-export default CompanyProfile;
+export default VCProfile;

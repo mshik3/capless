@@ -9,7 +9,7 @@ function MessageView(props) {
   return (
     <>
       <div className="container-lg message-app-view">
-        <MiniCompanyProfile name={"Capless"}/>
+        <MiniCompanyProfile name={"Venture Standard"}/>
         <Conversation params={contentParams}/>
         <MessageBar/>
       </div>

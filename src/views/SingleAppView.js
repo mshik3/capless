@@ -4,6 +4,7 @@ import classNames from 'classnames';
 // Import Content
 import Feed from '../components/sections/partials/Feed';
 import CompanyProfile from '../components/sections/companyprofile/CompanyProfile';
+import VCProfile from '../components/sections/companyprofile/VCProfile';
 import Settings from '../components/sections/partials/Settings';
 
 function SingleAppView(props) {
@@ -14,6 +15,7 @@ function SingleAppView(props) {
   const contentMap = {
     "Daily Feed": <Feed/>,
     "Company Profile": <CompanyProfile params={contentParams}/>,
+    "VC Profile": <VCProfile params={contentParams}/>,
     "Settings": <Settings/>
   };
 

@@ -15,12 +15,13 @@ const defaultProps = {
 
 const ProfilePreview = ({name, series, industry, revenue, isInterested}) => {
   const linkObject = {
-    pathname: '/company',
+    pathname: '/vc',
     state: {
       name,
       series,
       industry,
-      revenue
+      revenue,
+      aboutUs: "Venture Standard is an agriculture technology focused investment firm with a history of providing its portfolio companies with a strong and dependable network, future funding options, and access to a wide talent pool to work with. Learn more about Venture Standard's mission below!"
     }
   }
 

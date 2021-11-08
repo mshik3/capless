@@ -84,7 +84,8 @@ const Header = ({
   const linkObject = {
     pathname: '/company',
     state: {
-      name: "Pear Products"
+      name: "Pear Products",
+      aboutUs: "Pear Products is a software technology company focused on providing the solution to the world's lack of accessibility to natural, non-modified, and locally sourced fruits and vegetables. Pear aims to tackle food shortage with logistic analysis and algorithmic supply chain orientation. Learn more about Pear below!"
     }
   }
 
