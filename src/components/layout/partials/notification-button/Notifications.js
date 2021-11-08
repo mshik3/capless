@@ -42,7 +42,7 @@ function DropdownMenu() {
 
   function DropdownItem(props) {
     return (
-      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <a href="#/messages" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <img className="icon-left" src={props.leftIcon}></img>
         {props.children}
         <img className="icon-right">{props.rightIcon}</img>
