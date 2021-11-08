@@ -62,10 +62,10 @@ function DropdownMenu() {
         <div className="menu">
           <NotificationHeader/>
           <DropdownItem leftIcon={AskNed} >
-            <p>AskNed has sent you a message!</p>
+            <p>Ventures Standard has sent you a message!</p>
           </DropdownItem>
           <DropdownItem leftIcon={BottleUp} >
-            <p>You've matched with BottleUp!</p>
+            <p>You've matched with Hiya!</p>
           </DropdownItem>
           <NotificationFooter />
         </div>
