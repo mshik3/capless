@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fa01afde5587b7edde6638dfbe3c5559",
+    "revision": "e525e1b1f60319985d523c8640ce1b6b",
     "url": "/index.html"
   },
   {
-    "revision": "3fa58bb744be7f3e75c0",
-    "url": "/static/css/main.af43b354.chunk.css"
+    "revision": "bb981c76b3a2b48579b7",
+    "url": "/static/css/main.1188db7a.chunk.css"
   },
   {
-    "revision": "e6df6957721d7fee7aee",
-    "url": "/static/js/2.1c0d09c4.chunk.js"
+    "revision": "5366eff7e65d40a396e4",
+    "url": "/static/js/2.c3514d9d.chunk.js"
   },
   {
     "revision": "0def066106b5692cd5c135dcafc5767d",
-    "url": "/static/js/2.1c0d09c4.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c3514d9d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3fa58bb744be7f3e75c0",
-    "url": "/static/js/main.d823ff28.chunk.js"
+    "revision": "bb981c76b3a2b48579b7",
+    "url": "/static/js/main.49be44ea.chunk.js"
   },
   {
     "revision": "77904f2f15d04443ca64",
@@ -120,6 +120,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Pear Products.16885924.png"
   },
   {
+    "revision": "f3efcaa19f86143c995e9ba63363dfad",
+    "url": "/static/media/Portfolio.f3efcaa1.png"
+  },
+  {
     "revision": "2f3293c685db7119f7cc95cdca035718",
     "url": "/static/media/Raaji Patel.2f3293c6.jpeg"
   },
@@ -132,6 +136,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Robert Perez.04953f39.jpeg"
   },
   {
+    "revision": "87eb6edbe9032ecec7da885143fece79",
+    "url": "/static/media/Rodney Clark.87eb6edb.jpeg"
+  },
+  {
     "revision": "fe049bf1e5e7a722c56c3e3177fb15b6",
     "url": "/static/media/Sequoia Capital.fe049bf1.png"
   },
@@ -142,6 +150,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e877641c6c6c485b2cf4b507d1b4558f",
     "url": "/static/media/Stage.e877641c.png"
+  },
+  {
+    "revision": "95c5bb850ba8c0c2b337b8a43efb69e5",
+    "url": "/static/media/Tony Morrow.95c5bb85.jpeg"
   },
   {
     "revision": "6bdea5466d5b96b3b6221a82094a8392",
