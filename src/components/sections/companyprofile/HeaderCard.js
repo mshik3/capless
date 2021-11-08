@@ -2,6 +2,12 @@ import React from 'react';
 import Image from '../../elements/Image';
 
 const HeaderCard = ({params}) => {
+  if (!params) {
+    params = {
+      name: "Venture Standard",
+      aboutUs: "Venture Standard is an agriculture technology focused investment firm with a history of providing its portfolio companies with a strong and dependable network, future funding options, and access to a wide talent pool to work with. Learn more about Venture Standard's mission below!"
+    }
+  }
   return (
       <>
         <div className = "profile-card">
