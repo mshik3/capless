@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import Input from '../elements/Input';
+import Container from './partials/WaitlistForm/Container';
 
 const propTypes = {
   ...SectionProps.types,
@@ -48,6 +48,13 @@ const Cta = ({
     split && 'cta-split'
   );  
 
+  const triggerText = 'Open form';
+  const onSubmit = (event) => {
+    event.preventDefault(event);
+    console.log(event.target.name.value);
+    console.log(event.target.email.value);
+  };
+
   return (
     <section
       {...props}
@@ -66,11 +73,7 @@ const Cta = ({
             </h5>
           </div>
           <div className="cta-action">
-            <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Your email">
-              <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9" />
-              </svg>
-            </Input>
+            <Container triggerText={triggerText} onSubmit={onSubmit} />
           </div>
         </div>
       </div>
