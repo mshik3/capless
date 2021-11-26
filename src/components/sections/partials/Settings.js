@@ -1,6 +1,7 @@
 import React from 'react';
 import SettingsRow from '../../elements/SettingsRow';
 import {sortableContainer, sortableElement} from 'react-sortable-hoc';
+import Button from '../../elements/Button';
 const SortableItem = sortableElement(({setting}) => <SettingsRow name={setting} />);
 const SortableContainer = sortableContainer(({children}) => {
   return <div>{children}</div>;
@@ -28,11 +29,16 @@ class Settings extends React.Component {
     return (
       <div className="settings">
         <h3>What matters to you?</h3>
+        <p>Please rank the attributes which matter to you most in a VC. Our algorithm will use this to recommend you VCs tailored to your liking.</p>
         <SortableContainer onSortEnd={this.onSortEnd}>
           {this.state.settings.map((value, index) => (
             <SortableItem index={index} setting={value} />
           ))}
         </SortableContainer>
+        <h3>Other Settings</h3>
+        <Button>Upgrade your Account</Button>
+        <Button>Update your Profile</Button>
+        <Button className="button-last">Update Payment Method</Button>
       </div>
     );
   }
