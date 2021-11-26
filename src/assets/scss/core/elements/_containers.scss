@@ -37,27 +37,8 @@
 }
 
 .container-hero {
-	max-width: $container--width + ( $container--padding__mobile * 2 );
-	padding-left: ($container--padding__mobile - $container--width) / 2;
-
-	h1 {
-		font-size: 40px;
-		line-height: 45px;
-	}
-
-	p {
-		margin-bottom: 5px;
-	}
-
-	// If screen can fit a 768x768 square, then adjust padding and font size
-	@media only screen and (min-width: 768px) and (min-height: 768px) {
-		padding-left: $container--padding__desktop;
-		padding-right: $container--padding__desktop;
-		h1 {
-			font-size: 70px;
-			line-height: 70px;
-		}
-	}
+	max-width: $container--width-lg + ( $container--padding__desktop * 2 );
+	height: 100%;
 }
 
 [class*=container] {

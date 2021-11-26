@@ -4,16 +4,18 @@
   padding: 5px;
   margin-left: 10%;
   width: 80%;
+
+  .button {
+    background-color: white;
+    width: 32%;
+    margin-right: 2%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 50px;
+    border-radius: 5px;
+  }
 }
 
-.button {
-  background-color: white;
-  width: 32%;
-  margin-right: 2%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  height: 50px;
-  border-radius: 5px;
-}
+
 
 .button-last {
   background-color: white;

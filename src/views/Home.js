@@ -13,8 +13,6 @@ const Home = () => {
     <>
       <Hero hasBgColor={false} invertColor={false} />
       <FeaturesSplit invertMobile topDivider={false} imageFill />
-      {/* <Testimonial topDivider /> */}
-      {/* <TheTeam /> */}
       <Cta split invertColor header="Join our waitlist!" message="We'll be opening up to new members soon! Enter your email to be notified when space opens up."/>
     </>
   );
