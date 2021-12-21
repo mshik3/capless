@@ -3,6 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Container from './partials/WaitlistForm/Container';
+import { GoogleSpreadsheet } from "google-spreadsheet";
+
+// Config variables
+const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
+const SHEET_ID = 0;
+const CLIENT_EMAIL = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL;
+const PRIVATE_KEY = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY.replace(/\\n/g, '\n');
+
+const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 
 const propTypes = {
   ...SectionProps.types,
@@ -46,14 +55,34 @@ const Cta = ({
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'
-  );  
+  );
 
   const triggerText = 'Open form';
+
+  const appendSpreadsheet = async (row) => {
+    try {
+      await doc.useServiceAccountAuth({
+        client_email: CLIENT_EMAIL,
+        private_key: PRIVATE_KEY,
+      });
+      // loads document properties and worksheets
+      await doc.loadInfo();
+
+      const sheet = doc.sheetsById[SHEET_ID];
+      const result = await sheet.addRow(row);
+    } catch (e) {
+      console.error('Error: ', e);
+    }
+  };
+
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.full_name.value);
-    console.log(event.target.company_name.value);
-    console.log(event.target.company_email.value);
+    const newRow = {
+      full_name: event.target.full_name.value,
+      company_name: event.target.company_name.value,
+      company_email: event.target.company_email.value
+    };
+    appendSpreadsheet(newRow);
   };
 
   return (
