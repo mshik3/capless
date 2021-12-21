@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.0ffe8c16.chunk.css",
-    "main.js": "/static/js/main.bd87705a.chunk.js",
-    "main.js.map": "/static/js/main.bd87705a.chunk.js.map",
+    "main.css": "/static/css/main.d0db27de.chunk.css",
+    "main.js": "/static/js/main.42e15e7c.chunk.js",
+    "main.js.map": "/static/js/main.42e15e7c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2619689c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2619689c.js.map",
-    "static/js/2.4a95092d.chunk.js": "/static/js/2.4a95092d.chunk.js",
-    "static/js/2.4a95092d.chunk.js.map": "/static/js/2.4a95092d.chunk.js.map",
+    "static/js/2.4c6a583d.chunk.js": "/static/js/2.4c6a583d.chunk.js",
+    "static/js/2.4c6a583d.chunk.js.map": "/static/js/2.4c6a583d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.16a3f55063907f095b9973e70b0c6ef4.js": "/precache-manifest.16a3f55063907f095b9973e70b0c6ef4.js",
+    "precache-manifest.43ed5259b32df28ebcfb31deb416ff3c.js": "/precache-manifest.43ed5259b32df28ebcfb31deb416ff3c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.0ffe8c16.chunk.css.map": "/static/css/main.0ffe8c16.chunk.css.map",
-    "static/js/2.4a95092d.chunk.js.LICENSE.txt": "/static/js/2.4a95092d.chunk.js.LICENSE.txt",
+    "static/css/main.d0db27de.chunk.css.map": "/static/css/main.d0db27de.chunk.css.map",
+    "static/js/2.4c6a583d.chunk.js.LICENSE.txt": "/static/js/2.4c6a583d.chunk.js.LICENSE.txt",
     "static/media/Abhinav.jpeg": "/static/media/Abhinav.2ff48a08.jpeg",
     "static/media/Accel.png": "/static/media/Accel.802573dd.png",
     "static/media/Andrew Rivera.jpeg": "/static/media/Andrew Rivera.bdda032d.jpeg",
@@ -46,6 +46,7 @@
     "static/media/Sequoia Capital.png": "/static/media/Sequoia Capital.fe049bf1.png",
     "static/media/Shield AI.png": "/static/media/Shield AI.8be4afd5.png",
     "static/media/Stage.png": "/static/media/Stage.e877641c.png",
+    "static/media/Susan Harris.jpeg": "/static/media/Susan Harris.5ce918a1.jpeg",
     "static/media/Tony Morrow.jpeg": "/static/media/Tony Morrow.95c5bb85.jpeg",
     "static/media/Unite Us.png": "/static/media/Unite Us.6bdea546.png",
     "static/media/Venture Standard.png": "/static/media/Venture Standard.34e0c22e.png",
@@ -71,8 +72,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2619689c.js",
-    "static/js/2.4a95092d.chunk.js",
-    "static/css/main.0ffe8c16.chunk.css",
-    "static/js/main.bd87705a.chunk.js"
+    "static/js/2.4c6a583d.chunk.js",
+    "static/css/main.d0db27de.chunk.css",
+    "static/js/main.42e15e7c.chunk.js"
   ]
 }
