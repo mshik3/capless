@@ -50,9 +50,10 @@ const Cta = ({
 
   const triggerText = 'Open form';
   const onSubmit = (event) => {
-    event.preventDefault(event);
-    console.log(event.target.name.value);
-    console.log(event.target.email.value);
+    event.preventDefault();
+    console.log(event.target.full_name.value);
+    console.log(event.target.company_name.value);
+    console.log(event.target.company_email.value);
   };
 
   return (

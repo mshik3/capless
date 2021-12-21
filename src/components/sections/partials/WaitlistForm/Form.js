@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function TextInput({ type = 'text', label }) {
+function TextInput({ type = 'text', label, name }) {
   const [value, setValue] = useState('');
 
   function handleChange(e) {
@@ -9,7 +9,7 @@ function TextInput({ type = 'text', label }) {
 
   return (
     <div className="input-container">
-      <input id="namedInput" type={type} value={value} onChange={handleChange} />
+      <input name={name} id="namedInput" type={type} value={value} onChange={handleChange} />
       <label className={value && 'filled'} htmlFor="namedInput">
         {label}
       </label>
