@@ -20,6 +20,10 @@
 }
 
 .body-wrap {
+	background-image: url("../../../../assets/images/wave-background.svg");
+	background-position:center;
+	background-repeat: repeat-y;
+	background-size: cover;
 	position: relative;
     overflow: hidden;
     // Sticky footer

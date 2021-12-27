@@ -47,7 +47,6 @@
     }
 
     li {
-
 		+ .header-button {
 			margin-left: $header-nav--padding-h;
 		}
@@ -59,6 +58,7 @@
 		@include font-weight(header-link);
 		text-transform: $link-header--transform;
         padding: 0 $header-nav--padding-h;
+		color: get-color(dark, 2);
 
 		.invert-color & {
 			@include anchor-aspect(header, inverse);
@@ -124,6 +124,7 @@
 			        @include anchor-aspect(header-mobile);
 					padding-top: $header-nav--padding-v__mobile / 2;
 					padding-bottom: $header-nav--padding-v__mobile / 2;
+					color: get-color(dark, 2);
 			    }
 			}
 

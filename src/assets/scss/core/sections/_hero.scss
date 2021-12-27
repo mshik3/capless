@@ -1,58 +1,39 @@
 .hero {
-	text-align: left;
-	background-color: white;
-	p {
-		margin-top: 150px;
-		padding-bottom: 5%;
-		font-size: 30px;
-		line-height: 35px;
-		color: #fefefe;
-		text-align: center;
-		text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
+	position: relative;
+	height: 100vh;
+	.button {
+		background-color: get-color(light, 1);
 	}
 	h1 {
-		font-size: 50px;
-		line-height: 53px;
+		font-size: 30px;
+		line-height: 33px;
+		color: get-color(light, 1);
 	}
-	// If screen can fit a 768x768 square, then adjust padding and font size
-	@media only screen and (min-width: 1024px) and (min-height: 1024px) {
+	@media only screen and (min-width: 1024px){
 		h1 {
-			font-size: 70px;
-			line-height: 70px;
-		}
-		p {
-			font-size: 50px;
+			font-size: 55px;
 			line-height: 55px;
 		}
 	}
-
-	// If screen can fit a 560x560 square, then make height based on full screen
-	@media only screen and (min-width: 1024px) and (min-height: 768px) {
-		height: 100vh;
+	img {
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		-ms-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+		width: 30px;
+		height: 30px;
 	}
 }
 
 .hero-content {
-	height: 60%;
-}
-
-@media only screen and (min-width: 1024px) and (min-height: 560px) {
-	.hero-content {
-    	display:flex;
-	}
-}
-
-@media only screen and (min-width: 1024px) and (min-height: 768px) {
-	.left {
-		display:flex;
-		width: 45%;
-		margin-right: 5%;
-		margin: auto;
-	}
-	.right {
-		margin: auto;
-		max-width: 53%;
-	}
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .hero-background-image {

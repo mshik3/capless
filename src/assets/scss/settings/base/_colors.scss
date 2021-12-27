@@ -3,12 +3,12 @@
 // The color palette
 $palette: (
 	light: (
-		1: #EDF0F3,
-		2: #a4a3a3,
-		3: #006DAF
+		1: #FFFFFF,
+		2: #EDF0F3,
+		3: #5e9ecc
 	),
 	dark: (
-		1: #358DCE,
+		1: #006DAF,
 		2: #6C6C6C,
 		3: #33363A
 	),
@@ -75,7 +75,7 @@ $icon--color: (
 
 // Misc elements: background color
 $bg--color: (
-	body: 			get-color(light, 1),
+	body: 			get-color(light, 3),
 	body-shadow:	0 20px 48px rgba(get-color(light, 1), .8),	// body shadow when a boxed layout is used (set to null if don't want a shadow)
 	body-outer:		darken(get-color(light, 1), 2%),			// outer bg color when a boxed layout is used
 	bg-color: 		darken(get-color(light, 1), 3%),			// .has-bg-color helper class

@@ -50,7 +50,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: "Capless intelligently sources deals to create more investor-founder fundraising meetings",
+    title: "Intelligently source deals to create more investor-founder fundraising meetings",
     paragraph: ''
   };
 
@@ -88,9 +88,7 @@ const FeaturesSplit = ({
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/home_images/key_tag_one_image.png')}
-                  alt="Features split 01"
-                  width={528}
-                  height={396} />
+                  alt="Features split 01" />
               </div>
             </div>
 
