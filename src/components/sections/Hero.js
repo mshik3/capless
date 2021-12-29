@@ -37,25 +37,15 @@ const Hero = ({
       {...props}
       className={outerClasses}
     >
-      {/* <div className="container-hero"> */}
-        <div className="hero-content">
-          {/* <div className="left"> */}
-            <h1 className="reveal-from-bottom" data-reveal-delay="200">
-              Build the next unicorn partnership <br></br>with an algorithm tailored <span className="text-color-primary">just for you</span>
-            </h1>
-            <ScrollLink to="waitlist" spy={false} smooth={true} className="button button-primary button-lg text-color-primary">Join Waitlist</ScrollLink>
-          {/* </div> */}
-          {/* <div className="right">
-            <video src={require('./../../assets/videos/Capless_intro.mp4')} controls="controls" poster={require('./../../assets/videos/Capless_intro.png')}/>
-          </div> */}
-        </div>
-        <Image
-        src={require(`./../../assets/images/button_images/down-arrow.png`)}
-        alt="Yes"/>
-        {/* <p>
-          Capless provides a stream of potential fundraising opportunities between startups and investors that are curated based on our intelligent matching algorithm
-        </p> */}
-      {/* </div> */}
+      <div className="hero-content">
+          <h1 className="reveal-from-bottom" data-reveal-delay="200">
+            Build the next unicorn partnership <br></br>with an algorithm tailored <span className="text-color-primary">just for you</span>
+          </h1>
+          <ScrollLink to="waitlist" spy={false} smooth={true} className="button button-primary button-lg text-color-primary">Join Waitlist</ScrollLink>
+      </div>
+      <Image
+      src={require(`./../../assets/images/button_images/down-arrow.png`)}
+      alt="Yes"/>
     </section>
   );
 }
