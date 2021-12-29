@@ -22,34 +22,21 @@ const Footer = ({
   ...props
 }) => {
 
-  const classes = classNames(
-    'site-footer center-content-mobile',
-    topOuterDivider && 'has-top-divider',
-    className
-  );
-
   return (
     <footer
       {...props}
-      className={classes}
     >
-      <div className="container">
-        <div className={
-          classNames(
-            'site-footer-inner',
-            topDivider && 'has-top-divider'
-          )}>
-          <div className="footer-top space-between text-xxs">
-            <Logo />
-            <FooterSocial />
-          </div>
-          <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <FooterNav />
-            {/* <div className="footer-copyright">Made by <a href="https://cruip.com">Cruip</a>. All right reserved</div> */}
-            {/* TODO : Put some kickass footer here after we can copyright */}
+      <div className="site-footer">
+          <div className="footer-container">
+            <div className="footer-top">
+              <FooterSocial />
+            </div>
+            <br></br>
+            <div className="footer-bottom">
+              <FooterNav />
+            </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 }

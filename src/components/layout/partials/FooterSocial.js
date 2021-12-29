@@ -16,7 +16,7 @@ const FooterSocial = ({
       {...props}
       className={classes}
     >
-      <ul className="list-reset">
+      <ul className="list-reset footer-list footer-social-list">
         <li>
           <a href="https://facebook.com/">
             <svg
