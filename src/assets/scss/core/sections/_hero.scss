@@ -2,8 +2,8 @@
 	position: relative;
 	height: 100vh;
 	.button {
-		// background-color: get-color(light, 1);
 		color: get-color(light, 1);
+		box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 10px;
 	}
 	h1 {
 		font-size: 30px;

@@ -77,14 +77,16 @@ const Cta = ({
 
   const onSubmit = (event) => {
     event.preventDefault();
-    event.target.style.visibility = "hidden";
     const newRow = {
       full_name: event.target.full_name.value,
       company_name: event.target.company_name.value,
       company_email: event.target.company_email.value
     };
-    appendSpreadsheet(newRow);
-    document.getElementById("thank-you").style.visibility = "visible";
+    if (newRow.full_name != "" && newRow.company_name != "" && newRow.company_email != "") {
+      event.target.style.visibility = "hidden";
+      appendSpreadsheet(newRow);
+      document.getElementById("thank-you").style.visibility = "visible";
+    }
   };
 
   return (
