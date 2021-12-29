@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import Container from './partials/WaitlistForm/Container';
+import Form from './partials/WaitlistForm/Form';
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
 // Config variables
@@ -51,7 +51,7 @@ const Cta = ({
   );
 
   const innerClasses = classNames(
-    'cta-inner section-inner',
+    'cta-inner section-inner blue-image-background',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'
@@ -77,12 +77,14 @@ const Cta = ({
 
   const onSubmit = (event) => {
     event.preventDefault();
+    event.target.style.visibility = "hidden";
     const newRow = {
       full_name: event.target.full_name.value,
       company_name: event.target.company_name.value,
       company_email: event.target.company_email.value
     };
     appendSpreadsheet(newRow);
+    document.getElementById("thank-you").style.visibility = "visible";
   };
 
   return (
@@ -90,20 +92,17 @@ const Cta = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div>
         <div id={props.cta_type}
           className={innerClasses}
         >
           <div className="cta-slogan">
-            <h3 className="m-0">
-              {props.header}
-              </h3>
-            <h5>
-              {props.message}
-            </h5>
+            <h2 className="m-0">Join our waitlist now!</h2>
+            <p id='waitlist-info'>We'll be opening up to new members soon!<br></br>Enter your email to be notified when space opens up.</p>
           </div>
           <div className="cta-action">
-            <Container triggerText={triggerText} onSubmit={onSubmit} />
+            <Form onSubmit={onSubmit} />
+            <h2 id="thank-you">Thank you!</h2>
           </div>
         </div>
       </div>

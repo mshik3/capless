@@ -30,7 +30,7 @@ export const Form = ({ onSubmit }) => (
       <TextInput name="company_email" label="Company Email" />
     </div>
     <div className="form-group">
-      <button className="form-control btn btn-primary" type="submit">
+      <button className="button-primary" type="submit">
         Submit
       </button>
     </div>

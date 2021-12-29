@@ -24,7 +24,7 @@ const Hero = ({
 }) => {
 
   const outerClasses = classNames(
-    'hero section hero-background-image',
+    'hero section blue-image-background',
     topOuterDivider && 'has-top-divider',
     bottomOuterDivider && 'has-bottom-divider',
     hasBgColor && 'has-bg-color',

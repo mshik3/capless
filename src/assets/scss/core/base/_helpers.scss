@@ -608,4 +608,12 @@ img.has-shadow {
 	width: 100%;
 	background-color: white;
 	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.blue-image-background {
+	background-image: url("../../../../assets/images/wave-background.svg");
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
