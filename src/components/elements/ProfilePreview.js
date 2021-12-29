@@ -27,29 +27,32 @@ const ProfilePreview = ({name, series, industry, revenue, isInterested}) => {
 
   return (
     <Link to={linkObject}>
-      <div className="profile-preview">
-        <div className = "profile-preview-header">
+      <div className="pro-pre-profile-preview">
+        <div className = "pro-pre-profile-preview-header">
         <Image
           src={require(`./../../assets/images/profile_images/${name}.png`)}
           alt="Profile"
-          width={60}
-          height={60}
-          className={"image-preview"}/>
-          <h4 className="profile-name">{name}</h4>
+          width={90}
+          height={90}
+          className={"pro-pre-image-preview"}/>
+          <h4 className="pro-pre-profile-name">{name}</h4>
           {isInterested &&
-            <p className="profile-interested">Interested</p>
+            <p className="pro-pre-profile-interested">Interested</p>
           }
         </div>
         <p>Build the next unicorn partnership with an algorithm tailored for you</p>
-        <div className="fun-facts-containe">
-          <div className="column">
-            <h5 className="facts-header">{series}</h5>
+        <div className="pro-pre-fun-facts-container">
+          <div className="pro-pre-column">
+            <h6 className="pro-pre-facts-header">Fundraising Stage</h6>
+            <h3 className="pro-pre-facts-content">{series}</h3>
           </div>
-          <div className="column">
-            <h5 className="facts-header">{industry}</h5>
+          <div className="pro-pre-column">
+            <h6 className="pro-pre-facts-header">Industry</h6>
+            <h3 className="pro-pre-facts-content">{industry}</h3>
           </div>
-          <div className="column column-last">
-            <h5 className="facts-header">{revenue}</h5>
+          <div className="pro-pre-column pro-pre-column-last">
+            <h6 className="pro-pre-facts-header">Revenue</h6>
+            <h3 className="pro-pre-facts-content">{revenue}</h3>
           </div>
         </div>
         <ActionButtons/>

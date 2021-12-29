@@ -9,7 +9,7 @@ const Feed = () => {
   const interested = [true, true, false, true, false, false, false, false, false, false];
   return (
     <>
-      <div className="profile-preview-grid">
+      <div className="pro-pre-profile-preview-grid">
         {VCs.map((startUpName, index) => {
           return <ProfilePreview className="container-preview-profile" name={startUpName} isInterested={interested[index]} series={series[index]} industry={industries[index]} revenue={revenues[index]}/>
         })}
