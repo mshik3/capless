@@ -12,6 +12,20 @@
 }
 
 .action-button {
+	flex: 1; 
+	display: flex;
+	justify-content: center;
+}
+
+.action-button-image {
     border: 0;
     background: none;
+}
+
+.action-button-hover-parent {
+	width: 100%;
+}
+
+.action-button-hover-text {
+	height:10px;
 }
