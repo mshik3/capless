@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from '../../elements/Image';
 import HeaderCard from '../companyprofile/HeaderCard';
 import FundSizeCard from '../companyprofile/FundSizeCard';
 import classNames from 'classnames';

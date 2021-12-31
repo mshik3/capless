@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../elements/Image';
+
 import ActionButtons from '../../elements/ActionButtons';
 import HeaderCard from './HeaderCard';
 import RevenueCard from './RevenueCard';

@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import Logo from './partials/Logo';
 import CompanyName from './partials/CompanyName'
 
 const propTypes = {

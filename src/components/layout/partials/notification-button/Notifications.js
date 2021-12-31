@@ -1,6 +1,5 @@
 import "./_notification.scss"
 
-import React, { Component } from 'react';
 import AskNed from './../../../../assets/images/profile_images/Venture Standard.png'
 import BottleUp from './../../../../assets/images/profile_images/Hiya.png'
 
@@ -28,7 +27,7 @@ function Notifications(props) {
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
-  const [menuHeight, setMenuHeight] = useState(null);
+  const [setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
 
   useEffect(() => {

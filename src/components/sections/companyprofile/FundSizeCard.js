@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from '../../elements/Image';
 import classNames from 'classnames';
 
 const RevenueCard = ({classes}) => {
