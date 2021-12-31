@@ -1,5 +1,7 @@
 import "./_notification.scss"
 
+import React  from 'react';
+
 import AskNed from './../../../../assets/images/profile_images/Venture Standard.png'
 import BottleUp from './../../../../assets/images/profile_images/Hiya.png'
 

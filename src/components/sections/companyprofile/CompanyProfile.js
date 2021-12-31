@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ActionButtons from '../../elements/ActionButtons';
 import HeaderCard from './HeaderCard';
 import RevenueCard from './RevenueCard';
