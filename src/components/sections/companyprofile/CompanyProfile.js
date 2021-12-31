@@ -39,9 +39,6 @@ const CompanyProfile = ({params}) => {
           <FastFactCard classes={['profile-card', 'small-card']} header="6" content="Cities with active partnerships"/>
           <FastFactCard classes={['profile-card', 'small-card', 'card-last']} header="1 Million+" content="People served nationally" />
         </div>
-        <div className="action-bar">
-          <ActionButtons/>
-        </div>
       </div>
     </>
   );

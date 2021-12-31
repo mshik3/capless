@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from '../../elements/Image';
+import ActionButtons from '../../elements/ActionButtons';
 
 const HeaderCard = ({params}) => {
   if (!params) {
@@ -17,6 +18,7 @@ const HeaderCard = ({params}) => {
         </div>
         <h2 className="card-header">About Us</h2>
         <p>{params.aboutUs}</p>
+        <ActionButtons/>
         </div>
       </>
   )

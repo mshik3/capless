@@ -31,9 +31,6 @@ const VCProfile = ({params}) => {
           <IndustryCard classes={['profile-card', 'small-card']} header="Agritech" content="Industry"/>
           <TeamMembersVCCard classes={['profile-card', 'medium-card', 'card-last']} />
         </div>
-        <div className="action-bar">
-          <ActionButtons/>
-        </div>
       </div>
     </>
   );

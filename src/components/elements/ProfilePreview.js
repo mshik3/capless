@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from '../elements/Image';
-import ActionButtons from '../elements/ActionButtons';
 import { Link } from 'react-router-dom';
 
 const propTypes = {
@@ -55,7 +54,6 @@ const ProfilePreview = ({name, series, industry, revenue, isInterested}) => {
             <h3 className="pro-pre-facts-content">{revenue}</h3>
           </div>
         </div>
-        <ActionButtons/>
       </div>
     </Link>
   );
