@@ -135,11 +135,9 @@ const Header = ({
                         <SettingsIcon className="nav-bar-icon"/>
                       </Link>
                     </li>
-                    <li>
-                      <Notifications icon={<BellIcon />}>
-                        <DropdownMenu></DropdownMenu>
-                      </Notifications>
-                    </li>
+                    <Notifications icon={<BellIcon />}>
+                      <DropdownMenu></DropdownMenu>
+                    </Notifications>
                   </ul>
                 </div>
               </nav>

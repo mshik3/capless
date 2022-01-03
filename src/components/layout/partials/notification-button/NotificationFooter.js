@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotificationFooter = () => {
     return (
-        <div class='notification-footer'>
+        <div className='notification-footer'>
             <a>All Notifications</a> 
         </div>
     );

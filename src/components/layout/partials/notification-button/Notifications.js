@@ -29,7 +29,7 @@ function Notifications(props) {
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
-  const [setMenuHeight] = useState(null);
+  const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
 
   useEffect(() => {

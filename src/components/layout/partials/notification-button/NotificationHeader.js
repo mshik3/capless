@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotificationHeader = () => {
     return (
-        <div class='notification-header'>
+        <div className='notification-header'>
             <p>Notifications</p> 
         </div>
     );
