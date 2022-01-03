@@ -15,7 +15,7 @@ function Notifications(props) {
 
   return (
     <li className="notifications">
-      <img className="notification-button"
+      <img className="notification-button" id="notification-button"
         src={require("../../../../assets/images/icons/notifications-none.svg")}
         onMouseOver={e => (e.currentTarget.src = require('../../../../assets/images/icons/notifications-active.svg'))}
         onMouseOut={e => (e.currentTarget.src = require('../../../../assets/images/icons/notifications-none.svg'))}
@@ -41,9 +41,16 @@ function DropdownMenu() {
     setMenuHeight(height);
   }
 
+  function didPressNotification(props) {
+    if (props.goToMenu) {
+      setActiveMenu(props.goToMenu);
+    }
+    document.getElementById('notification-button').click()
+  }
+
   function DropdownItem(props) {
     return (
-      <a href="#/messages" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <a href="#/messages" className="menu-item" onClick={() => didPressNotification(props)}>
         <img className="icon-left" src={props.leftIcon}></img>
         {props.children}
         <img className="icon-right">{props.rightIcon}</img>
