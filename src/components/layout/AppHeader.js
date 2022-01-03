@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ReactComponent as BellIcon } from "./partials/notification-button/icons/bell.svg";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
@@ -135,7 +134,7 @@ const Header = ({
                         <SettingsIcon className="nav-bar-icon"/>
                       </Link>
                     </li>
-                    <Notifications icon={<BellIcon />}>
+                    <Notifications>
                       <DropdownMenu></DropdownMenu>
                     </Notifications>
                   </ul>
