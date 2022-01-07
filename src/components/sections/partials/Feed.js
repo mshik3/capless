@@ -1,21 +1,34 @@
 import React from 'react';
 import ProfilePreview from '../../elements/ProfilePreview';
 
-const Feed = () => {
-  const VCs = ["Venture Standard", "Sequoia Capital", "Accel", "Kleiner Perkins", "Hiya", "Auth0", "HOVER", "Wrench", "Unite Us", "Shield AI"];
-  const series = ["Series A", "Series A", "Series A", "Series A", "Series A", "Series A", "Series A", "Series A", "Pre-Seed", "Pre-Seed"];
-  const industries = ["Agritech", "Agritech", "Agritech", "Agritech", "Agritech", "Agritech", "Tech", "Tech", "Biotech", "Fintech"];
-  const revenues = ["$85M", "$35M", "$25M", "$25M", "$30M", "$20M", "$35M", "$20M", "$3M", "$2M"];
-  const interested = [true, true, false, true, false, false, false, false, false, false];
-  return (
-    <>
-      <div className="pro-pre-profile-preview-grid">
-        {VCs.map((startUpName, index) => {
-          return <ProfilePreview className="container-preview-profile" name={startUpName} isInterested={interested[index]} series={series[index]} industry={industries[index]} revenue={revenues[index]}/>
-        })}
-      </div>
-    </>
-  );
+const interested = [true, true, false, true, false, false, false, false, false, false];
+const ENDPOINT = "https://iofe7t7f7k.execute-api.us-east-1.amazonaws.com/prod/feed";
+
+class Feed extends React.Component {
+  state = {
+    vcs: []
+  };
+
+  // Make call to feed endpoint
+  componentDidMount() {
+    fetch(ENDPOINT)
+    .then(response => response.json())
+    .then(data => this.setState({
+      vcs: data
+    }));
+  }
+
+  render() {
+    return (
+      <>
+        <div className="pro-pre-profile-preview-grid">
+          {this.state.vcs.map((vc, index) => {
+            return <ProfilePreview className="container-preview-profile" vc={vc} isInterested={interested[index]}/>
+          })}
+        </div>
+      </>
+    );
+  }
 }
 
 export default Feed;
