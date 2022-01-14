@@ -1,6 +1,5 @@
 import React from 'react';
 import HeaderCard from '../companyprofile/HeaderCard';
-import FundSizeCard from '../companyprofile/FundSizeCard';
 import classNames from 'classnames';
 
 const MiniCompanyProfile = ({name}) => {
@@ -10,8 +9,7 @@ const MiniCompanyProfile = ({name}) => {
     <>
       <div className={outerClasses}>
         <div className = "mini-company-profile-header">
-          <HeaderCard />
-          <FundSizeCard classes={['profile-card', 'mini-profile-card', 'large-card']} />
+          <HeaderCard isMainProfile={false}/>
         </div>
     </div>
     </>
