@@ -131,27 +131,6 @@
 	width: 100%;
 }
 
-.button-group {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	margin-right: -($button-group-padding / 2);
-	margin-left: -($button-group-padding / 2);
-	margin-top: -($button-group-padding / 2);
-
-	&:last-of-type {
-		margin-bottom: -($button-group-padding / 2);
-	}
-
-	&:not(:last-of-type) {
-		margin-bottom: ($button-group-padding / 2);
-	}
-
-	> [class*=button] {
-		margin: $button-group-padding / 2;
-	}
-}
-
 @include media( '<=medium' ) {
 
 	.button-wide-mobile {

@@ -5,16 +5,11 @@ fieldset {
     border: 0;
 }
 
-.form-label,
 .form-switch,
 .form-slider {
     color: color(label);
     @include font-weight(label);
 
-}
-
-.form-label {
-	@include font-size(label);
 }
 
 .form-input,
@@ -346,7 +341,6 @@ textarea.form-input {
 
 .invert-color {
 
-    .form-label,
     .form-switch,
     .form-slider {
 		color: color(label-inverse);
@@ -480,11 +474,6 @@ textarea.form-input {
 		padding-left: $button-sm-w-form--padding-h;
 		padding-right: $button-sm-w-form--padding-h;
 	}
-}
-
-.form-hint {
-	@include font-size(hint);
-	margin-top: $form-hint--margin;
 }
 
 @include media( '<=medium' ) {
