@@ -1,8 +1,8 @@
 import React from 'react';
-import Hero from '../components/sections/Hero';
-import VideoSection from '../components/sections/VideoSection';
-import FeaturesSplit from '../components/sections/FeaturesSplit';
-import Cta from '../components/sections/Cta';
+import Hero from '../common/sections/Hero';
+import VideoSection from '../common/sections/VideoSection';
+import FeaturesSplit from '../common/sections/FeaturesSplit';
+import Cta from '../common/sections/Cta';
 
 const Home = () => {
 

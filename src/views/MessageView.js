@@ -1,8 +1,8 @@
 import React from 'react';
 // import sections
-import MiniCompanyProfile from '../components/sections/messages/MiniCompanyProfile';
-import Conversation from '../components/sections/partials/Conversation';
-import MessageBar from '../components/sections/MessageBar';
+import MiniCompanyProfile from '../app/messages/components/MiniCompanyProfile';
+import Conversation from '../app/messages/Conversation';
+import MessageBar from '../app/messages/components/MessageBar';
 
 function MessageView(props) {
   let contentParams = props.location.state; // Parameters taken from link state

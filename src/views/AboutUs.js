@@ -1,7 +1,7 @@
 import React from 'react';
 // import sections
-import FeaturesTiles from '../components/sections/FeaturesTiles';
-import Cta from '../components/sections/Cta';
+import FeaturesTiles from '../common/sections/FeaturesTiles';
+import Cta from '../common/sections/Cta';
 
 const AboutUs = () => {
 

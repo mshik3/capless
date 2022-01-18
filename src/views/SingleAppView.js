@@ -2,10 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 
 // Import Content
-import Feed from '../components/sections/partials/Feed';
-import CompanyProfile from '../components/sections/companyprofile/CompanyProfile';
-import VCProfile from '../components/sections/companyprofile/VCProfile';
-import Settings from '../components/sections/partials/Settings';
+import Feed from '../app/feed/Feed';
+import CompanyProfile from '../app/companyprofile/CompanyProfile';
+import VCProfile from '../app/companyprofile/VCProfile';
+import Settings from '../app/settings/Settings';
 
 function SingleAppView(props) {
   let currentContent = props.content;

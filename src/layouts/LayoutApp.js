@@ -1,6 +1,6 @@
 import React from 'react';
-import AppHeader from '../components/layout/AppHeader';
-import Footer from '../components/layout/Footer';
+import AppHeader from '../app/app-header/AppHeader';
+import Footer from '../common/layout/Footer';
 
 const LayoutApp = ({ children }) => (
   <>
