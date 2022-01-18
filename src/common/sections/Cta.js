@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import Form from './partials/WaitlistForm/Form';
+import Form from './partials/Form';
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
 // Config variables
