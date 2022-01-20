@@ -1,5 +1,3 @@
-import "./_notification.scss"
-
 import React  from 'react';
 
 import VentureStandard from '../../../assets/images/profile_images/Venture Standard.png'
