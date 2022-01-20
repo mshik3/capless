@@ -1,21 +1,25 @@
 import React from 'react';
 import ProfilePreview from './components/ProfilePreview';
+import getFeed from '../../utils/AppGateway';
 
 const interested = [true, true, false, true, false, false, false, false, false, false];
-const ENDPOINT = "https://iofe7t7f7k.execute-api.us-east-1.amazonaws.com/prod/feed";
 
 class Feed extends React.Component {
-  state = {
-    vcs: []
-  };
+  constructor(urlParams) {
+    super();
+    const query = new URLSearchParams(urlParams.params);
+    const useBackendFeed = query.get('backend_feed') === 'true';
+    this.state = {
+      vcs: [],
+      useBackendFeed
+    }
+  }
 
   // Make call to feed endpoint
   componentDidMount() {
-    fetch(ENDPOINT)
-    .then(response => response.json())
-    .then(data => this.setState({
-      vcs: data
-    }));
+    getFeed(this.state.useBackendFeed).then(data => {
+      this.setState({vcs: data});
+    });
   }
 
   render() {

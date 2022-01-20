@@ -10,10 +10,11 @@ import Settings from '../app/settings/Settings';
 function SingleAppView(props) {
   let currentContent = props.content;
   let contentParams = props.location.state; // Parameters taken from link state
+  let urlParams = props.location.search;
 
   // "Daily Feed", "Company Profile", "My Profile", "Settings", "Upgrade"
   const contentMap = {
-    "Daily Feed": <Feed/>,
+    "Daily Feed": <Feed params={urlParams}/>,
     "Company Profile": <CompanyProfile params={contentParams}/>,
     "VC Profile": <VCProfile params={contentParams}/>,
     "Settings": <Settings/>
