@@ -4,35 +4,39 @@ export default class SignUpView extends Component {
     render() {
         return (
             <div className="auth-wrapper">
-                <div className="auth-inner text-xs">
+                <div className="auth-middle">
+                <div className="signup-auth-inner auth-inner text-xs">
                     <form>
-                        <h3>Sign Up</h3>
+                        <h3>Source the next unicorn deal</h3>
 
-                        <div className="form-group">
-                            <label>First name</label>
-                            <input type="text" className="form-control" placeholder="First name" />
+                        <h4>Capless is the next step in passive deal sourcing, perfectly catered to your needs.</h4>
+
+                        <h4>Please fill out some information so we can get started.</h4>
+
+                        <div className="signup-flex-box">
+                            <div className="form-group signup-flex-child">
+                                <input type="text" className="form-control" placeholder="First name" />
+                            </div>
+
+                            <div className="form-group signup-flex-child">
+                                <input type="text" className="form-control" placeholder="Last name" />
+                            </div>
                         </div>
 
                         <div className="form-group">
-                            <label>Last name</label>
-                            <input type="text" className="form-control" placeholder="Last name" />
+                            <input type="email" className="form-control" placeholder="Email" />
                         </div>
 
                         <div className="form-group">
-                            <label>Email address</label>
-                            <input type="email" className="form-control" placeholder="Enter email" />
+                            <input type="password" className="form-control" placeholder="Password" />
                         </div>
 
-                        <div className="form-group">
-                            <label>Password</label>
-                            <input type="password" className="form-control" placeholder="Enter password" />
-                        </div>
-
-                        <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                        <button type="submit" className="signup-btn btn btn-primary btn-block">Continue</button>
                         <p className="forgot-password text-right">
                             Already registered <a href="#">sign in?</a>
                         </p>
                     </form>
+                </div>
                 </div>
             </div>
         );
