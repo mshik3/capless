@@ -29,7 +29,6 @@ const Footer = ({
             <div className="footer-top">
               <FooterSocial />
             </div>
-            <br></br>
             <div className="footer-bottom">
               <FooterNav />
             </div>
