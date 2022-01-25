@@ -8,13 +8,18 @@ import ReactGA from 'react-ga';
 import LayoutApp from './layouts/LayoutApp';
 import LayoutDefault from './layouts/LayoutDefault';
 
-// Views 
+// Homepage Views
 import Home from './views/Home';
 import AboutUs from './views/AboutUs';
-import SingleAppView from './views/SingleAppView';
-import MessageView from './views/MessageView';
-import LoginView from './views/LoginView';
-import SignUpView from './views/SignUpView';
+
+// App Specific Views
+import MessageView from './app/messages/MessageView';
+import LoginView from './app/onboarding/LoginView';
+import SignUpView from './app/onboarding/SignUpView';
+import Feed from './app/feed/Feed';
+import CompanyProfile from './app/companyprofile/CompanyProfile';
+import VCProfile from './app/companyprofile/VCProfile';
+import Settings from './app/settings/Settings';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -44,10 +49,10 @@ const App = () => {
         <Switch>
           <AppRoute exact path={process.env.PUBLIC_URL + '/'} component={Home} layout={LayoutDefault} />
           <AppRoute path={process.env.PUBLIC_URL + '/aboutcapless'} component={AboutUs} layout={LayoutDefault} />
-          <AppRoute path={process.env.PUBLIC_URL + '/feed'} component={SingleAppView} layout={LayoutApp} content={"Daily Feed"}/>
-          <AppRoute path={process.env.PUBLIC_URL + '/company'} component={SingleAppView} layout={LayoutApp} content={"Company Profile"}/>
-          <AppRoute path={process.env.PUBLIC_URL + '/vc'} component={SingleAppView} layout={LayoutApp} content={"VC Profile"}/>
-          <AppRoute path={process.env.PUBLIC_URL + '/settings'} component={SingleAppView} layout={LayoutApp} content={"Settings"}/>
+          <AppRoute path={process.env.PUBLIC_URL + '/feed'} component={Feed} layout={LayoutApp}/>
+          <AppRoute path={process.env.PUBLIC_URL + '/company'} component={CompanyProfile} layout={LayoutApp} />
+          <AppRoute path={process.env.PUBLIC_URL + '/vc'} component={VCProfile} layout={LayoutApp} />
+          <AppRoute path={process.env.PUBLIC_URL + '/settings'} component={Settings} layout={LayoutApp} />
           <AppRoute path={process.env.PUBLIC_URL + '/messages'} component={MessageView} layout={LayoutApp} />
           <AppRoute path={process.env.PUBLIC_URL + '/login'} component={LoginView} layout={LayoutApp} />
           <AppRoute path={process.env.PUBLIC_URL + '/signup'} component={SignUpView} layout={LayoutApp} />

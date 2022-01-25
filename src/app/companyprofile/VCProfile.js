@@ -8,15 +8,16 @@ import TeamMembersVCCard from './components/TeamMembersVCCard';
 import IndustryCard from './components/IndustryCard';
 import './style/company-profile.scss'
 
-const VCProfile = ({params}) => {
-  if (!params) {
-    params = {
-      name: "Venture Standard",
-      aboutUs: "Venture Standard is an agriculture technology focused investment firm with a history of providing its portfolio companies with a strong and dependable network, future funding options, and access to a wide talent pool to work with. Learn more about Venture Standard's mission below!"
-    }
+const VCProfile = (props) => {
+  let params = {
+    name: "Venture Standard",
+    aboutUs: "Venture Standard is an agriculture technology focused investment firm with a history of providing its portfolio companies with a strong and dependable network, future funding options, and access to a wide talent pool to work with. Learn more about Venture Standard's mission below!"
+  }
+  if (props) {
+    params = props.location.state;
   }
   return (
-    <>
+    <div className='container-app'>
       <div className="company-profile">
         <HeaderCard params={params} />
         <div className="card-row">
@@ -32,7 +33,7 @@ const VCProfile = ({params}) => {
           <TeamMembersVCCard classes={['profile-card', 'medium-card', 'card-last']} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

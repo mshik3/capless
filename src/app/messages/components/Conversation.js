@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Image from '../../common/elements/Image';
-import './style/conversation.scss'
+import Image from '../../../common/elements/Image';
+import '../style/conversation.scss'
 
 const Conversation = ({params}) => {
   if (!params) {
@@ -56,7 +56,7 @@ const Conversation = ({params}) => {
     <>
       <div className="conversation">
         <div className="conversation-header">
-          <Image src={require(`../../assets/images/message_contacts/${companyRep}.jpeg`)}/>
+          <Image src={require(`../../../assets/images/message_contacts/${companyRep}.jpeg`)}/>
           <p className="name">{companyRep}</p>
           <p className="company">{company}</p>
         </div>

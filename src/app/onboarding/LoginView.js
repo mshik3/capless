@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../app/onboarding/style/login.scss';
+import './style/login.scss';
 
 export default class LoginView extends Component {
     render() {

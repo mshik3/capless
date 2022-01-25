@@ -29,18 +29,20 @@ class Settings extends React.Component {
 
   render() {
     return (
-      <div className="settings">
-        <h3>What matters to you?</h3>
-        <p>Please rank the attributes which matter to you most in a VC. Our algorithm will use this to recommend you VCs tailored to your liking.</p>
-        <SortableContainer onSortEnd={this.onSortEnd}>
-          {this.state.settings.map((value, index) => (
-            <SortableItem index={index} setting={value} />
-          ))}
-        </SortableContainer>
-        <h3>Other Settings</h3>
-        <Button>Upgrade your Account</Button>
-        <Button>Update your Profile</Button>
-        <Button className="button-last">Update Payment Method</Button>
+      <div className='container-app'>
+        <div className="settings">
+          <h3>What matters to you?</h3>
+          <p>Please rank the attributes which matter to you most in a VC. Our algorithm will use this to recommend you VCs tailored to your liking.</p>
+          <SortableContainer onSortEnd={this.onSortEnd}>
+            {this.state.settings.map((value, index) => (
+              <SortableItem index={index} setting={value} />
+            ))}
+          </SortableContainer>
+          <h3>Other Settings</h3>
+          <Button>Upgrade your Account</Button>
+          <Button>Update your Profile</Button>
+          <Button className="button-last">Update Payment Method</Button>
+        </div>
       </div>
     );
   }

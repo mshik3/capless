@@ -9,15 +9,16 @@ import TeamMembersCard from './components/TeamMembersCard';
 import FastFactCard from './components/FastFactCard';
 import './style/company-profile.scss'
 
-const CompanyProfile = ({params}) => {
-  if (!params) {
-    params = {
-      name: "Pear Products",
-      aboutUs: "Pear Products is a software technology company focused on providing the solution to the world's lack of accessibility to natural, non-modified, and locally sourced fruits and vegetables. Pear aims to tackle food shortage with logistic analysis and algorithmic supply chain orientation. Learn more about Pear below!"
-    }
+const CompanyProfile = (props) => {
+  let params = {
+    name: "Pear Products",
+    aboutUs: "Pear Products is a software technology company focused on providing the solution to the world's lack of accessibility to natural, non-modified, and locally sourced fruits and vegetables. Pear aims to tackle food shortage with logistic analysis and algorithmic supply chain orientation. Learn more about Pear below!"
+  }
+  if (props) {
+    params = props.location.state;
   }
   return (
-    <>
+    <div className='container-app'>
       <div className="company-profile">
         <HeaderCard params={params} />
         <div className="card-row">
@@ -40,7 +41,7 @@ const CompanyProfile = ({params}) => {
           <FastFactCard classes={['profile-card', 'small-card', 'card-last']} header="1 Million+" content="People served nationally" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

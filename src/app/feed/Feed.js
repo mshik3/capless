@@ -6,9 +6,10 @@ import './style/profile-preview.scss'
 const interested = [true, true, false, true, false, false, false, false, false, false];
 
 class Feed extends React.Component {
-  constructor(urlParams) {
+  constructor(props) {
     super();
-    const query = new URLSearchParams(urlParams.params);
+    const urlParams = props.location.search;
+    const query = new URLSearchParams(urlParams);
     const useBackendFeed = query.get('backend_feed') === 'true';
     this.state = {
       vcs: [],
@@ -25,13 +26,13 @@ class Feed extends React.Component {
 
   render() {
     return (
-      <>
+      <div className='container-app'>
         <div className="pro-pre-profile-preview-grid">
           {this.state.vcs.map((vc, index) => {
             return <ProfilePreview className="container-preview-profile" vc={vc} isInterested={interested[index]}/>
           })}
         </div>
-      </>
+      </div>
     );
   }
 }
