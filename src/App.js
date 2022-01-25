@@ -13,6 +13,8 @@ import Home from './views/Home';
 import AboutUs from './views/AboutUs';
 import SingleAppView from './views/SingleAppView';
 import MessageView from './views/MessageView';
+import LoginView from './views/LoginView';
+import SignUpView from './views/SignUpView';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -47,6 +49,8 @@ const App = () => {
           <AppRoute path={process.env.PUBLIC_URL + '/vc'} component={SingleAppView} layout={LayoutApp} content={"VC Profile"}/>
           <AppRoute path={process.env.PUBLIC_URL + '/settings'} component={SingleAppView} layout={LayoutApp} content={"Settings"}/>
           <AppRoute path={process.env.PUBLIC_URL + '/messages'} component={MessageView} layout={LayoutApp} />
+          <AppRoute path={process.env.PUBLIC_URL + '/login'} component={LoginView} layout={LayoutApp} />
+          <AppRoute path={process.env.PUBLIC_URL + '/signup'} component={SignUpView} layout={LayoutApp} />
         </Switch>
       )} />
   );
