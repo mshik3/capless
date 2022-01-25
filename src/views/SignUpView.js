@@ -33,7 +33,7 @@ export default class SignUpView extends Component {
 
                         <button type="submit" className="signup-btn btn btn-primary btn-block">Continue</button>
                         <p className="forgot-password text-right">
-                            Already registered <a href="#">sign in?</a>
+                            <a href="#">Already registered? Sign in</a>
                         </p>
                     </form>
                 </div>
