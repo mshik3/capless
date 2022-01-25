@@ -7,7 +7,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 //import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/style.scss';
 
 createBrowserHistory();
