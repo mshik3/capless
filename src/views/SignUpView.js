@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../app/onboarding/style/signup.scss';
 
 export default class SignUpView extends Component {
     render() {

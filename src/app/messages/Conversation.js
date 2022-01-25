@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Image from '../../common/elements/Image';
+import './style/conversation.scss'
 
 const Conversation = ({params}) => {
   if (!params) {

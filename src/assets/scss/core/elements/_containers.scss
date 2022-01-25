@@ -3,7 +3,8 @@
 .container-lg,
 .container-xs,
 .container-hero,
-.container-app {
+.container-app,
+.container-app-lg {
 	margin: 0 auto;
 	padding-left: $container--padding__mobile;
 	padding-right: $container--padding__mobile;
@@ -39,6 +40,12 @@
 .container-hero {
 	max-width: $container--width-lg + ( $container--padding__desktop * 2 );
 	height: 100%;
+}
+
+.container-app-lg {
+	max-width: $container--width-lg + ( $container--padding__desktop * 2 );
+	margin-top: 110px;
+	margin-bottom: 50px;
 }
 
 [class*=container] {

@@ -6,6 +6,7 @@ import TeamSizeCard from './components/TeamSizeCard';
 import LocationCard from './components/LocationCard';
 import TeamMembersVCCard from './components/TeamMembersVCCard';
 import IndustryCard from './components/IndustryCard';
+import './style/company-profile.scss'
 
 const VCProfile = ({params}) => {
   if (!params) {

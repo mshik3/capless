@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderCard from '../../companyprofile/components/HeaderCard';
 import classNames from 'classnames';
+import '../style/mini-company-profile.scss'
 
 const MiniCompanyProfile = ({name}) => {
   const outerClasses = classNames(`side-bar mini-company-profile`);

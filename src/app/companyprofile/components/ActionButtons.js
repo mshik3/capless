@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Image from '../../../common/elements/Image';
+import '../style/action-buttons.scss'
 
 const propTypes = {
     name: PropTypes.string

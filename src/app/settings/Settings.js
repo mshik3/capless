@@ -2,6 +2,8 @@ import React from 'react';
 import SettingsRow from './components/SettingsRow';
 import {sortableContainer, sortableElement} from 'react-sortable-hoc';
 import Button from '../../common/elements/Button';
+import './style/settings.scss'
+
 const SortableItem = sortableElement(({setting}) => <SettingsRow name={setting} />);
 const SortableContainer = sortableContainer(({children}) => {
   return <div>{children}</div>;

@@ -7,6 +7,7 @@ import NotificationFooter from './NotificationFooter'
 import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import NotificationHeader from "./NotificationHeader";
+import '../style/notification.scss'
 
 function Notifications(props) {
   const [open, setOpen] = useState(false);
