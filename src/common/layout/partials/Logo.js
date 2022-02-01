@@ -1,34 +1,25 @@
-import React from 'react';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-import Image from '../../elements/Image';
+import React from "react";
+import classNames from "classnames";
+import { Link } from "react-router-dom";
+import Image from "../../elements/Image";
 
-const Logo = ({
-  className,
-  ...props
-}) => {
+const Logo = ({ className, ...props }) => {
+	const classes = classNames("brand", className);
 
-  const classes = classNames(
-    'brand',
-    className
-  );
-
-  return (
-    <div
-      {...props}
-      className={classes}
-    >
-      <h1 className="m-0">
-        <Link to="/">
-          <Image
-            src={require('./../../../assets/images/logo_images/DarkIcon.png')}
-            alt="Open"
-            width={40}
-            height={40} />
-        </Link>
-      </h1>
-    </div>
-  );
-}
+	return (
+		<div {...props} className={classes}>
+			<h1 className="m-0">
+				<Link to="/">
+					<Image
+						src={require("./../../../assets/images/logo_images/DarkIcon.png")}
+						alt="Open"
+						width={40}
+						height={40}
+					/>
+				</Link>
+			</h1>
+		</div>
+	);
+};
 
 export default Logo;

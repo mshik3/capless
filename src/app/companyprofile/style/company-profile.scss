@@ -1,203 +1,203 @@
-  .company-profile {
-    position: relative;
-    margin-top: 30px;
-    padding: 5px;
-    width: 100%;
-  }
+.company-profile {
+	position: relative;
+	margin-top: 30px;
+	padding: 5px;
+	width: 100%;
+}
 
-  .company-profile h2 {
-      margin: 0px;
-  }
-  
-  .company-profile p {
-    font-size: 18px;
-    text-align: left;
-    padding-left: 10px;
-    color: #777;
-  }
+.company-profile h2 {
+	margin: 0px;
+}
 
-  .profile-card {
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 10px;
-    margin-bottom: 20px;
-    min-height: 300px;
+.company-profile p {
+	font-size: 18px;
+	text-align: left;
+	padding-left: 10px;
+	color: #777;
+}
 
-    h3 {
-      margin: 0px;
-    }
-  }
+.profile-card {
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	padding: 10px;
+	margin-bottom: 20px;
+	min-height: 300px;
 
-  .mini-profile-card {
-    min-height: 150px !important;
-    h4 {
-      font-size: 80px !important;
-      margin-top: 0px !important;
-    }
-  }
+	h3 {
+		margin: 0px;
+	}
+}
 
-  .small-card {
-    width: 32%;
-    margin-right: 2%;
-  }
+.mini-profile-card {
+	min-height: 150px !important;
+	h4 {
+		font-size: 80px !important;
+		margin-top: 0px !important;
+	}
+}
 
-  .medium-card {
-    width: 66%;
-    margin-right: 2%;
-  }
+.small-card {
+	width: 32%;
+	margin-right: 2%;
+}
 
-  .large-card {
-    width: 100%;
-  }
+.medium-card {
+	width: 66%;
+	margin-right: 2%;
+}
 
-  .card-last {
-    margin-right: 0px !important;
-  }
+.large-card {
+	width: 100%;
+}
 
-  .card-row {
-    display:flex;
-    height: 300px;
-    margin-bottom: 20px;
-  }
-  
-  .company-profile-header {
-    height: 80px;
-    display: table;
-    padding: 20px;
-  }
-  
-  .company-profile-image {
-    float: left;
-    width: 90px;
-    height: 90px;
-    border-radius: 10px;
-  }
-  
-  .company-profile-name {
-    text-align: left;
-    vertical-align: middle;
-    display: table-cell;
-    padding-left: 30px;
-    font-size: 50px;
-  }
-  
-  .card-header {
-    font-size: 28px;
-    padding-left: 10px;
-    text-align: left;
-    font-weight: bold;
-    color: #222;
-  }
+.card-last {
+	margin-right: 0px !important;
+}
 
-  .center-text {
-    text-align: center !important;
-  }
+.card-row {
+	display: flex;
+	height: 300px;
+	margin-bottom: 20px;
+}
 
-  .revenue-info {
-    padding-top: 60px;
-    text-align: center;
-    font-size: 100px;
-    font-weight: bold;
-    color: rgb(20, 167, 69);
-  }
+.company-profile-header {
+	height: 80px;
+	display: table;
+	padding: 20px;
+}
 
-  .team-size-info {
-    padding-top: 60px;
-    text-align: center;
-    font-size: 100px;
-    font-weight: bold;
-    color: rgb(21, 10, 163);
-  }
+.company-profile-image {
+	float: left;
+	width: 90px;
+	height: 90px;
+	border-radius: 10px;
+}
 
-  .secondary-card-info {
-    font-size: 28px;
-    text-align: center;
-    color: #999;
-  }
+.company-profile-name {
+	text-align: left;
+	vertical-align: middle;
+	display: table-cell;
+	padding-left: 30px;
+	font-size: 50px;
+}
 
-  .card-image {
-    margin: auto;
-  }
+.card-header {
+	font-size: 28px;
+	padding-left: 10px;
+	text-align: left;
+	font-weight: bold;
+	color: #222;
+}
 
-  .fun-facts-container {
-    display: table;
-    width: 95%;
-    position: relative;
-  }
-  
-  .facts-header {
-    /*text-align: left;*/
-    padding-left: 10px;
-    margin: 0px;
-    color: #222;
-    font-style: italic;
-  }
-  
-  // .facts-content {
-  //   font-size: 14px !important;
-  // }
-  
-  .column {
-    float: left;
-    width: 33%;
-    border-right: 1px solid #999;
-    text-align: left;
-  }
-  
-  .column-last {
-    border-right: 0px solid #999;
-  }
-  
-  .team-members-container {
-    display: table;
-    margin-top: 20px;
-  }
-  
-  .team-column {
-    float: left;
-    width: 33%;
-    text-align: center;
-  }
-  
-  .team-image {
-    width: 30%;
-    height: 30%;
-    border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .member-info {
-    text-align: center !important;
-    margin: 5px;
-  }
-  
-  .company-profile-preview {
-    background: #fff;
-    border: 0px solid #999;
-    font-size: 16px;
-    font-weight: bold;
-    height: 150px;
-    margin-right: 20px;
-    margin-top: 20px;
-    width: 150px;
-    text-align: center;
-    outline: none;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .preview-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-  }
+.center-text {
+	text-align: center !important;
+}
 
-  .action-bar {
-    width: 100%;
-    height: 58px;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  }
+.revenue-info {
+	padding-top: 60px;
+	text-align: center;
+	font-size: 100px;
+	font-weight: bold;
+	color: rgb(20, 167, 69);
+}
+
+.team-size-info {
+	padding-top: 60px;
+	text-align: center;
+	font-size: 100px;
+	font-weight: bold;
+	color: rgb(21, 10, 163);
+}
+
+.secondary-card-info {
+	font-size: 28px;
+	text-align: center;
+	color: #999;
+}
+
+.card-image {
+	margin: auto;
+}
+
+.fun-facts-container {
+	display: table;
+	width: 95%;
+	position: relative;
+}
+
+.facts-header {
+	/*text-align: left;*/
+	padding-left: 10px;
+	margin: 0px;
+	color: #222;
+	font-style: italic;
+}
+
+// .facts-content {
+//   font-size: 14px !important;
+// }
+
+.column {
+	float: left;
+	width: 33%;
+	border-right: 1px solid #999;
+	text-align: left;
+}
+
+.column-last {
+	border-right: 0px solid #999;
+}
+
+.team-members-container {
+	display: table;
+	margin-top: 20px;
+}
+
+.team-column {
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+.team-image {
+	width: 30%;
+	height: 30%;
+	border-radius: 5%;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.member-info {
+	text-align: center !important;
+	margin: 5px;
+}
+
+.company-profile-preview {
+	background: #fff;
+	border: 0px solid #999;
+	font-size: 16px;
+	font-weight: bold;
+	height: 150px;
+	margin-right: 20px;
+	margin-top: 20px;
+	width: 150px;
+	text-align: center;
+	outline: none;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.preview-image {
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+}
+
+.action-bar {
+	width: 100%;
+	height: 58px;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

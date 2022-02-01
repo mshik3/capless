@@ -1,4 +1,4 @@
-@import '../../../assets/scss/settings/base/widths-and-spacing';
+@import "../../../assets/scss/settings/base/widths-and-spacing";
 
 // Message App View
 .message-app-view {
@@ -35,7 +35,7 @@
 	border-bottom-style: solid;
 	border-bottom-color: #c4c4c4;
 
-	img { 
+	img {
 		width: 50px;
 		height: 50px;
 		border-radius: 24px;
@@ -56,24 +56,23 @@
 		position: absolute;
 		left: 70px;
 		top: 28px;
-		color: #6C6C6C;
+		color: #6c6c6c;
 	}
 }
 
 .side-bar-section:hover {
-    background-color: #eeeeee;
+	background-color: #eeeeee;
 }
 
 .side-bar-section:active {
-    background-color: #e4e8eb;
+	background-color: #e4e8eb;
 	outline: none;
 }
 
 .ad {
 	width: $side-bar--width;
 	height: 100px;
-    background-color: #D5D8DA;
+	background-color: #d5d8da;
 	line-height: 100px;
 	margin-bottom: 20px;
 }
-

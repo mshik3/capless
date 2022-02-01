@@ -9,19 +9,21 @@
 }
 
 .pro-pre-profile-preview:hover {
-	cursor:pointer;
+	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 10px;
 }
 
 .pro-pre-profile-preview-grid {
-	display:grid;
+	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	grid-gap: 10px;
 }
 
-@media screen and (max-width:768px) {
-	.grid { grid-template-columns: auto; }
-  }
+@media screen and (max-width: 768px) {
+	.grid {
+		grid-template-columns: auto;
+	}
+}
 
 .pro-pre-image-preview {
 	padding: 0px;
