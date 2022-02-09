@@ -1,28 +1,77 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "../../../common/elements/Image";
 import "../style/conversation.scss";
+
+// Amplify
+import "@aws-amplify/pubsub";
+import API, { graphqlOperation } from "@aws-amplify/api";
+import { messagesByChannelID } from "../../../graphql/queries";
+import { onCreateMessage } from "../../../graphql/subscriptions";
+import { createMessage } from "../../../graphql/mutations";
 
 const Conversation = ({ params }) => {
 	if (!params) {
 		params = {
 			name: "Rebecca Sanford",
-			company: "Partner, Venture Standard",
+			company: "Venture Standard",
 		};
 	}
 
 	// Initialize state
 	const [companyRep, updateCompanyRep] = useState(params.name);
 	const [company, updateCompany] = useState(params.company);
+	const [visitedCompanies, setVisitedCompanies] = useState(new Set());
 	// Threads structure maps companies to specific conversations with those companies: {company: [{name: "", message: ""}]}
-	const [threads, updateThreads] = useState({
-		"Partner, Venture Standard": [
-			{
-				name: "Rebecca Sanford",
-				message:
-					"Hey Paul, it looks like Pear’s had some recent growth! I’d love to learn more about your business model. Have a couple minutes to chat?",
+	const [threads, updateThreads] = useState({});
+
+	// Update threads state
+	const appendToThreads = (items) => {
+		for (let i = 0; i < items.length; i++) {
+			const item = items[i];
+			const author = item.author;
+			const body = item.body;
+			if (!threads[company]) {
+				threads[company] = [];
+			}
+			// Append text input to thread for current company
+			threads[company] = [...threads[company], { author, body }];
+		}
+		updateThreads({
+			...threads,
+		});
+	};
+
+	// Fetching Messages
+	useEffect(() => {
+		if (!visitedCompanies.has(company)) {
+			API.graphql(
+				graphqlOperation(messagesByChannelID, {
+					channelID: company,
+					sortDirection: "ASC",
+				})
+			).then((response) => {
+				const items = response.data?.messagesByChannelID?.items;
+				if (items) {
+					appendToThreads(items);
+				}
+				visitedCompanies.add(company);
+				setVisitedCompanies(visitedCompanies);
+			});
+		}
+	}, [company, visitedCompanies]);
+
+	// Subscribing to new Messages
+	useEffect(() => {
+		const subscription = API.graphql(graphqlOperation(onCreateMessage)).subscribe({
+			next: (event) => {
+				appendToThreads([event.value.data.onCreateMessage]);
 			},
-		],
-	});
+		});
+
+		return () => {
+			subscription.unsubscribe();
+		};
+	}, [threads]);
 
 	// Update state when params change from new URL
 	if (params.name !== companyRep) {
@@ -32,28 +81,29 @@ const Conversation = ({ params }) => {
 		updateCompany(params.company);
 	}
 
-	const onKeyPress = (event) => {
+	const onKeyPress = async (event) => {
 		// If enter is pressed
 		if (event.keyCode === 13) {
-			const message = event.target.value;
+			const messageBody = event.target.value;
 			event.preventDefault();
 			document.getElementById("text-bar").value = "";
-			var name = "Rebecca Sanford";
+
+			const input = {
+				channelID: company,
+				author: "Paul Nelson",
+				body: messageBody.trim(),
+			};
+
+			try {
+				await API.graphql(graphqlOperation(createMessage, { input }));
+			} catch (error) {
+				console.warn(error);
+			}
+
 			// Initialize threads[company] if empty
 			if (!threads[company]) {
 				threads[company] = [];
-			} else {
-				// Toggle name back between two for demo purposes
-				let latestName = threads[company][threads[company].length - 1].name;
-				if (latestName === companyRep) {
-					name = "Paul Nelson";
-				}
 			}
-			// Append text input to thread for current company
-			threads[company] = [...threads[company], { name, message }];
-			updateThreads({
-				...threads,
-			});
 		}
 	};
 
@@ -70,8 +120,8 @@ const Conversation = ({ params }) => {
 						return (
 							<>
 								<div className="conversation-section">
-									<p className="name">{thread.name}</p>
-									<p className="message">{thread.message}</p>
+									<p className="name">{thread.author}</p>
+									<p className="message">{thread.body}</p>
 								</div>
 							</>
 						);
