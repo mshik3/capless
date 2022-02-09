@@ -1,6 +1,6 @@
 import React from "react";
 import ProfilePreview from "./components/ProfilePreview";
-import { getFeed } from "../../utils/AppGateway";
+import { getFeed } from "./api/GetFeed";
 import "./style/profile-preview.scss";
 
 const interested = [true, true, false, true, false, false, false, false, false, false];

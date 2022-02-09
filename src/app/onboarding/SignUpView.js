@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style/signup.scss";
-import { signUp, confirmSignUp } from "../../utils/AppGateway";
-import InformationalTiles from "./InformationalTiles";
+import { signUp, confirmSignUp } from "./api/UserAuth";
+import InformationalTiles from "./components/InformationalTiles";
 
 export default class SignUpView extends Component {
 	constructor(props) {

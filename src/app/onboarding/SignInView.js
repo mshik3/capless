@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style/signin.scss";
-import { signIn } from "../../utils/AppGateway";
-import InformationalTiles from "./InformationalTiles";
+import { signIn } from "./api/UserAuth";
+import InformationalTiles from "./components/InformationalTiles";
 
 export default class SignInView extends Component {
 	constructor(props) {
