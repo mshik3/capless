@@ -14,7 +14,7 @@ import AboutUs from "./views/AboutUs";
 
 // App Specific Views
 import MessageView from "./app/messages/MessageView";
-import LoginView from "./app/onboarding/LoginView";
+import SignInView from "./app/onboarding/SignInView";
 import SignUpView from "./app/onboarding/SignUpView";
 import Feed from "./app/feed/Feed";
 import CompanyProfile from "./app/companyprofile/CompanyProfile";
@@ -65,7 +65,7 @@ const App = () => {
 					<AppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/login"} component={LoginView} layout={LayoutApp} />
+					<AppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={LayoutApp} />
 				</Switch>
 			)}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./style/signup.scss";
-import { signUp } from "../../utils/AppGateway";
+import { signUp, confirmSignUp } from "../../utils/AppGateway";
 import InformationalTiles from "./InformationalTiles";
 
 export default class SignUpView extends Component {
@@ -12,9 +12,11 @@ export default class SignUpView extends Component {
 			username: "",
 			password: "",
 			email: "",
+			shouldShowConfirmCode: false,
 		};
 		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
+		this.handleConfirmationCodeSubmit = this.handleConfirmationCodeSubmit.bind(this);
 	}
 
 	handleChange(event) {
@@ -26,13 +28,24 @@ export default class SignUpView extends Component {
 		});
 	}
 
-	handleSubmit(event) {
-		console.log(
-			"A name was submitted: " + this.state.username + " " + this.state.password + " " + this.state.email
-		);
+	handleSignUpSubmit(event) {
+		console.log("An email was submitted: " + this.state.email + " " + this.state.password);
 		event.preventDefault();
 
-		signUp(this.state.username, this.state.password, this.email);
+		signUp(this.state.email, this.state.password);
+
+		this.setState({
+			shouldShowConfirmCode: true,
+		});
+
+		// Call lambda to start signup for user
+	}
+
+	handleConfirmationCodeSubmit(event) {
+		console.log("A confirmation code was submitted: " + this.state.confirmationCode);
+		event.preventDefault();
+
+		confirmSignUp(this.state.email, this.state.confirmationCode);
 
 		// Call lambda to start signup for user
 	}
@@ -44,22 +57,22 @@ export default class SignUpView extends Component {
 				<div className="auth-right-wrapper">
 					<div className="auth-middle">
 						<div className="auth-inner text-xs">
-							<form onSubmit={this.handleSubmit}>
-								<h4>Please fill out some information so we can get started.</h4>
+							{!this.state.shouldShowConfirmCode && (
+								<form onSubmit={this.handleSignUpSubmit}>
+									<h4>Please fill out some information so we can get started.</h4>
 
-								<div className="signup-flex-box">
-									<div className="form-group signup-flex-child">
+									<div className="form-group">
 										<input
-											type="text"
-											name="username"
-											value={this.state.username}
+											type="email"
+											name="email"
+											value={this.state.email}
 											onChange={this.handleChange}
 											className="form-control"
-											placeholder="Username"
+											placeholder="Email"
 										/>
 									</div>
 
-									<div className="form-group signup-flex-child">
+									<div className="form-group">
 										<input
 											type="password"
 											name="password"
@@ -69,26 +82,34 @@ export default class SignUpView extends Component {
 											placeholder="Password"
 										/>
 									</div>
-								</div>
 
-								<div className="form-group">
-									<input
-										type="email"
-										name="email"
-										value={this.state.email}
-										onChange={this.handleChange}
-										className="form-control"
-										placeholder="Email"
-									/>
-								</div>
+									<button type="submit" className="onboarding-btn btn btn-primary btn-block">
+										Continue
+									</button>
+									<p className="forgot-password text-right">
+										<a href="#">Already registered? Sign in</a>
+									</p>
+								</form>
+							)}
+							{this.state.shouldShowConfirmCode && (
+								<form onSubmit={this.handleConfirmationCodeSubmit}>
+									<h4>Check your email to confirm your email!</h4>
+									<div className="form-group">
+										<input
+											type="input"
+											name="confirmationCode"
+											value={this.state.confirmationCode}
+											onChange={this.handleChange}
+											className="form-control"
+											placeholder="Confirmation Code"
+										/>
+									</div>
 
-								<button type="submit" className="signup-btn btn btn-primary btn-block">
-									Continue
-								</button>
-								<p className="forgot-password text-right">
-									<a href="#">Already registered? Sign in</a>
-								</p>
-							</form>
+									<button type="submit" className="onboarding-btn btn btn-primary btn-block">
+										Submit
+									</button>
+								</form>
+							)}
 						</div>
 					</div>
 				</div>
