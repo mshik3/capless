@@ -21,6 +21,10 @@ import CompanyProfile from "./app/companyprofile/CompanyProfile";
 import VCProfile from "./app/companyprofile/VCProfile";
 import Settings from "./app/settings/Settings";
 
+import Amplify, { Auth } from "aws-amplify";
+import awsconfig from "./aws-exports";
+Amplify.configure(awsconfig);
+
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-capless-dev-204147-authRole",
+      "UnauthRoleArn": "arn:aws:iam::052950998977:role/amplify-capless-dev-204147-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::052950998977:role/amplify-capless-dev-204147-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-capless-dev-204147-deployment",
+      "UnauthRoleName": "amplify-capless-dev-204147-unauthRole",
+      "StackName": "amplify-capless-dev-204147",
+      "StackId": "arn:aws:cloudformation:us-east-1:052950998977:stack/amplify-capless-dev-204147/d4ca5970-8951-11ec-ae62-0ac83037bd0b",
+      "AmplifyAppId": "dkxwinob75mws"
+    },
+    "categories": {
+      "auth": {
+        "capless35638930": {}
+      }
+    }
+  }
+}

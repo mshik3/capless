@@ -1,3 +1,5 @@
+import { Auth } from "aws-amplify";
+
 const FEED_ENDPOINT = "https://iofe7t7f7k.execute-api.us-east-1.amazonaws.com/prod/feed";
 const OFFLINE_FEED_DATA = [
 	{
@@ -91,4 +93,19 @@ const getFeed = async (useBackendFeed) => {
 	return response;
 };
 
-export default getFeed;
+const signUp = async (username, password, email) => {
+	try {
+		const { user } = await Auth.signUp({
+			username,
+			password,
+			attributes: {
+				email, // optional
+			},
+		});
+		console.log(user);
+	} catch (error) {
+		console.log("error signing up:", error);
+	}
+};
+
+export { getFeed, signUp };
