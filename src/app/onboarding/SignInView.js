@@ -9,6 +9,7 @@ export default class SignInView extends Component {
 		this.state = {
 			email: "",
 			password: "",
+			remember_me: false,
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,7 +17,7 @@ export default class SignInView extends Component {
 
 	handleChange(event) {
 		const target = event.target;
-		const value = target.value;
+		const value = target.type === "checkbox" ? target.checked : target.value;
 		const name = target.name;
 		this.setState({
 			[name]: value,
@@ -24,10 +25,12 @@ export default class SignInView extends Component {
 	}
 
 	handleSubmit(event) {
-		console.log("An email was submitted: " + this.state.email + " " + this.state.password);
+		console.log(
+			"An email was submitted: " + this.state.email + " " + this.state.password + " " + this.state.remember_me
+		);
 		event.preventDefault();
 
-		signIn(this.state.email, this.state.password);
+		signIn(this.state.email, this.state.password, this.state.remember_me);
 
 		// Call lambda to start signup for user
 	}
@@ -68,7 +71,13 @@ export default class SignInView extends Component {
 
 								<div className="form-group">
 									<div className="custom-control custom-checkbox">
-										<input type="checkbox" className="custom-control-input" id="customCheck1" />
+										<input
+											type="checkbox"
+											className="custom-control-input"
+											id="customCheck1"
+											name="remember_me"
+											value={!this.state.remember_me}
+											onChange={this.handleChange}></input>
 										<label className="custom-control-label" htmlFor="customCheck1">
 											Remember me
 										</label>
