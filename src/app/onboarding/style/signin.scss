@@ -39,3 +39,21 @@ input {
 .forgot-password a {
 	color: #167bff !important;
 }
+
+.sign-in-instead,
+.sign-in-instead a {
+	text-align: left;
+	font-size: 13px;
+	padding-top: 10px;
+	color: #7f7d7d;
+	margin: 0;
+}
+
+.sign-in-instead a {
+	color: #167bff !important;
+}
+
+.sign-in-reroutes {
+	display: flex;
+	justify-content: space-between;
+}

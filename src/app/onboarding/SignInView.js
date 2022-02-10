@@ -78,9 +78,18 @@ export default class SignInView extends Component {
 								<button type="submit" className="onboarding-btn btn btn-primary btn-block">
 									Submit
 								</button>
-								<p className="forgot-password text-right">
-									<a href="#">Forgot password?</a>
+
+								<p className="sign-in-reroutes">
+									<span className="sign-in-instead">
+										Not on Capless? <a href="/#/signup">Create an account</a>
+									</span>
+									<span className="forgot-password">
+										<a href="#">Forgot password?</a>
+									</span>
 								</p>
+								{/* <p className="forgot-password text-right">
+									<a href="#">Forgot password?</a>
+								</p> */}
 							</form>
 						</div>
 					</div>
