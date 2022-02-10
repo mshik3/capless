@@ -5,6 +5,7 @@ import ScrollReveal from "./utils/ScrollReveal";
 import ReactGA from "react-ga";
 
 // Layouts
+import Layout_NoHeader from "./layouts/Layout_NoHeader";
 import LayoutApp from "./layouts/LayoutApp";
 import LayoutDefault from "./layouts/LayoutDefault";
 
@@ -65,8 +66,16 @@ const App = () => {
 					<AppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={LayoutApp} />
+					<AppRoute
+						path={process.env.PUBLIC_URL + "/signin"}
+						component={SignInView}
+						layout={Layout_NoHeader}
+					/>
+					<AppRoute
+						path={process.env.PUBLIC_URL + "/signup"}
+						component={SignUpView}
+						layout={Layout_NoHeader}
+					/>
 				</Switch>
 			)}
 		/>

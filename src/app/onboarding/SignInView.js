@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style/signin.scss";
 import { signIn } from "./api/UserAuth";
-import InformationalTiles from "./components/InformationalTiles";
+import Image from "../../common/elements/Image";
 
 export default class SignInView extends Component {
 	constructor(props) {
@@ -37,13 +37,15 @@ export default class SignInView extends Component {
 
 	render() {
 		return (
-			<div>
-				<InformationalTiles />
-				<div className="auth-right-wrapper">
+			<div className="signin-parent">
+				<div className="signin-image">
+					<Image src={require("./../../assets/images/sign_in/Business-deal.svg")} alt="Sign In Graphic" />
+				</div>
+				<div className="sign-in-modal-wrapper">
 					<div className="auth-middle">
-						<div className="auth-inner text-xs">
+						<div className="signin-auth-inner text-xs">
 							<form onSubmit={this.handleSubmit}>
-								<h3>Sign In</h3>
+								<h3>Log in to Capless</h3>
 
 								<div className="form-group">
 									<label>Email address</label>
