@@ -52,30 +52,14 @@ const App = () => {
 			children={() => (
 				<Switch>
 					<AppRoute exact path={process.env.PUBLIC_URL + "/"} component={Home} layout={LayoutDefault} />
-					<AppRoute
-						path={process.env.PUBLIC_URL + "/aboutcapless"}
-						component={AboutUs}
-						layout={LayoutDefault}
-					/>
+					<AppRoute path={process.env.PUBLIC_URL + "/aboutcapless"} component={AboutUs} layout={LayoutDefault} />
 					<AppRoute path={process.env.PUBLIC_URL + "/feed"} component={Feed} layout={LayoutApp} />
-					<AppRoute
-						path={process.env.PUBLIC_URL + "/company"}
-						component={CompanyProfile}
-						layout={LayoutApp}
-					/>
+					<AppRoute path={process.env.PUBLIC_URL + "/company"} component={CompanyProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
-					<AppRoute
-						path={process.env.PUBLIC_URL + "/signin"}
-						component={SignInView}
-						layout={Layout_NoHeader}
-					/>
-					<AppRoute
-						path={process.env.PUBLIC_URL + "/signup"}
-						component={SignUpView}
-						layout={Layout_NoHeader}
-					/>
+					<AppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={Layout_NoHeader} />
+					<AppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={Layout_NoHeader} />
 				</Switch>
 			)}
 		/>

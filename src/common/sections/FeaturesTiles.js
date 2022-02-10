@@ -57,17 +57,17 @@ const FeaturesTiles = ({
 					<GenericSection>
 						<p>
 							As founders begin their journey to create a company that could change the world their first
-							obstacle tends to be fundraising. The 3 to 6 months they spend to raise funds takes away
-							from the time they could be using to grow.{" "}
+							obstacle tends to be fundraising. The 3 to 6 months they spend to raise funds takes away from the
+							time they could be using to grow.{" "}
 						</p>
 						<p>
-							With over 100 million startups created every year investors can be overwhelmed with
-							potential opportunities. As they begin to assess relevance, opportunity, and their match
-							with these startups they could miss out on other emerging companies.
+							With over 100 million startups created every year investors can be overwhelmed with potential
+							opportunities. As they begin to assess relevance, opportunity, and their match with these
+							startups they could miss out on other emerging companies.
 						</p>
 						<p>
-							However, innovation can not occur without means. Capless is here to create handshakes
-							between investors and founders as efficiently as possible.
+							However, innovation can not occur without means. Capless is here to create handshakes between
+							investors and founders as efficiently as possible.
 						</p>
 					</GenericSection>
 

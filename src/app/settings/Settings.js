@@ -42,8 +42,8 @@ class Settings extends React.Component {
 				<div className="settings">
 					<h3>What matters to you?</h3>
 					<p>
-						Please rank the attributes which matter to you most in a VC. Our algorithm will use this to
-						recommend you VCs tailored to your liking.
+						Please rank the attributes which matter to you most in a VC. Our algorithm will use this to recommend
+						you VCs tailored to your liking.
 					</p>
 					<SortableContainer onSortEnd={this.onSortEnd}>
 						{this.state.settings.map((value, index) => (

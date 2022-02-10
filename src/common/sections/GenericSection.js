@@ -33,11 +33,7 @@ const GenericSection = ({
 		className
 	);
 
-	const innerClasses = classNames(
-		"section-inner",
-		topDivider && "has-top-divider",
-		bottomDivider && "has-bottom-divider"
-	);
+	const innerClasses = classNames("section-inner", topDivider && "has-top-divider", bottomDivider && "has-bottom-divider");
 
 	return (
 		<section {...props} className={outerClasses}>

@@ -30,11 +30,7 @@ class Feed extends React.Component {
 				<div className="pro-pre-profile-preview-grid">
 					{this.state.vcs.map((vc, index) => {
 						return (
-							<ProfilePreview
-								className="container-preview-profile"
-								vc={vc}
-								isInterested={interested[index]}
-							/>
+							<ProfilePreview className="container-preview-profile" vc={vc} isInterested={interested[index]} />
 						);
 					})}
 				</div>

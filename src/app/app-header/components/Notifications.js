@@ -18,12 +18,8 @@ function Notifications(props) {
 				className="notification-button"
 				id="notification-button"
 				src={require("../../../assets/images/icons/notifications-none.svg")}
-				onMouseOver={(e) =>
-					(e.currentTarget.src = require("../../../assets/images/icons/notifications-active.svg"))
-				}
-				onMouseOut={(e) =>
-					(e.currentTarget.src = require("../../../assets/images/icons/notifications-none.svg"))
-				}
+				onMouseOver={(e) => (e.currentTarget.src = require("../../../assets/images/icons/notifications-active.svg"))}
+				onMouseOut={(e) => (e.currentTarget.src = require("../../../assets/images/icons/notifications-none.svg"))}
 				onClick={() => setOpen(!open)}
 				alt="Notifications"
 			/>

@@ -68,10 +68,7 @@ const Header = ({ className, navPosition, hideNav, hideSignin, bottomOuterDivide
 					<CompanyName />
 					{!hideNav && (
 						<>
-							<button
-								ref={hamburger}
-								className="header-nav-toggle"
-								onClick={isActive ? closeMenu : openMenu}>
+							<button ref={hamburger} className="header-nav-toggle" onClick={isActive ? closeMenu : openMenu}>
 								<span className="screen-reader">Menu</span>
 								<span className="hamburger">
 									<span className="hamburger-inner"></span>
