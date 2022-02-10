@@ -8,6 +8,7 @@ import API, { graphqlOperation } from "@aws-amplify/api";
 import { messagesByChannelID } from "../../../graphql/queries";
 import { onCreateMessage } from "../../../graphql/subscriptions";
 import { createMessage } from "../../../graphql/mutations";
+import { Auth } from "@aws-amplify/auth";
 
 const Conversation = ({ params }) => {
 	if (!params) {
@@ -23,6 +24,8 @@ const Conversation = ({ params }) => {
 	const [visitedCompanies, setVisitedCompanies] = useState(new Set());
 	// Threads structure maps companies to specific conversations with those companies: {company: [{name: "", message: ""}]}
 	const [threads, updateThreads] = useState({});
+	// Initialize user info state
+	const [userInfo, setUserInfo] = useState(null);
 
 	// Update threads state
 	const appendToThreads = (items) => {
@@ -40,6 +43,13 @@ const Conversation = ({ params }) => {
 			...threads,
 		});
 	};
+
+	// Fetch Auth User
+	useEffect(() => {
+		Auth.currentUserInfo().then((userInfo) => {
+			setUserInfo(userInfo);
+		});
+	}, []);
 
 	// Fetching Messages
 	useEffect(() => {
@@ -90,7 +100,7 @@ const Conversation = ({ params }) => {
 
 			const input = {
 				channelID: company,
-				author: "Paul Nelson",
+				author: userInfo.attributes.email,
 				body: messageBody.trim(),
 			};
 
