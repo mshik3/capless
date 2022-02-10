@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./style/signup.scss";
 import { signUp, confirmSignUp } from "./api/UserAuth";
 import InformationalTiles from "./components/InformationalTiles";
+import SignInView from "./SignInView";
+import { Link } from "react-router-dom";
 
 export default class SignUpView extends Component {
 	constructor(props) {
@@ -87,7 +89,7 @@ export default class SignUpView extends Component {
 										Continue
 									</button>
 									<p className="forgot-password text-right">
-										<a href="#">Already registered? Sign in</a>
+										<a href="/#/signin">Already registered? Sign in</a>
 									</p>
 								</form>
 							)}
