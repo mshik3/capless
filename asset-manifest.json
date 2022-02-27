@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.7978264c.chunk.css",
-    "main.js": "/static/js/main.c1164775.chunk.js",
-    "main.js.map": "/static/js/main.c1164775.chunk.js.map",
+    "main.css": "/static/css/main.c5e48f39.chunk.css",
+    "main.js": "/static/js/main.109f8fc7.chunk.js",
+    "main.js.map": "/static/js/main.109f8fc7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2619689c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2619689c.js.map",
-    "static/js/2.595204a0.chunk.js": "/static/js/2.595204a0.chunk.js",
-    "static/js/2.595204a0.chunk.js.map": "/static/js/2.595204a0.chunk.js.map",
+    "static/js/2.d8744c78.chunk.js": "/static/js/2.d8744c78.chunk.js",
+    "static/js/2.d8744c78.chunk.js.map": "/static/js/2.d8744c78.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d857572622f0f6dbe17b6043449f2679.js": "/precache-manifest.d857572622f0f6dbe17b6043449f2679.js",
+    "precache-manifest.167bd8092439c162cfc00b0c1eb48e3f.js": "/precache-manifest.167bd8092439c162cfc00b0c1eb48e3f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.7978264c.chunk.css.map": "/static/css/main.7978264c.chunk.css.map",
-    "static/js/2.595204a0.chunk.js.LICENSE.txt": "/static/js/2.595204a0.chunk.js.LICENSE.txt",
+    "static/css/main.c5e48f39.chunk.css.map": "/static/css/main.c5e48f39.chunk.css.map",
+    "static/js/2.d8744c78.chunk.js.LICENSE.txt": "/static/js/2.d8744c78.chunk.js.LICENSE.txt",
     "static/media/Accel.png": "/static/media/Accel.802573dd.png",
     "static/media/Andrew Rivera.jpeg": "/static/media/Andrew Rivera.bdda032d.jpeg",
     "static/media/Anthony Wright.jpeg": "/static/media/Anthony Wright.b2e05131.jpeg",
@@ -32,6 +32,7 @@
     "static/media/Jonathan Nolan.jpeg": "/static/media/Jonathan Nolan.9c07a6ae.jpeg",
     "static/media/Kleiner Perkins.png": "/static/media/Kleiner Perkins.42067be2.png",
     "static/media/Location.png": "/static/media/Location.87c81839.png",
+    "static/media/Main-Profile.svg": "/static/media/Main-Profile.26ed3bbe.svg",
     "static/media/Maria Garcia.jpeg": "/static/media/Maria Garcia.f3d2e458.jpeg",
     "static/media/Mark Lewis.jpeg": "/static/media/Mark Lewis.c36edd6c.jpeg",
     "static/media/Paul Nelson.jpeg": "/static/media/Paul Nelson.9754f2ca.jpeg",
@@ -68,8 +69,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2619689c.js",
-    "static/js/2.595204a0.chunk.js",
-    "static/css/main.7978264c.chunk.css",
-    "static/js/main.c1164775.chunk.js"
+    "static/js/2.d8744c78.chunk.js",
+    "static/css/main.c5e48f39.chunk.css",
+    "static/js/main.109f8fc7.chunk.js"
   ]
 }
