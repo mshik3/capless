@@ -63,38 +63,40 @@ export default class SignUpView extends Component {
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
 							{!this.state.shouldShowConfirmCode && (
-								<form onSubmit={this.handleSignUpSubmit}>
-									<h4>Please fill out some information so we can get started.</h4>
+								<div className="signup-form-div">
+									<form className="signup-form" onSubmit={this.handleSignUpSubmit}>
+										<h3>Sign Up for Capless</h3>
 
-									<div className="form-group">
-										<input
-											type="email"
-											name="email"
-											value={this.state.email}
-											onChange={this.handleChange}
-											className="form-control"
-											placeholder="Email"
-										/>
-									</div>
+										<div className="form-group">
+											<input
+												type="email"
+												name="email"
+												value={this.state.email}
+												onChange={this.handleChange}
+												className="form-control"
+												placeholder="Email Address"
+											/>
+										</div>
 
-									<div className="form-group">
-										<input
-											type="password"
-											name="password"
-											value={this.state.password}
-											onChange={this.handleChange}
-											className="form-control"
-											placeholder="Password"
-										/>
-									</div>
+										<div className="form-group">
+											<input
+												type="password"
+												name="password"
+												value={this.state.password}
+												onChange={this.handleChange}
+												className="form-control"
+												placeholder="Password"
+											/>
+										</div>
 
-									<button type="submit" className="onboarding-btn btn btn-primary btn-block">
-										Continue
-									</button>
-									<p className="forgot-password text-right">
-										<a href="/#/signin">Already registered? Sign in</a>
-									</p>
-								</form>
+										<button type="submit" className="onboarding-btn btn btn-primary btn-block">
+											Continue
+										</button>
+										<p className="forgot-password text-right">
+											<a href="/#/signin">Already registered? Sign in</a>
+										</p>
+									</form>
+								</div>
 							)}
 							{this.state.shouldShowConfirmCode && (
 								<form onSubmit={this.handleConfirmationCodeSubmit}>

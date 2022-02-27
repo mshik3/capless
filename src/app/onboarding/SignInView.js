@@ -44,64 +44,64 @@ export default class SignInView extends Component {
 				<div className="signin-modal-wrapper">
 					<div className="auth-middle">
 						<div className="signin-auth-inner text-xs">
-							<form onSubmit={this.handleSubmit}>
-								<h3>Log in to Capless</h3>
+							<div className="signin-form-div">
+								<form className="signin-form" onSubmit={this.handleSubmit}>
+									<h3>Log in to Capless</h3>
 
-								<div className="form-group">
-									<label>Email address</label>
-									<input
-										type="email"
-										name="email"
-										value={this.state.email}
-										onChange={this.handleChange}
-										className="form-control"
-										placeholder="Enter email"
-									/>
-								</div>
-
-								<div className="form-group">
-									<label>Password</label>
-									<input
-										type="password"
-										name="password"
-										value={this.state.password}
-										onChange={this.handleChange}
-										className="form-control"
-										placeholder="Enter password"
-									/>
-								</div>
-
-								<div className="form-group">
-									<div className="custom-control custom-checkbox">
+									<div className="form-group">
 										<input
-											type="checkbox"
-											className="custom-control-input"
-											id="customCheck1"
-											name="remember_me"
-											value={!this.state.remember_me}
-											onChange={this.handleChange}></input>
-										<label className="custom-control-label" htmlFor="customCheck1">
-											Remember me
-										</label>
+											type="email"
+											name="email"
+											value={this.state.email}
+											onChange={this.handleChange}
+											className="form-control"
+											placeholder="Email Address"
+										/>
 									</div>
-								</div>
 
-								<button type="submit" className="onboarding-btn btn btn-primary btn-block">
-									Submit
-								</button>
+									<div className="form-group">
+										<input
+											type="password"
+											name="password"
+											value={this.state.password}
+											onChange={this.handleChange}
+											className="form-control"
+											placeholder="Password"
+										/>
+									</div>
 
-								<p className="sign-in-reroutes">
-									<span className="sign-in-instead">
-										Not on Capless? <a href="/#/signup">Create an account</a>
-									</span>
-									<span className="forgot-password">
-										<a href="#">Forgot password?</a>
-									</span>
-								</p>
-								{/* <p className="forgot-password text-right">
+									<div className="form-group">
+										<div className="custom-control custom-checkbox">
+											<input
+												type="checkbox"
+												className="custom-control-input"
+												id="customCheck1"
+												name="remember_me"
+												value={!this.state.remember_me}
+												onChange={this.handleChange}></input>
+											<label className="custom-control-label" htmlFor="customCheck1">
+												Remember me
+											</label>
+										</div>
+									</div>
+
+									<button type="submit" className="onboarding-btn btn btn-primary btn-block">
+										Submit
+									</button>
+
+									<p className="sign-in-reroutes">
+										<span className="sign-in-instead">
+											Not on Capless? <a href="/#/signup">Create an account</a>
+										</span>
+										<span className="forgot-password">
+											<a href="#">Forgot password?</a>
+										</span>
+									</p>
+									{/* <p className="forgot-password text-right">
 									<a href="#">Forgot password?</a>
 								</p> */}
-							</form>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
