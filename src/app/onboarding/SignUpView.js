@@ -4,6 +4,7 @@ import { signUp, confirmSignUp } from "./api/UserAuth";
 import InformationalTiles from "./components/InformationalTiles";
 import SignInView from "./SignInView";
 import { Link } from "react-router-dom";
+import Image from "../../common/elements/Image";
 
 export default class SignUpView extends Component {
 	constructor(props) {
@@ -54,11 +55,13 @@ export default class SignUpView extends Component {
 
 	render() {
 		return (
-			<div>
-				<InformationalTiles />
-				<div className="auth-right-wrapper">
+			<div className="signup-parent">
+				<div className="signup-image">
+					<Image src={require("./../../assets/images/sign_up/Main-Profile.svg")} alt="Sign Up Graphic" />
+				</div>
+				<div className="signup-modal-wrapper">
 					<div className="auth-middle">
-						<div className="auth-inner text-xs">
+						<div className="signup-auth-inner text-xs">
 							{!this.state.shouldShowConfirmCode && (
 								<form onSubmit={this.handleSignUpSubmit}>
 									<h4>Please fill out some information so we can get started.</h4>

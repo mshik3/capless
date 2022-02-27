@@ -41,7 +41,7 @@ export default class SignInView extends Component {
 				<div className="signin-image">
 					<Image src={require("./../../assets/images/sign_in/Business-deal.svg")} alt="Sign In Graphic" />
 				</div>
-				<div className="sign-in-modal-wrapper">
+				<div className="signin-modal-wrapper">
 					<div className="auth-middle">
 						<div className="signin-auth-inner text-xs">
 							<form onSubmit={this.handleSubmit}>
