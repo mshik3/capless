@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderCard from "../../companyprofile/components/HeaderCard";
+import HeaderCard from "../../profile/components/HeaderCard";
 import classNames from "classnames";
 import "../style/mini-company-profile.scss";
 

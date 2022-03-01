@@ -6,7 +6,7 @@ import TeamSizeCard from "./components/TeamSizeCard";
 import LocationCard from "./components/LocationCard";
 import TeamMembersVCCard from "./components/TeamMembersVCCard";
 import IndustryCard from "./components/IndustryCard";
-import "./style/company-profile.scss";
+import "./style/profile.scss";
 
 const VCProfile = (props) => {
 	let params = {

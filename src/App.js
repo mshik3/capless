@@ -18,8 +18,9 @@ import MessageView from "./app/messages/MessageView";
 import SignInView from "./app/onboarding/SignInView";
 import SignUpView from "./app/onboarding/SignUpView";
 import Feed from "./app/feed/Feed";
-import CompanyProfile from "./app/companyprofile/CompanyProfile";
-import VCProfile from "./app/companyprofile/VCProfile";
+import CompanyProfile from "./app/profile/CompanyProfile";
+import UserProfile from "./app/profile/UserProfile";
+import VCProfile from "./app/profile/VCProfile";
 import Settings from "./app/settings/Settings";
 
 import Amplify from "aws-amplify";
@@ -55,6 +56,7 @@ const App = () => {
 					<AppRoute path={process.env.PUBLIC_URL + "/aboutcapless"} component={AboutUs} layout={LayoutDefault} />
 					<AppRoute path={process.env.PUBLIC_URL + "/feed"} component={Feed} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/company"} component={CompanyProfile} layout={LayoutApp} />
+					<AppRoute path={process.env.PUBLIC_URL + "/profile"} component={UserProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
