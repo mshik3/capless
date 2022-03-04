@@ -7,7 +7,8 @@ import TeamSizeCard from "./components/TeamSizeCard";
 import LocationCard from "./components/LocationCard";
 import TeamMembersCard from "./components/TeamMembersCard";
 import FastFactCard from "./components/FastFactCard";
-import "./style/profile.scss";
+import "./style/company-profile.scss";
+import "./style/cards.scss";
 
 const CompanyProfile = (props) => {
 	let params = {

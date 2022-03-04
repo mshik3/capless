@@ -6,7 +6,8 @@ import TeamSizeCard from "./components/TeamSizeCard";
 import LocationCard from "./components/LocationCard";
 import TeamMembersVCCard from "./components/TeamMembersVCCard";
 import IndustryCard from "./components/IndustryCard";
-import "./style/profile.scss";
+import "./style/company-profile.scss";
+import "./style/cards.scss";
 
 const VCProfile = (props) => {
 	let params = {
@@ -30,7 +31,7 @@ const VCProfile = (props) => {
 					<TeamSizeCard classes={["profile-card", "small-card", "card-last"]} />
 				</div>
 				<div className="card-row">
-					<IndustryCard classes={["profile-card", "small-card"]} header="Agritech" content="Industry" />
+					<IndustryCard classes={["profile-card", "small-card", "center-text"]} header="Agritech" content="Industry" />
 					<TeamMembersVCCard classes={["profile-card", "medium-card", "card-last"]} />
 				</div>
 			</div>

@@ -1,0 +1,41 @@
+.user-profile {
+	margin-top: 30px;
+	padding: 5px;
+	width: 100%;
+    position: relative;
+
+    p, h1, h2, h3, h4, h5 {
+		margin: 0px;
+        color: #222;
+	}
+
+    p {
+        font-size: 18px;
+        text-align: left;
+        color: #777;
+    }
+
+    .user-profile-header {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+    }
+
+    .user-profile-image {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+    
+    .user-profile-info {
+        width: 100%;
+    }
+
+    .summary {
+        margin-top: 5px;
+        color: #222;
+        font-style: italic;
+    }
+
+}

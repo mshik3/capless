@@ -1,0 +1,41 @@
+.company-profile {
+	position: relative;
+	margin-top: 30px;
+	padding: 5px;
+	width: 100%;
+
+    h1, h2, h3, h4, h5 {
+		margin: 0px;
+	}
+
+    p {
+        font-size: 18px;
+        text-align: left;
+        padding-left: 10px;
+        color: #777;
+    }
+
+    .company-profile-header {
+        height: 80px;
+        display: table;
+        padding: 20px;
+    }
+
+    .company-profile-image {
+        float: left;
+        width: 90px;
+        height: 90px;
+        border-radius: 10px;
+    }
+
+    .company-profile-name {
+        text-align: left;
+        vertical-align: middle;
+        display: table-cell;
+        padding-left: 30px;
+        font-size: 50px;
+    }
+
+}
+
+

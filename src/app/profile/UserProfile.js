@@ -1,6 +1,9 @@
 import React from "react";
 import UserHeaderCard from "./components/UserHeaderCard";
-import "./style/profile.scss";
+import LocationCard from "./components/LocationCard";
+import IndustryCard from "./components/IndustryCard";
+import "./style/user-profile.scss";
+import "./style/cards.scss";
 
 const UserProfile = (props) => {
 	let params = {
@@ -12,8 +15,12 @@ const UserProfile = (props) => {
 	}
 	return (
 		<div className="container-app">
-			<div className="company-profile">
-				<UserHeaderCard params={params} />			
+			<div className="user-profile">
+				<UserHeaderCard params={params} />
+				<div className="card-row">
+					<LocationCard classes={["profile-card", "medium-card"]} />
+					<IndustryCard classes={["profile-card", "small-card", "card-last", "center-text"]} />
+				</div>		
 			</div>
 		</div>
 	);
