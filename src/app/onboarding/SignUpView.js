@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./style/signup.scss";
 import { signUp, confirmSignUp } from "./api/UserAuth";
-import InformationalTiles from "./components/InformationalTiles";
-import SignInView from "./SignInView";
-import { Link } from "react-router-dom";
 import Image from "../../common/elements/Image";
+import { createUser } from "../feed/api/CreateUser";
 
 export default class SignUpView extends Component {
 	constructor(props) {
@@ -38,10 +36,11 @@ export default class SignUpView extends Component {
 		signUp(this.state.email, this.state.password);
 
 		this.setState({
+			username: this.state.email,
 			shouldShowConfirmCode: true,
 		});
 
-		// Call lambda to start signup for user
+		console.log("The username is " + this.state.username);
 	}
 
 	handleConfirmationCodeSubmit(event) {
@@ -50,7 +49,7 @@ export default class SignUpView extends Component {
 
 		confirmSignUp(this.state.email, this.state.confirmationCode);
 
-		// Call lambda to start signup for user
+		createUser(this.state.username);
 	}
 
 	render() {
@@ -99,23 +98,25 @@ export default class SignUpView extends Component {
 								</div>
 							)}
 							{this.state.shouldShowConfirmCode && (
-								<form onSubmit={this.handleConfirmationCodeSubmit}>
-									<h4>Check your email to confirm your email!</h4>
-									<div className="form-group">
-										<input
-											type="input"
-											name="confirmationCode"
-											value={this.state.confirmationCode}
-											onChange={this.handleChange}
-											className="form-control"
-											placeholder="Confirmation Code"
-										/>
-									</div>
+								<div className="signup-form-div">
+									<form className="signup-form" onSubmit={this.handleConfirmationCodeSubmit}>
+										<h4>Check your email to confirm your account!</h4>
+										<div className="form-group">
+											<input
+												type="input"
+												name="confirmationCode"
+												value={this.state.confirmationCode}
+												onChange={this.handleChange}
+												className="form-control"
+												placeholder="Confirmation Code"
+											/>
+										</div>
 
-									<button type="submit" className="onboarding-btn btn btn-primary btn-block">
-										Submit
-									</button>
-								</form>
+										<button type="submit" className="onboarding-btn btn btn-primary btn-block">
+											Submit
+										</button>
+									</form>
+								</div>
 							)}
 						</div>
 					</div>
