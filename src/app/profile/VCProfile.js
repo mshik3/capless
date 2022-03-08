@@ -4,24 +4,39 @@ import FundSizeCard from "./components/FundSizeCard";
 import PortfolioCard from "./components/PortfolioCard";
 import TeamSizeCard from "./components/TeamSizeCard";
 import LocationCard from "./components/LocationCard";
-import TeamMembersVCCard from "./components/TeamMembersVCCard";
+import TeamMembersCard from "./components/TeamMembersCard";
 import IndustryCard from "./components/IndustryCard";
 import "./style/company-profile.scss";
 import "./style/cards.scss";
 
 const VCProfile = (props) => {
 	let params = {
-		name: "Venture Standard",
-		aboutUs:
-			"Venture Standard is an agriculture technology focused investment firm with a history of providing its portfolio companies with a strong and dependable network, future funding options, and access to a wide talent pool to work with. Learn more about Venture Standard's mission below!",
+		name: "Venture Standard"
 	};
-	if (props) {
+	if (props.location.state) {
 		params = props.location.state;
 	}
+	const aboutUs = "Venture Standard is an agriculture technology focused investment firm with a history of providing its portfolio companies with a strong and dependable network, future funding options, and access to a wide talent pool to work with. Learn more about Venture Standard's mission below!";
+
+	const teamMembers = [
+		{
+			name: "Rebecca Sanford",
+			role: "Partner"
+		},
+		{
+			name: "Tony Morrow",
+			role: "Partner"
+		},
+		{
+			name: "Rodney Clark",
+			role: "Associate"
+		}
+	];
+
 	return (
 		<div className="container-app">
 			<div className="company-profile">
-				<HeaderCard params={params} />
+				<HeaderCard name={params.name} aboutUs={aboutUs}/>
 				<div className="card-row">
 					<FundSizeCard classes={["profile-card", "small-card"]} />
 					<PortfolioCard classes={["profile-card", "medium-card", "card-last"]} />
@@ -32,7 +47,7 @@ const VCProfile = (props) => {
 				</div>
 				<div className="card-row">
 					<IndustryCard classes={["profile-card", "small-card", "center-text"]} header="Agritech" content="Industry" />
-					<TeamMembersVCCard classes={["profile-card", "medium-card", "card-last"]} />
+					<TeamMembersCard classes={["profile-card", "medium-card", "card-last"]} teamMembers={teamMembers} />
 				</div>
 			</div>
 		</div>

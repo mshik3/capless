@@ -38,4 +38,18 @@
         font-style: italic;
     }
 
+    .company-profile-image {
+        width: 90px;
+        height: 90px;
+        border-radius: 10px;
+    }
+
+    .company-profile-link {
+        min-width: 90px;
+        height: 90px;
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+    }
+
 }
