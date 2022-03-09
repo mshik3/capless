@@ -49,7 +49,7 @@ const CompanyProfile = (props) => {
 					<TeamSizeCard classes={["profile-card", "small-card", "card-last"]} />
 				</div>
 				<div className="card-row">
-					<TeamMembersCard classes={["profile-card", "large-card"]} teamMembers={teamMembers}/>
+					<TeamMembersCard classes={["profile-card", "large-card"]} teamMembers={teamMembers} companyName={params.name} companyPath="/company"/>
 				</div>
 				<div className="card-row">
 					<FastFactCard

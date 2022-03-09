@@ -8,9 +8,10 @@ import "./style/cards.scss";
 const UserProfile = (props) => {
 	let params = {
 		name: "Paul Nelson",
-        aboutMe: "CEO & Co-Founder of Pear Products"
+		companyName: "Pear Products",
+		companyPath: "/company"
 	};
-	if (props) {
+	if (props.location.state) {
 		params = props.location.state;
 	}
 	return (

@@ -67,13 +67,6 @@ const Header = ({ className, navPosition, hideNav, hideSignin, bottomOuterDivide
 
 	const classes = classNames("site-header", bottomOuterDivider && "has-bottom-divider", className);
 
-	const companyLinkObject = {
-		pathname: "/company",
-		state: {
-			name: "Pear Products"
-		},
-	};
-
 	return (
 		<header {...props} className={classes}>
 			<div className="container">
@@ -99,7 +92,7 @@ const Header = ({ className, navPosition, hideNav, hideSignin, bottomOuterDivide
 											</Link>
 										</li>
 										<li>
-											<Link className="nav-bar-icon" to={companyLinkObject}>
+											<Link className="nav-bar-icon" to="/company">
 												<CompanyProfileIcon className="nav-bar-icon" />
 											</Link>
 										</li>

@@ -3,20 +3,12 @@ import Image from "../../../common/elements/Image";
 import { Link } from "react-router-dom";
 
 const UserHeaderCard = ({ params }) => {
-	if (!params) {
-		params = {
-			name: "Paul Nelson",
-			companyName: "Pear Products"
-		};
-	}
-
 	const companyLinkObject = {
-		pathname: "/company",
+		pathname: params.companyPath,
 		state: {
 			name: params.companyName
 		}
 	};
-
 	return (
 		<>
 			<div className="profile-card">

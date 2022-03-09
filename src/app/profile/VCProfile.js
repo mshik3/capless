@@ -47,7 +47,7 @@ const VCProfile = (props) => {
 				</div>
 				<div className="card-row">
 					<IndustryCard classes={["profile-card", "small-card", "center-text"]} header="Agritech" content="Industry" />
-					<TeamMembersCard classes={["profile-card", "medium-card", "card-last"]} teamMembers={teamMembers} />
+					<TeamMembersCard classes={["profile-card", "medium-card", "card-last"]} teamMembers={teamMembers} companyName={params.name} companyPath="/vc" />
 				</div>
 			</div>
 		</div>
