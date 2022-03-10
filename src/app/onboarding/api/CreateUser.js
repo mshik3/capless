@@ -1,12 +1,13 @@
 const USER_ENDPOINT = "https://lvb9zei4qj.execute-api.us-east-1.amazonaws.com/prod/";
 
-const createUser = async (username) => {
-	console.log(JSON.stringify({ username: username }));
+const createUser = async (username, startup_or_investor) => {
+	var json_body = JSON.stringify({ username: username, startup_or_investor: startup_or_investor });
+	console.log(json_body);
 	const requestOptions = {
 		mode: "cors",
 		method: "PUT",
 		headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
-		body: JSON.stringify({ username: "mshik3@gmail.com" }),
+		body: json_body,
 	};
 	fetch(USER_ENDPOINT, requestOptions)
 		.then(async (response) => {

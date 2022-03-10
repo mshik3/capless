@@ -9,7 +9,11 @@ export default class SignUpView extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			startup_or_investor: "",
+            
+            optin: "",
+			firstname: "",
+			lastname: "",
+
 			username: "",
 			password: "",
 			email: "",
@@ -18,14 +22,7 @@ export default class SignUpView extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
 		this.handleConfirmationCodeSubmit = this.handleConfirmationCodeSubmit.bind(this);
-		this.onRadioChange = this.onRadioChange.bind(this);
 	}
-
-	onRadioChange = (e) => {
-		this.setState({
-			startup_or_investor: e.target.value,
-		});
-	};
 
 	handleChange(event) {
 		const target = event.target;
@@ -56,7 +53,7 @@ export default class SignUpView extends Component {
 
 		// confirmSignUp(this.state.email, this.state.confirmationCode);
 
-		createUser(this.state.username, this.state.startup_or_investor);
+		createUser(this.state.username);
 	}
 
 	render() {
@@ -94,35 +91,11 @@ export default class SignUpView extends Component {
 												placeholder="Password"
 											/>
 										</div>
-										<br />
-										<div className="form-group">
-											Are you part of a startup or an accredited investor?
-											<br />
-											<label>
-												<input
-													type="radio"
-													value="startup"
-													onChange={this.onRadioChange}
-													checked={this.state.startup_or_investor === "startup"}
-													className="signup-radio"
-												/>
-												Startup
-											</label>
-											<br />
-											<label>
-												<input
-													type="radio"
-													value="investor"
-													onChange={this.onRadioChange}
-													checked={this.state.startup_or_investor === "investor"}
-													className="signup-radio"
-												/>
-												Investor
-											</label>
-										</div>
-										<button type="submit" className="onboarding-btn btn btn-primary btn-block">
-											Continue
-										</button>
+										<Link to="/onboarding">
+											<button type="submit" className="onboarding-btn btn btn-primary btn-block">
+												Continue
+											</button>
+										</Link>
 										<p className="forgot-password text-right">
 											<a href="/#/signin">Already registered? Sign in</a>
 										</p>
@@ -143,6 +116,7 @@ export default class SignUpView extends Component {
 												placeholder="Confirmation Code"
 											/>
 										</div>
+
 										<button type="submit" className="onboarding-btn btn btn-primary btn-block">
 											Submit
 										</button>
