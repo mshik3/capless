@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style/signup.scss";
 import { signUp, confirmSignUp } from "./api/UserAuth";
 import Image from "../../common/elements/Image";
-import { createUser } from "../feed/api/CreateUser";
+import { createUser } from "./api/CreateUser";
 
 export default class SignUpView extends Component {
 	constructor(props) {
@@ -33,21 +33,21 @@ export default class SignUpView extends Component {
 		console.log("An email was submitted: " + this.state.email + " " + this.state.password);
 		event.preventDefault();
 
-		signUp(this.state.email, this.state.password);
+		// signUp(this.state.email, this.state.password);
 
 		this.setState({
 			username: this.state.email,
 			shouldShowConfirmCode: true,
 		});
 
-		console.log("The username is " + this.state.username);
+		alert("welcome! " + this.state.email);
 	}
 
 	handleConfirmationCodeSubmit(event) {
 		console.log("A confirmation code was submitted: " + this.state.confirmationCode);
 		event.preventDefault();
 
-		confirmSignUp(this.state.email, this.state.confirmationCode);
+		// confirmSignUp(this.state.email, this.state.confirmationCode);
 
 		createUser(this.state.username);
 	}
