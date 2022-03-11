@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import "./style/signup.scss";
 import { signUp, confirmSignUp } from "./api/UserAuth";
 import { Link } from "react-router-dom";
+import OnboardingView from "./InvestorOnboardingView";
 import Image from "../../common/elements/Image";
-import { createUser } from "./api/CreateUser";
+import { UpdateUser } from "./api/UpdateUser";
+
+import { useHistory } from "react-router-dom";
 
 export default class SignUpView extends Component {
 	constructor(props) {
@@ -56,7 +59,14 @@ export default class SignUpView extends Component {
 
 		// confirmSignUp(this.state.email, this.state.confirmationCode);
 
-		createUser(this.state.username, this.state.startup_or_investor);
+		UpdateUser(this.state.username, this.state.startup_or_investor);
+
+		if (this.state.startup_or_investor == 'startup') {
+			document.getElementById("routeToStartupOnboarding").click();
+		}
+		else if (this.state.startup_or_investor == 'investor') {
+			document.getElementById("routeToInvestorOnboarding").click()
+		}
 	}
 
 	render() {
@@ -131,7 +141,10 @@ export default class SignUpView extends Component {
 							)}
 							{this.state.shouldShowConfirmCode && (
 								<div className="signup-form-div">
-									<form className="signup-form" onSubmit={this.handleConfirmationCodeSubmit}>
+									<form
+										className="signup-form"
+										onSubmit={this.handleConfirmationCodeSubmit}
+										action="/#/onboarding">
 										<h4>Check your email to confirm your account!</h4>
 										<div className="form-group">
 											<input
@@ -147,6 +160,8 @@ export default class SignUpView extends Component {
 											Submit
 										</button>
 									</form>
+									<Link to={{ pathname: "/investor-onboarding", username: this.state.username }} id="routeToInvestorOnboarding"></Link>
+									<Link to="/startup-onboarding" id="routeToStartupOnboarding" username={this.state.username}></Link>
 								</div>
 							)}
 						</div>

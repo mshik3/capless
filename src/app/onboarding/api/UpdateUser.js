@@ -1,8 +1,19 @@
 const USER_ENDPOINT = "https://lvb9zei4qj.execute-api.us-east-1.amazonaws.com/prod/";
 
-const createUser = async (username, startup_or_investor) => {
-	var json_body = JSON.stringify({ username: username, startup_or_investor: startup_or_investor });
-	console.log(json_body);
+const UpdateUser = async (username, startup_or_investor, data) => {
+	console.log("username: " + username);
+
+	console.log("data: " + data);
+
+	var full_json = { username: username, startup_or_investor: startup_or_investor };
+
+	if (data !== null) {
+		full_json = Object.assign(full_json, data);
+	}
+
+	var json_body = JSON.stringify(full_json);
+
+	console.log("json_body: " + json_body);
 	const requestOptions = {
 		mode: "cors",
 		method: "PUT",
@@ -30,4 +41,4 @@ const createUser = async (username, startup_or_investor) => {
 		});
 };
 
-export { createUser };
+export { UpdateUser };

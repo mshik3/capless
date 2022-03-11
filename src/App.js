@@ -17,7 +17,7 @@ import AboutUs from "./views/AboutUs";
 import MessageView from "./app/messages/MessageView";
 import SignInView from "./app/onboarding/SignInView";
 import SignUpView from "./app/onboarding/SignUpView";
-import OnboardingView from "./app/onboarding/OnboardingView";
+import OnboardingView from "./app/onboarding/InvestorOnboardingView";
 import Feed from "./app/feed/Feed";
 import CompanyProfile from "./app/profile/CompanyProfile";
 import UserProfile from "./app/profile/UserProfile";
@@ -26,6 +26,8 @@ import Settings from "./app/settings/Settings";
 
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
+import StartupOnboardingView from "./app/onboarding/InvestorOnboardingView";
+import InvestorOnboardingView from "./app/onboarding/InvestorOnboardingView";
 Amplify.configure(awsconfig);
 
 // Initialize Google Analytics
@@ -63,7 +65,11 @@ const App = () => {
 					<AppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={Layout_NoHeader} />
 					<AppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={Layout_NoHeader} />
-					<AppRoute path={process.env.PUBLIC_URL + "/onboarding"} component={OnboardingView} layout={Layout_NoHeader} />
+					<AppRoute
+						path={process.env.PUBLIC_URL + "/investor-onboarding"}
+						component={InvestorOnboardingView}
+						layout={Layout_NoHeader}
+					/>
 				</Switch>
 			)}
 		/>
