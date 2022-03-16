@@ -27,7 +27,44 @@
         border-radius: 10px;
         margin-right: 20px;
     }
+
+    .name-edit {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .edit-container {
+        display: flex;
+        visibility: hidden;
+    }
+
+    .edit-container:hover {
+        #edit-static {
+            display: none;
+        }
+
+        #edit-hover {
+            visibility: visible;
+        }
+    }
+
+    .edit {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+
+    }
+
+    #edit-hover {
+        visibility: hidden;
+    }
     
+    .user-profile-header:hover {
+        .edit-container {
+            visibility: visible;
+        }
+    }
+
     .user-profile-info {
         width: 100%;
     }
@@ -50,6 +87,15 @@
         cursor: pointer;
         position: absolute;
         right: 30px;
+    }
+
+    .edit-profile {
+        width: 400px;
+        min-height: 600px;
+        background-color: #fff;
+        position: absolute;
+        left: 0px;
+        top: 0px;
     }
 
 }

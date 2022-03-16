@@ -21,7 +21,7 @@ const UserProfile = (props) => {
 				<div className="card-row">
 					<LocationCard classes={["profile-card", "medium-card"]} />
 					<IndustryCard classes={["profile-card", "small-card", "card-last", "center-text"]} />
-				</div>		
+				</div>
 			</div>
 		</div>
 	);
