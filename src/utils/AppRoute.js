@@ -1,5 +1,6 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, useHistory } from "react-router-dom";
+import { Auth } from 'aws-amplify'
 
 const AppRoute = ({ component: Component, layout: Layout, ...componentProps }) => {
 	return (
@@ -13,4 +14,34 @@ const AppRoute = ({ component: Component, layout: Layout, ...componentProps }) =
 	);
 };
 
-export default AppRoute;
+const ProtectedAppRoute = ({ component: Component, layout: Layout, ...componentProps }) => {
+
+	const history = useHistory();
+	const isAuthenticated = () => {
+        Auth.currentSession().then( response => {
+            if(!response.isValid()) {
+				console.log('not logged in');
+				history.push('/signin');
+            }
+        }).catch(() => {
+			console.log('not logged in');
+			history.push('/signin');
+        });
+    };
+
+	useEffect(() => {
+        isAuthenticated();
+    }, []);
+
+	return (
+		<Route
+			render={() => (
+				<Layout>
+					<Component {...componentProps} />
+				</Layout>
+			)}
+		/>
+	);
+};
+
+export { AppRoute, ProtectedAppRoute};

@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useLocation, Switch } from "react-router-dom";
-import AppRoute from "./utils/AppRoute";
+import { AppRoute, ProtectedAppRoute } from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
 import ReactGA from "react-ga";
 
@@ -23,11 +23,12 @@ import CompanyProfile from "./app/profile/CompanyProfile";
 import UserProfile from "./app/profile/UserProfile";
 import VCProfile from "./app/profile/VCProfile";
 import Settings from "./app/settings/Settings";
-
-import Amplify from "aws-amplify";
-import awsconfig from "./aws-exports";
 import StartupOnboardingView from "./app/onboarding/InvestorOnboardingView";
 import InvestorOnboardingView from "./app/onboarding/InvestorOnboardingView";
+
+// Amplify
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 
 // Initialize Google Analytics
@@ -57,11 +58,11 @@ const App = () => {
 				<Switch>
 					<AppRoute exact path={process.env.PUBLIC_URL + "/"} component={Home} layout={LayoutDefault} />
 					<AppRoute path={process.env.PUBLIC_URL + "/aboutcapless"} component={AboutUs} layout={LayoutDefault} />
-					<AppRoute path={process.env.PUBLIC_URL + "/feed"} component={Feed} layout={LayoutApp} />
+					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/feed"} component={Feed} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/company"} component={CompanyProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/profile"} component={UserProfile} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp} />
+					<AppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp}/>
 					<AppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
 					<AppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={Layout_NoHeader} />
 					<AppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={Layout_NoHeader} />

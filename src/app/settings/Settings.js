@@ -2,6 +2,7 @@ import React from "react";
 import SettingsRow from "./components/SettingsRow";
 import { sortableContainer, sortableElement } from "react-sortable-hoc";
 import Button from "../../common/elements/Button";
+import { signOut } from "../onboarding/api/UserAuth";
 import "./style/settings.scss";
 
 const SortableItem = sortableElement(({ setting }) => <SettingsRow name={setting} />);
@@ -52,8 +53,8 @@ class Settings extends React.Component {
 					</SortableContainer>
 					<h3>Other Settings</h3>
 					<Button>Upgrade your Account</Button>
-					<Button>Update your Profile</Button>
-					<Button className="button-last">Update Payment Method</Button>
+					<Button>Update Payment Method</Button>
+					<Button className="button-last" onClick={() => signOut()}>Sign Out</Button>
 				</div>
 			</div>
 		);

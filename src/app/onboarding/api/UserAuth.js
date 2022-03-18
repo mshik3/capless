@@ -20,6 +20,15 @@ const signIn = async (username, password) => {
 	}
 };
 
+const signOut = async () => {
+	try {
+		console.log("signing out");
+		await Auth.signOut();
+	} catch (error) {
+		console.log("error signing out", error);
+	}
+};
+
 const confirmSignUp = async (email, code) => {
 	try {
 		await Auth.confirmSignUp(email, code);
@@ -29,4 +38,4 @@ const confirmSignUp = async (email, code) => {
 	}
 };
 
-export { signUp, signIn, confirmSignUp };
+export { signUp, signIn, signOut, confirmSignUp };
