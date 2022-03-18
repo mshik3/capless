@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { useEffect, Component } from "react";
 import "./style/signin.scss";
 import { signIn } from "./api/UserAuth";
 import Image from "../../common/elements/Image";
+import { Link } from "react-router-dom";
 
 export default class SignInView extends Component {
 	constructor(props) {
@@ -29,11 +30,13 @@ export default class SignInView extends Component {
 			"An email was submitted: " + this.state.email + " " + this.state.password + " " + this.state.remember_me
 		);
 		event.preventDefault();
-
-		signIn(this.state.email, this.state.password, this.state.remember_me);
-
-		// Call lambda to start signup for user
-	}
+		signIn(this.state.email, this.state.password, this.state.remember_me, this.routeToFeed).then((success) => {
+			if (success) {
+				document.getElementById("routeToFeed").click();
+				// Call lambda to start signup for user
+			}
+		})
+	};
 
 	render() {
 		return (
@@ -105,6 +108,7 @@ export default class SignInView extends Component {
 						</div>
 					</div>
 				</div>
+			<Link to={{ pathname: "/feed" }} id="routeToFeed"></Link>
 			</div>
 		);
 	}

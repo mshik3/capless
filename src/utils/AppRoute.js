@@ -20,11 +20,9 @@ const ProtectedAppRoute = ({ component: Component, layout: Layout, ...componentP
 	const isAuthenticated = () => {
         Auth.currentSession().then( response => {
             if(!response.isValid()) {
-				console.log('not logged in');
 				history.push('/signin');
             }
         }).catch(() => {
-			console.log('not logged in');
 			history.push('/signin');
         });
     };
