@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8fa937d9.chunk.css",
-    "main.js": "/static/js/main.706b89a6.chunk.js",
-    "main.js.map": "/static/js/main.706b89a6.chunk.js.map",
+    "main.css": "/static/css/main.2f98fef2.chunk.css",
+    "main.js": "/static/js/main.2bc265a6.chunk.js",
+    "main.js.map": "/static/js/main.2bc265a6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2619689c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2619689c.js.map",
     "static/js/2.d2dcc382.chunk.js": "/static/js/2.d2dcc382.chunk.js",
     "static/js/2.d2dcc382.chunk.js.map": "/static/js/2.d2dcc382.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.44a5a857d9df2c9fd8aa996a48f8c170.js": "/precache-manifest.44a5a857d9df2c9fd8aa996a48f8c170.js",
+    "precache-manifest.1ff25f8cb6148473b9d7e625cf1f0df6.js": "/precache-manifest.1ff25f8cb6148473b9d7e625cf1f0df6.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.8fa937d9.chunk.css.map": "/static/css/main.8fa937d9.chunk.css.map",
+    "static/css/main.2f98fef2.chunk.css.map": "/static/css/main.2f98fef2.chunk.css.map",
     "static/js/2.d2dcc382.chunk.js.LICENSE.txt": "/static/js/2.d2dcc382.chunk.js.LICENSE.txt",
     "static/media/Abhinav.jpeg": "/static/media/Abhinav.2ff48a08.jpeg",
     "static/media/Accel.png": "/static/media/Accel.802573dd.png",
@@ -74,7 +74,7 @@
   "entrypoints": [
     "static/js/runtime-main.2619689c.js",
     "static/js/2.d2dcc382.chunk.js",
-    "static/css/main.8fa937d9.chunk.css",
-    "static/js/main.706b89a6.chunk.js"
+    "static/css/main.2f98fef2.chunk.css",
+    "static/js/main.2bc265a6.chunk.js"
   ]
 }
