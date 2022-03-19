@@ -35,7 +35,7 @@ export default class SignInView extends Component {
 				document.getElementById("routeToFeed").click();
 				// Call lambda to start signup for user
 			}
-		})
+		});
 	};
 
 	render() {
@@ -108,7 +108,7 @@ export default class SignInView extends Component {
 						</div>
 					</div>
 				</div>
-			<Link to={{ pathname: "/feed" }} id="routeToFeed"></Link>
+				<Link to={{ pathname: "/feed" }} id="routeToFeed"></Link>
 			</div>
 		);
 	}

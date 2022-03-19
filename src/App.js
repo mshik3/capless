@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useLocation, Switch } from "react-router-dom";
-import { AppRoute, ProtectedAppRoute } from "./utils/AppRoute";
+import { AppRoute, ProtectedAppRoute, UnProtectedAppRoute } from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
 import ReactGA from "react-ga";
 
@@ -59,13 +59,13 @@ const App = () => {
 					<AppRoute exact path={process.env.PUBLIC_URL + "/"} component={Home} layout={LayoutDefault} />
 					<AppRoute path={process.env.PUBLIC_URL + "/aboutcapless"} component={AboutUs} layout={LayoutDefault} />
 					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/feed"} component={Feed} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/company"} component={CompanyProfile} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/profile"} component={UserProfile} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp}/>
-					<AppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
-					<AppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={Layout_NoHeader} />
-					<AppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={Layout_NoHeader} />
+					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/company"} component={CompanyProfile} layout={LayoutApp} />
+					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/profile"} component={UserProfile} layout={LayoutApp} />
+					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
+					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp}/>
+					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
+					<UnProtectedAppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={Layout_NoHeader} />
+					<UnProtectedAppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={Layout_NoHeader} />
 					<AppRoute
 						path={process.env.PUBLIC_URL + "/investor-onboarding"}
 						component={InvestorOnboardingView}

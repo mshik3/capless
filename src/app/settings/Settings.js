@@ -4,6 +4,7 @@ import { sortableContainer, sortableElement } from "react-sortable-hoc";
 import Button from "../../common/elements/Button";
 import { signOut } from "../onboarding/api/UserAuth";
 import "./style/settings.scss";
+import { Link } from "react-router-dom";
 
 const SortableItem = sortableElement(({ setting }) => <SettingsRow name={setting} />);
 const SortableContainer = sortableContainer(({ children }) => {
@@ -37,6 +38,14 @@ class Settings extends React.Component {
 		}));
 	};
 
+	signOutHandler = () => {
+		signOut().then((success) => {
+			if (success) {
+				document.getElementById("routeToSignIn").click();
+			}
+		});
+	};
+
 	render() {
 		return (
 			<div className="container-app">
@@ -54,8 +63,9 @@ class Settings extends React.Component {
 					<h3>Other Settings</h3>
 					<Button>Upgrade your Account</Button>
 					<Button>Update Payment Method</Button>
-					<Button className="button-last" onClick={() => signOut()}>Sign Out</Button>
+					<Button className="button-last" onClick={() => this.signOutHandler()}>Sign Out</Button>
 				</div>
+				<Link to={{ pathname: "/signin" }} id="routeToSignIn"></Link>
 			</div>
 		);
 	}

@@ -26,8 +26,10 @@ const signOut = async () => {
 	try {
 		console.log("signing out");
 		await Auth.signOut();
+		return true;
 	} catch (error) {
 		console.log("error signing out", error);
+		return false;
 	}
 };
 
