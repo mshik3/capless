@@ -1,6 +1,6 @@
 import React from "react";
 // import sections
-import MiniCompanyProfile from "./components/MiniCompanyProfile";
+import MiniUserProfile from "./components/MiniUserProfile";
 import Conversation from "./components/Conversation";
 import MessageBar from "./components/MessageBar";
 import "./style/message-appview.scss";
@@ -10,7 +10,7 @@ function MessageView(props) {
 	return (
 		<>
 			<div className="container-app-lg message-app-view">
-				<MiniCompanyProfile name={"Venture Standard"} />
+				<MiniUserProfile name={"Venture Standard"} />
 				<Conversation params={contentParams} />
 				<MessageBar />
 			</div>
