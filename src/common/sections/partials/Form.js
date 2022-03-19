@@ -19,7 +19,6 @@ function TextInput({ type = "text", label, name }) {
 
 export const Form = ({ onSubmit }) => (
 	<form className="waitlist-form" onSubmit={onSubmit}>
-		<p> Please give us some information! </p>
 		<div className="form-group">
 			<TextInput name="full_name" label="Full Name" />
 		</div>
