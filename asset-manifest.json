@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.bc174498.chunk.css",
-    "main.js": "/static/js/main.bc8503d2.chunk.js",
-    "main.js.map": "/static/js/main.bc8503d2.chunk.js.map",
+    "main.js": "/static/js/main.c4217b0d.chunk.js",
+    "main.js.map": "/static/js/main.c4217b0d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2619689c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2619689c.js.map",
     "static/js/2.a979b92c.chunk.js": "/static/js/2.a979b92c.chunk.js",
     "static/js/2.a979b92c.chunk.js.map": "/static/js/2.a979b92c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.db93dc51ce531efa965a5e975c37ae85.js": "/precache-manifest.db93dc51ce531efa965a5e975c37ae85.js",
+    "precache-manifest.18402dd9ea7c1eea163262fec3eec71a.js": "/precache-manifest.18402dd9ea7c1eea163262fec3eec71a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.bc174498.chunk.css.map": "/static/css/main.bc174498.chunk.css.map",
     "static/js/2.a979b92c.chunk.js.LICENSE.txt": "/static/js/2.a979b92c.chunk.js.LICENSE.txt",
@@ -22,7 +22,7 @@
     "static/media/Business-deal.svg": "/static/media/Business-deal.43cb7de4.svg",
     "static/media/CapTable.png": "/static/media/CapTable.b019586d.png",
     "static/media/Capless_intro.png": "/static/media/Capless_intro.42efc728.png",
-    "static/media/Capless_intro.mov": "/static/media/Capless_intro.949ecf1a.mov",
+    "static/media/Capless_intro.MOV": "/static/media/Capless_intro.88444d40.MOV",
     "static/media/Carl Incerto.jpeg": "/static/media/Carl Incerto.31209b5f.jpeg",
     "static/media/DarkLogoText.png": "/static/media/DarkLogoText.e801d6c8.png",
     "static/media/David Jackson.jpeg": "/static/media/David Jackson.f7634b48.jpeg",
@@ -75,6 +75,6 @@
     "static/js/runtime-main.2619689c.js",
     "static/js/2.a979b92c.chunk.js",
     "static/css/main.bc174498.chunk.css",
-    "static/js/main.bc8503d2.chunk.js"
+    "static/js/main.c4217b0d.chunk.js"
   ]
 }
