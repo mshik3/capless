@@ -11,7 +11,7 @@ const VideoSection = () => {
 			</div>
 			<div className="right">
 				<video
-					src={require("./../../assets/videos/Capless_intro.mp4")}
+					src={require("./../../assets/videos/Capless_intro.mov")}
 					controls="controls"
 					poster={require("./../../assets/videos/Capless_intro.png")}
 				/>
