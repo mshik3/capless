@@ -71,6 +71,11 @@ const App = () => {
 						component={InvestorOnboardingView}
 						layout={Layout_NoHeader}
 					/>
+					<AppRoute
+						path={process.env.PUBLIC_URL + "/startup-onboarding"}
+						component={StartupOnboardingView}
+						layout={Layout_NoHeader}
+					/>
 				</Switch>
 			)}
 		/>

@@ -1,17 +1,15 @@
 import React, { Component, useState } from "react";
-import "./style/investor-onboarding.scss";
+import "./style/startup-onboarding.scss";
 import Select from "react-select";
 import Image from "../../common/elements/Image";
-import { industries, demographic, investment_description } from "./constants";
+import { industries, demographic } from "./constants";
 import { UpdateUser } from "./api/UpdateUser";
-import { UpdateInvestor } from "./api/UpdateInvestor";
 
 import { useForm, Controller } from "react-hook-form";
 
-const InvestorForm = (data) => {
+const StartupForm = (data) => {
 	const [submitted, setSubmitted] = useState();
 	const username = data.username;
-	const company_email = data.company_email;
 
 	const {
 		register,
@@ -26,9 +24,7 @@ const InvestorForm = (data) => {
 
 		setSubmitted(data);
 
-		UpdateUser(username, "investor", company_email);
-
-		UpdateInvestor(username, data);
+		UpdateUser(username, "startup", data);
 
 		console.log(data);
 	};
@@ -77,15 +73,6 @@ const InvestorForm = (data) => {
 			<label>LinkedIN Link</label>
 			<input type="text" {...register("linkedIn_link", { required: true, maxLength: 100 })} />
 
-			<label>Venture Experience</label>
-			<select name="venture_experience" {...register("venture_experience", { required: true })}>
-				<option value="less_than_one_year">&lt; 1 year</option>
-				<option value="one_to_three_years">1-3 years</option>
-				<option value="three_to_five_years">3-5 years</option>
-				<option value="five_to_ten_years">5-10 years</option>
-				<option value="ten_plus_years">10+ years</option>
-			</select>
-
 			<div>
 				<Controller
 					name="industries"
@@ -112,7 +99,7 @@ const InvestorForm = (data) => {
 				<option value="ten_million_to_hundred_million">$10M-$100M</option>
 			</select>
 
-			<label>Investment Region</label>
+			<label>Company Region</label>
 			<select name="investment_region" {...register("investment_region", { required: true })}>
 				<option value="chicago">Chicago</option>
 				<option value="san_francisco">San Francisco</option>
@@ -125,37 +112,16 @@ const InvestorForm = (data) => {
 
 			<div>
 				<Controller
-					name="investment_demographic"
+					name="startup_demographic"
 					control={control}
 					render={({ field }) => {
 						return (
 							<div>
-								<label>Investment Demographic</label>
+								<label>Demographic</label>
 								<Select
-									name="investment_demographic"
-									placeholder="Investment Demographic"
+									name="startup_demographic"
+									placeholder="Startup Demographic"
 									options={demographic}
-									isMulti
-									{...field}
-								/>
-							</div>
-						);
-					}}
-				/>
-			</div>
-
-			<div>
-				<Controller
-					name="investment_description"
-					control={control}
-					render={({ field }) => {
-						return (
-							<div>
-								<label>Investment Description</label>
-								<Select
-									name="investment_description"
-									placeholder="Investment Description"
-									options={investment_description}
 									isMulti
 									{...field}
 								/>
@@ -190,7 +156,7 @@ const InvestorForm = (data) => {
 	);
 };
 
-export default class InvestorOnboardingView extends Component {
+export default class StartupOnboardingView extends Component {
 	constructor(props) {
 		super(props);
 
@@ -211,7 +177,7 @@ export default class InvestorOnboardingView extends Component {
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
 							<div className="signup-form-div">
-								<InvestorForm username={this.username} />
+								<StartupForm username={this.username} />
 							</div>
 						</div>
 					</div>

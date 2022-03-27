@@ -1,15 +1,11 @@
 const USER_ENDPOINT = "https://lvb9zei4qj.execute-api.us-east-1.amazonaws.com/prod/";
 
-const UpdateUser = async (username, startup_or_investor, company_name) => {
+const UpdateInvestor = async (username, data) => {
 	console.log("username: " + username);
 
-	console.log("company_name: " + company_name);
+	console.log("data: " + data);
 
-	var full_json = { username: username, startup_or_investor: startup_or_investor };
-
-	if (company_name !== null) {
-		full_json["company_name"] = company_name
-	}
+    var full_json = Object.assign({ username: username }, data);
 
 	var json_body = JSON.stringify(full_json);
 
@@ -41,4 +37,4 @@ const UpdateUser = async (username, startup_or_investor, company_name) => {
 		});
 };
 
-export { UpdateUser };
+export { UpdateInvestor };

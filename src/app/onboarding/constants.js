@@ -77,7 +77,7 @@ export const industries = [
 	{ value: "wellness_fitness", label: "Wellness & Fitness" },
 ];
 
-export const investment_demographic = [
+export const demographic = [
 	{ value: "female", label: "Female" },
 	{ value: "hispanic_latinx", label: "Hispanic or Latinx" },
 	{ value: "black_african-american", label: "Black or African-American" },

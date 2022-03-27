@@ -161,7 +161,7 @@ export default class SignUpView extends Component {
 										</button>
 									</form>
 									<Link to={{ pathname: "/investor-onboarding", username: this.state.username }} id="routeToInvestorOnboarding"></Link>
-									<Link to="/startup-onboarding" id="routeToStartupOnboarding" username={this.state.username}></Link>
+									<Link to={{ pathname: "/startup-onboarding", username: this.state.username }} id="routeToStartupOnboarding"></Link>
 								</div>
 							)}
 						</div>
