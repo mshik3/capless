@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import "./style/startup-onboarding.scss";
+// import "./style/startup-onboarding.scss";
 import Select from "react-select";
 import Image from "../../common/elements/Image";
 import { industries, demographic } from "./constants";

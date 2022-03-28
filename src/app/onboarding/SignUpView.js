@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./style/signup.scss";
 import { signUp, confirmSignUp } from "./api/UserAuth";
-import { Link } from "react-router-dom";
-import OnboardingView from "./InvestorOnboardingView";
 import Image from "../../common/elements/Image";
 import { UpdateUser } from "./api/UpdateUser";
+import InvestorOnboardingView from "./InvestorOnboardingView";
+import StartupOnboardingView from "./StartupOnboardingView";
 
 import { useHistory } from "react-router-dom";
 
@@ -16,7 +16,10 @@ export default class SignUpView extends Component {
 			username: "",
 			password: "",
 			email: "",
-			shouldShowConfirmCode: false,
+			main: true,
+			codeConfirm: false,
+			investor_onboarding: false,
+			startup_onboarding: false,
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
@@ -47,7 +50,8 @@ export default class SignUpView extends Component {
 
 		this.setState({
 			username: this.state.email,
-			shouldShowConfirmCode: true,
+			main: false,
+			codeConfirm: true,
 		});
 
 		alert("welcome! " + this.state.email);
@@ -61,11 +65,16 @@ export default class SignUpView extends Component {
 
 		UpdateUser(this.state.username, this.state.startup_or_investor);
 
-		if (this.state.startup_or_investor == 'startup') {
-			document.getElementById("routeToStartupOnboarding").click();
-		}
-		else if (this.state.startup_or_investor == 'investor') {
-			document.getElementById("routeToInvestorOnboarding").click()
+		if (this.state.startup_or_investor == "investor") {
+			this.setState({
+				codeConfirm: false,
+				investor_onboarding: true,
+			});
+		} else if (this.state.startup_or_investor == "startup") {
+			this.setState({
+				codeConfirm: false,
+				startup_onboarding: true,
+			});
 		}
 	}
 
@@ -78,7 +87,7 @@ export default class SignUpView extends Component {
 				<div className="signup-modal-wrapper">
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
-							{!this.state.shouldShowConfirmCode && (
+							{this.state.main && (
 								<div className="signup-form-div">
 									<form className="signup-form" onSubmit={this.handleSignUpSubmit}>
 										<h3>Sign Up for Capless</h3>
@@ -139,7 +148,7 @@ export default class SignUpView extends Component {
 									</form>
 								</div>
 							)}
-							{this.state.shouldShowConfirmCode && (
+							{this.state.codeConfirm && (
 								<div className="signup-form-div">
 									<form
 										className="signup-form"
@@ -160,8 +169,16 @@ export default class SignUpView extends Component {
 											Submit
 										</button>
 									</form>
-									<Link to={{ pathname: "/investor-onboarding", username: this.state.username }} id="routeToInvestorOnboarding"></Link>
-									<Link to={{ pathname: "/startup-onboarding", username: this.state.username }} id="routeToStartupOnboarding"></Link>
+								</div>
+							)}
+							{this.state.investor_onboarding && (
+								<div className="signup-form-div">
+									<InvestorOnboardingView username={this.state.username} />
+								</div>
+							)}
+							{this.state.startup_onboarding && (
+								<div className="signup-form-div">
+									<StartupOnboardingView username={this.state.username} />
 								</div>
 							)}
 						</div>

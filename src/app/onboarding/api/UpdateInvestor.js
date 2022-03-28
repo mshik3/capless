@@ -1,4 +1,4 @@
-const USER_ENDPOINT = "https://lvb9zei4qj.execute-api.us-east-1.amazonaws.com/prod/";
+const USER_ENDPOINT = "https://llndkc7lji.execute-api.us-east-1.amazonaws.com/prod/";
 
 const UpdateInvestor = async (username, data) => {
 	console.log("username: " + username);
@@ -9,7 +9,7 @@ const UpdateInvestor = async (username, data) => {
 
 	var json_body = JSON.stringify(full_json);
 
-	console.log("json_body: " + json_body);
+	console.log("update Investor json_body: " + json_body);
 	const requestOptions = {
 		mode: "cors",
 		method: "PUT",

@@ -66,16 +66,6 @@ const App = () => {
 					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
 					<UnProtectedAppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={Layout_NoHeader} />
 					<UnProtectedAppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={Layout_NoHeader} />
-					<AppRoute
-						path={process.env.PUBLIC_URL + "/investor-onboarding"}
-						component={InvestorOnboardingView}
-						layout={Layout_NoHeader}
-					/>
-					<AppRoute
-						path={process.env.PUBLIC_URL + "/startup-onboarding"}
-						component={StartupOnboardingView}
-						layout={Layout_NoHeader}
-					/>
 				</Switch>
 			)}
 		/>

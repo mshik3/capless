@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
 import "./style/investor-onboarding.scss";
 import Select from "react-select";
-import Image from "../../common/elements/Image";
 import { industries, demographic, investment_description } from "./constants";
 import { UpdateUser } from "./api/UpdateUser";
 import { UpdateInvestor } from "./api/UpdateInvestor";
@@ -22,7 +21,7 @@ const InvestorForm = (data) => {
 	} = useForm({ mode: "onChange" });
 
 	const onSubmit = (data) => {
-		console.log("submitted full form")
+		console.log("submitted full form");
 
 		setSubmitted(data);
 
@@ -194,24 +193,17 @@ export default class InvestorOnboardingView extends Component {
 	constructor(props) {
 		super(props);
 
-		console.log("location: " + props.location.username);
-
-		this.username = props.location.username;
-
-		console.log("username: " + this.username);
+		console.log("username: " + this.props.username);
 	}
 
 	render() {
 		return (
 			<div className="signup-parent">
-				<div className="signup-image">
-					<Image src={require("./../../assets/images/sign_up/Main-Profile.svg")} alt="Sign Up Graphic" />
-				</div>
 				<div className="signup-modal-wrapper">
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
 							<div className="signup-form-div">
-								<InvestorForm username={this.username} />
+								<InvestorForm username={this.props.username} />
 							</div>
 						</div>
 					</div>
