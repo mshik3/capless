@@ -58,3 +58,135 @@
 	width: 80%;
 	height: 200px;
 }
+
+.register-form {
+	height: 90vh;
+	max-width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.form-row {
+	margin: 0 -15px;
+	display: flex;
+	flex-direction: row;
+	.form-group {
+		width: 50%;
+		padding: 0 15px;
+	}
+}
+
+.form-group {
+	margin-bottom: 8px;
+	position: relative;
+}
+
+input,
+select {
+	display: block;
+	width: 100%;
+	border: 1px solid #006daf;
+	padding: 11px 20px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	&:focus {
+		border: 1px solid #0b426c;
+	}
+}
+
+label {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 2px;
+	display: block;
+}
+
+.signup-form-radio {
+	margin-bottom: 18px;
+	input {
+		width: auto;
+		display: inline-block;
+	}
+}
+
+.radio-label {
+	padding-right: 30px;
+}
+
+.radio-row {
+	width: 50%;
+}
+.form-radio-item {
+	flex: 1;
+	position: relative;
+	margin-right: 45px;
+	label {
+		font-weight: 500;
+		font-size: 13px;
+		padding-left: 15px;
+		position: relative;
+		z-index: 9;
+		display: block;
+		cursor: pointer;
+	}
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+.form-select {
+	position: relative;
+}
+
+select {
+	appearance: none;
+	position: relative;
+	background: 0 0;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.max-z-index {
+	position:relative;
+	z-index: 100;
+}
+
+option {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	border: 1px solid #ced4da;
+}
+
+.form-submit {
+	text-align: right;
+	padding-top: 27px;
+}
+
+.submit {
+	width: 140px;
+	height: 40px;
+	display: inline-block;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+#submit {
+	background: #0b426c;
+	color: #fff;
+	&:hover {
+		background-color: darken(#0b426c, 10%);
+	}
+}

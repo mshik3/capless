@@ -114,30 +114,34 @@ export default class SignUpView extends Component {
 											/>
 										</div>
 										<br />
-										<div className="form-group">
+										<div className="signup-form-radio">
 											Are you part of a startup or an accredited investor?
 											<br />
-											<label>
-												<input
-													type="radio"
-													value="startup"
-													onChange={this.onRadioChange}
-													checked={this.state.startup_or_investor === "startup"}
-													className="signup-radio"
-												/>
-												Startup
-											</label>
-											<br />
-											<label>
-												<input
-													type="radio"
-													value="investor"
-													onChange={this.onRadioChange}
-													checked={this.state.startup_or_investor === "investor"}
-													className="signup-radio"
-												/>
-												Investor
-											</label>
+											<div className="form-row radio-row">
+												<div className="form-radio-item">
+													<label className="radio-label">
+														<input
+															type="radio"
+															value="startup"
+															onChange={this.onRadioChange}
+															checked={this.state.startup_or_investor === "startup"}
+														/>
+														Startup
+													</label>
+												</div>
+												<br />
+												<div className="form-radio-item">
+													<label className="radio-label">
+														<input
+															type="radio"
+															value="investor"
+															onChange={this.onRadioChange}
+															checked={this.state.startup_or_investor === "investor"}
+														/>
+														Investor
+													</label>
+												</div>
+											</div>
 										</div>
 										<button type="submit" className="onboarding-btn btn btn-primary btn-block">
 											Continue
