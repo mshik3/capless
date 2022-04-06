@@ -10,6 +10,8 @@ import { useForm, Controller } from "react-hook-form";
 const StartupForm = (data) => {
 	const [submitted, setSubmitted] = useState();
 	const username = data.username;
+	const user_id = data.user_id;
+	const company_email = data.company_email;
 
 	const {
 		register,
@@ -24,7 +26,7 @@ const StartupForm = (data) => {
 
 		setSubmitted(data);
 
-		UpdateUser(username, "startup", data);
+		UpdateUser(user_id, username, "startup", company_email);
 
 		console.log(data);
 	};
@@ -165,6 +167,8 @@ export default class StartupOnboardingView extends Component {
 		this.username = props.location.username;
 
 		console.log("username: " + this.username);
+
+		this.user_id = props.location.user_id;
 	}
 
 	render() {
@@ -177,7 +181,7 @@ export default class StartupOnboardingView extends Component {
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
 							<div className="signup-form-div">
-								<StartupForm username={this.username} />
+								<StartupForm username={this.username} user_id={this.user_id} />
 							</div>
 						</div>
 					</div>

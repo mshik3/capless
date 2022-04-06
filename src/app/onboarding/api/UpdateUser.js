@@ -1,11 +1,11 @@
 const USER_ENDPOINT = "https://lvb9zei4qj.execute-api.us-east-1.amazonaws.com/prod/";
 
-const UpdateUser = async (username, startup_or_investor, company_name) => {
+const UpdateUser = async (user_id, username, startup_or_investor, company_name) => {
 	console.log("username: " + username);
 
 	console.log("company_name: " + company_name);
 
-	var full_json = { username: username, startup_or_investor: startup_or_investor };
+	var full_json = { user_id: user_id, username: username, startup_or_investor: startup_or_investor };
 
 	if (company_name !== null) {
 		full_json["company_name"] = company_name

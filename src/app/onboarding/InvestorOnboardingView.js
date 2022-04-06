@@ -10,6 +10,7 @@ import { useForm, Controller } from "react-hook-form";
 const InvestorForm = (data) => {
 	const [submitted, setSubmitted] = useState();
 	const username = data.username;
+	const user_id = data.user_id;
 	const company_email = data.company_email;
 
 	const {
@@ -25,7 +26,7 @@ const InvestorForm = (data) => {
 
 		setSubmitted(data);
 
-		UpdateUser(username, "investor", company_email);
+		UpdateUser(user_id, username, "investor", company_email);
 
 		UpdateInvestor(username, data);
 
@@ -261,7 +262,7 @@ export default class InvestorOnboardingView extends Component {
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
 							<div className="signup-form-div">
-								<InvestorForm username={this.props.username} />
+								<InvestorForm username={this.props.username} user_id={this.props.user_id} />
 							</div>
 						</div>
 					</div>

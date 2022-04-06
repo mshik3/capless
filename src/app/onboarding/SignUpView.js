@@ -6,8 +6,6 @@ import { UpdateUser } from "./api/UpdateUser";
 import InvestorOnboardingView from "./InvestorOnboardingView";
 import StartupOnboardingView from "./StartupOnboardingView";
 
-import { useHistory } from "react-router-dom";
-
 export default class SignUpView extends Component {
 	constructor(props) {
 		super(props);
@@ -16,6 +14,7 @@ export default class SignUpView extends Component {
 			username: "",
 			password: "",
 			email: "",
+			user_id: "",
 			main: true,
 			codeConfirm: false,
 			investor_onboarding: false,
@@ -45,16 +44,17 @@ export default class SignUpView extends Component {
 	handleSignUpSubmit(event) {
 		console.log("An email was submitted: " + this.state.email + " " + this.state.password);
 		event.preventDefault();
-
-		// signUp(this.state.email, this.state.password);
-
-		this.setState({
-			username: this.state.email,
-			main: false,
-			codeConfirm: true,
+		signUp(this.state.email, this.state.password).then((user) => {
+			if (user) {
+				this.setState({
+					username: this.state.email,
+					user_id: user.userSub,
+					main: false,
+					codeConfirm: true,
+				});
+				alert("welcome! " + this.state.email);
+			}
 		});
-
-		alert("welcome! " + this.state.email);
 	}
 
 	handleConfirmationCodeSubmit(event) {
@@ -63,7 +63,7 @@ export default class SignUpView extends Component {
 
 		// confirmSignUp(this.state.email, this.state.confirmationCode);
 
-		UpdateUser(this.state.username, this.state.startup_or_investor);
+		UpdateUser(this.state.user_id, this.state.username, this.state.startup_or_investor);
 
 		if (this.state.startup_or_investor == "investor") {
 			this.setState({
@@ -177,12 +177,12 @@ export default class SignUpView extends Component {
 							)}
 							{this.state.investor_onboarding && (
 								<div className="signup-form-div">
-									<InvestorOnboardingView username={this.state.username} />
+									<InvestorOnboardingView username={this.state.username} user_id={this.state.user_id} />
 								</div>
 							)}
 							{this.state.startup_onboarding && (
 								<div className="signup-form-div">
-									<StartupOnboardingView username={this.state.username} />
+									<StartupOnboardingView username={this.state.username} user_id={this.state.user_id} />
 								</div>
 							)}
 						</div>

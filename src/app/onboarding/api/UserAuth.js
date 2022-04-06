@@ -2,19 +2,22 @@ import { Auth } from "aws-amplify";
 
 const signUp = async (username, password) => {
 	try {
-		const { user } = await Auth.signUp({
+		const user = await Auth.signUp({
 			username,
 			password,
 		});
+		console.log("created user: " + JSON.stringify(user));
+		return user;
 	} catch (error) {
 		console.log("error signing up:", error);
+		return false;
 	}
 };
 
 const signIn = async (username, password) => {
 	try {
 		const user = await Auth.signIn(username, password);
-		console.log("retrieved user: " + user);
+		console.log("retrieved user: " + JSON.stringify(user));
 		return true;
 	} catch (error) {
 		console.log("error signing in", error);
