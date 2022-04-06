@@ -1,6 +1,6 @@
 {
   "auth": {
-    "caplessc02fa5df": {
+    "caplessc6b59874": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
