@@ -61,7 +61,7 @@ export default class SignUpView extends Component {
 		console.log("A confirmation code was submitted: " + this.state.confirmationCode);
 		event.preventDefault();
 
-		// confirmSignUp(this.state.email, this.state.confirmationCode);
+		confirmSignUp(this.state.email, this.state.confirmationCode);
 
 		UpdateUser(this.state.user_id, this.state.username, this.state.startup_or_investor);
 
