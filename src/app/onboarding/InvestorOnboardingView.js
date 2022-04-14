@@ -9,7 +9,7 @@ import { useForm, Controller } from "react-hook-form";
 
 const InvestorForm = (data) => {
 	const [submitted, setSubmitted] = useState();
-	const username = data.username;
+	const user_email = data.user_email;
 	const user_id = data.user_id;
 	const company_email = data.company_email;
 
@@ -25,10 +25,10 @@ const InvestorForm = (data) => {
 		console.log("submitted full form");
 
 		setSubmitted(data);
+		// TODO: generate company_id, pass into UpdateUser
+		UpdateUser(user_id, user_email, data.firstname, data.lastname, "investor", company_email);
 
-		UpdateUser(user_id, username, "investor", company_email);
-
-		UpdateInvestor(username, data);
+		UpdateInvestor(user_email, data);
 
 		console.log(data);
 	};
@@ -39,7 +39,7 @@ const InvestorForm = (data) => {
 			<input className="form-control" type="radio" value="Yes" {...register("developer", { required: true })} />
 			<input className="form-control" type="radio" value="No" {...register("developer", { required: true })} /> */}
 			<label>Username</label>
-			<p>{username}</p>
+			<p>{user_email}</p>
 
 			<div className="form-row">
 				<div className="form-group">
@@ -252,7 +252,7 @@ export default class InvestorOnboardingView extends Component {
 	constructor(props) {
 		super(props);
 
-		console.log("username: " + this.props.username);
+		console.log("user_email: " + this.props.user_email);
 	}
 
 	render() {
@@ -262,7 +262,7 @@ export default class InvestorOnboardingView extends Component {
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
 							<div className="signup-form-div">
-								<InvestorForm username={this.props.username} user_id={this.props.user_id} />
+								<InvestorForm user_email={this.props.user_email} user_id={this.props.user_id} />
 							</div>
 						</div>
 					</div>

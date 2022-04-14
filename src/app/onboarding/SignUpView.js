@@ -10,13 +10,12 @@ export default class SignUpView extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			startup_or_investor: "",
-			username: "",
+			startup_or_investor: "startup",
 			password: "",
-			email: "",
+			user_email: "",
 			user_id: "",
-			main: true,
-			codeConfirm: false,
+			showMainView: true,
+			showCodeConfirmView: false,
 			investor_onboarding: false,
 			startup_onboarding: false,
 		};
@@ -42,17 +41,15 @@ export default class SignUpView extends Component {
 	}
 
 	handleSignUpSubmit(event) {
-		console.log("An email was submitted: " + this.state.email + " " + this.state.password);
+		console.log("An email was submitted: " + this.state.user_email + " " + this.state.password + " " + this.state.startup_or_investor);
 		event.preventDefault();
-		signUp(this.state.email, this.state.password).then((user) => {
+		signUp(this.state.user_email, this.state.password, this.state.startup_or_investor).then((user) => {
 			if (user) {
 				this.setState({
-					username: this.state.email,
 					user_id: user.userSub,
-					main: false,
-					codeConfirm: true,
+					showMainView: false,
+					showCodeConfirmView: true,
 				});
-				alert("welcome! " + this.state.email);
 			}
 		});
 	}
@@ -61,18 +58,16 @@ export default class SignUpView extends Component {
 		console.log("A confirmation code was submitted: " + this.state.confirmationCode);
 		event.preventDefault();
 
-		confirmSignUp(this.state.email, this.state.confirmationCode);
-
-		UpdateUser(this.state.user_id, this.state.username, this.state.startup_or_investor);
+		confirmSignUp(this.state.user_email, this.state.confirmationCode);
 
 		if (this.state.startup_or_investor == "investor") {
 			this.setState({
-				codeConfirm: false,
+				showCodeConfirmView: false,
 				investor_onboarding: true,
 			});
 		} else if (this.state.startup_or_investor == "startup") {
 			this.setState({
-				codeConfirm: false,
+				showCodeConfirmView: false,
 				startup_onboarding: true,
 			});
 		}
@@ -87,16 +82,16 @@ export default class SignUpView extends Component {
 				<div className="signup-modal-wrapper">
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
-							{this.state.main && (
+							{this.state.showMainView && (
 								<div className="signup-form-div">
 									<form className="signup-form" onSubmit={this.handleSignUpSubmit}>
 										<h3>Sign Up for Capless</h3>
 
 										<div className="form-group">
 											<input
-												type="email"
-												name="email"
-												value={this.state.email}
+												type="user_email"
+												name="user_email"
+												value={this.state.user_email}
 												onChange={this.handleChange}
 												className="form-control"
 												placeholder="Email Address"
@@ -152,7 +147,7 @@ export default class SignUpView extends Component {
 									</form>
 								</div>
 							)}
-							{this.state.codeConfirm && (
+							{this.state.showCodeConfirmView && (
 								<div className="signup-form-div">
 									<form
 										className="signup-form"
@@ -177,12 +172,12 @@ export default class SignUpView extends Component {
 							)}
 							{this.state.investor_onboarding && (
 								<div className="signup-form-div">
-									<InvestorOnboardingView username={this.state.username} user_id={this.state.user_id} />
+									<InvestorOnboardingView user_email={this.state.user_email} user_id={this.state.user_id} />
 								</div>
 							)}
 							{this.state.startup_onboarding && (
 								<div className="signup-form-div">
-									<StartupOnboardingView username={this.state.username} user_id={this.state.user_id} />
+									<StartupOnboardingView user_email={this.state.user_email} user_id={this.state.user_id} />
 								</div>
 							)}
 						</div>

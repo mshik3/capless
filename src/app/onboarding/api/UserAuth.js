@@ -1,10 +1,13 @@
 import { Auth } from "aws-amplify";
 
-const signUp = async (username, password) => {
+const signUp = async (email, password, startup_or_investor) => {
 	try {
 		const user = await Auth.signUp({
-			username,
+			username: email,
 			password,
+			attributes: {
+				'custom:startup_or_investor': startup_or_investor
+			}
 		});
 		console.log("created user: " + JSON.stringify(user));
 		return user;
