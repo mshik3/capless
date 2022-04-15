@@ -4,6 +4,7 @@ import Select from "react-select";
 import { industries, demographic, investment_description } from "./constants";
 import { UpdateUser } from "./api/UpdateUser";
 import { UpdateInvestor } from "./api/UpdateInvestor";
+import { v4 as uuidv4 } from 'uuid';
 
 import { useForm, Controller } from "react-hook-form";
 
@@ -11,7 +12,6 @@ const InvestorForm = (data) => {
 	const [submitted, setSubmitted] = useState();
 	const user_email = data.user_email;
 	const user_id = data.user_id;
-	const company_email = data.company_email;
 
 	const {
 		register,
@@ -23,13 +23,10 @@ const InvestorForm = (data) => {
 
 	const onSubmit = (data) => {
 		console.log("submitted full form");
-
 		setSubmitted(data);
-		// TODO: generate company_id, pass into UpdateUser
-		UpdateUser(user_id, user_email, data.firstname, data.lastname, "investor", company_email);
-
+		const company_id = uuidv4();
+		UpdateUser(user_id, user_email, data.firstname, data.lastname, "investor", company_id);
 		UpdateInvestor(user_email, data);
-
 		console.log(data);
 	};
 
@@ -38,7 +35,7 @@ const InvestorForm = (data) => {
 			{/* <label>Are you a developer?</label>
 			<input className="form-control" type="radio" value="Yes" {...register("developer", { required: true })} />
 			<input className="form-control" type="radio" value="No" {...register("developer", { required: true })} /> */}
-			<label>Username</label>
+			<label>User Email</label>
 			<p>{user_email}</p>
 
 			<div className="form-row">
