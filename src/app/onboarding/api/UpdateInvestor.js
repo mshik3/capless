@@ -1,22 +1,30 @@
-const USER_ENDPOINT = "https://llndkc7lji.execute-api.us-east-1.amazonaws.com/prod/";
+const INVESTOR_ENDPOINT = "https://llndkc7lji.execute-api.us-east-1.amazonaws.com/prod/";
 
-const UpdateInvestor = async (username, data) => {
-	console.log("username: " + username);
-
+const UpdateInvestor = async (user_id, company_id, data) => {
+	console.log("user_id: " + user_id);
 	console.log("data: " + data);
+    var full_json = Object.assign({ user_id: user_id, company_id: company_id }, data);
 
-    var full_json = Object.assign({ username: username }, data);
+	// Convert entries with [{label1: ..., value1... }, {label2: ..., value2... }, ...] to [value1, value2]
+	for (var key in full_json){
+		var attribute = full_json[key]
+		if (attribute instanceof Array) {
+			full_json[key] = attribute.map((element) => {
+				return element.hasOwnProperty('value') ? element.value : element
+			});
+		}
+	}
 
 	var json_body = JSON.stringify(full_json);
-
 	console.log("update Investor json_body: " + json_body);
+
 	const requestOptions = {
 		mode: "cors",
 		method: "PUT",
 		headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
 		body: json_body,
 	};
-	fetch(USER_ENDPOINT, requestOptions)
+	fetch(INVESTOR_ENDPOINT, requestOptions)
 		.then(async (response) => {
 			const isJson = response.headers.get("content-type")?.includes("application/json");
 			console.log(isJson);

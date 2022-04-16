@@ -26,7 +26,7 @@ const InvestorForm = (data) => {
 		setSubmitted(data);
 		const company_id = uuidv4();
 		UpdateUser(user_id, user_email, data.firstname, data.lastname, "investor", company_id);
-		UpdateInvestor(user_email, data);
+		UpdateInvestor(user_id, company_id, data);
 		console.log(data);
 	};
 
