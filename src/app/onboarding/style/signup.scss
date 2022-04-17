@@ -62,3 +62,8 @@
 .signup-radio {
 	margin-right: 7px;
 }
+
+.required:after {
+	content: " *";
+	color: red;
+}

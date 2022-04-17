@@ -32,9 +32,6 @@ const InvestorForm = (data) => {
 
 	return (
 		<form className="register-form" onSubmit={handleSubmit(onSubmit)}>
-			{/* <label>Are you a developer?</label>
-			<input className="form-control" type="radio" value="Yes" {...register("developer", { required: true })} />
-			<input className="form-control" type="radio" value="No" {...register("developer", { required: true })} /> */}
 			<label>User Email</label>
 			<p>{user_email}</p>
 

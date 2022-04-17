@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./style/signup.scss";
 import { signUp, confirmSignUp } from "./api/UserAuth";
 import Image from "../../common/elements/Image";
-import { UpdateUser } from "./api/UpdateUser";
 import InvestorOnboardingView from "./InvestorOnboardingView";
 import StartupOnboardingView from "./StartupOnboardingView";
 
@@ -10,7 +9,7 @@ export default class SignUpView extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			startup_or_investor: "startup",
+			startup_or_investor: "",
 			password: "",
 			user_email: "",
 			user_id: "",
@@ -41,7 +40,6 @@ export default class SignUpView extends Component {
 	}
 
 	handleSignUpSubmit(event) {
-		console.log("An email was submitted: " + this.state.user_email + " " + this.state.password + " " + this.state.startup_or_investor);
 		event.preventDefault();
 		signUp(this.state.user_email, this.state.password, this.state.startup_or_investor).then((user) => {
 			if (user) {
@@ -50,13 +48,11 @@ export default class SignUpView extends Component {
 					showMainView: false,
 					showCodeConfirmView: true,
 				});
-				alert("welcome! " + this.state.email + ", user_id: " + user.userSub);
 			}
 		});
 	}
 
 	handleConfirmationCodeSubmit(event) {
-		console.log("A confirmation code was submitted: " + this.state.confirmationCode);
 		event.preventDefault();
 
 		confirmSignUp(this.state.user_email, this.state.confirmationCode);
@@ -94,8 +90,9 @@ export default class SignUpView extends Component {
 												name="user_email"
 												value={this.state.user_email}
 												onChange={this.handleChange}
-												className="form-control"
+												className="form-control required"
 												placeholder="Email Address"
+												required
 											/>
 										</div>
 
@@ -105,8 +102,9 @@ export default class SignUpView extends Component {
 												name="password"
 												value={this.state.password}
 												onChange={this.handleChange}
-												className="form-control"
+												className="form-control required"
 												placeholder="Password"
+												required
 											/>
 										</div>
 										<br />
@@ -115,19 +113,20 @@ export default class SignUpView extends Component {
 											<br />
 											<div className="form-row radio-row">
 												<div className="form-radio-item">
-													<label className="radio-label">
+													<label className="radio-label required">
 														<input
 															type="radio"
 															value="startup"
 															onChange={this.onRadioChange}
 															checked={this.state.startup_or_investor === "startup"}
+															required
 														/>
 														Startup
 													</label>
 												</div>
 												<br />
 												<div className="form-radio-item">
-													<label className="radio-label">
+													<label className="radio-label required">
 														<input
 															type="radio"
 															value="investor"

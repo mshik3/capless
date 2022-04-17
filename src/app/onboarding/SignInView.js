@@ -36,7 +36,7 @@ export default class SignInView extends Component {
 				// Call lambda to start signup for user
 			}
 		});
-	};
+	}
 
 	render() {
 		return (
@@ -74,18 +74,12 @@ export default class SignInView extends Component {
 									</div>
 
 									<div className="form-group">
-										<div className="custom-control custom-checkbox">
-											<input
-												type="checkbox"
-												className="custom-control-input"
-												id="customCheck1"
-												name="remember_me"
-												value={!this.state.remember_me}
-												onChange={this.handleChange}></input>
-											<label className="custom-control-label" htmlFor="customCheck1">
-												Remember me
-											</label>
-										</div>
+										<input
+											type="checkbox"
+											value={!this.state.remember_me}
+											onChange={this.handleChange}
+										/>
+										<label>Remember me</label>
 									</div>
 
 									<button type="submit" className="onboarding-btn btn btn-primary btn-block">
@@ -100,9 +94,6 @@ export default class SignInView extends Component {
 											<a href="#">Forgot password?</a>
 										</span>
 									</p>
-									{/* <p className="forgot-password text-right">
-									<a href="#">Forgot password?</a>
-								</p> */}
 								</form>
 							</div>
 						</div>
