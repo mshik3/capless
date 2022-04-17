@@ -110,3 +110,11 @@ export const investment_description = [
 	{ value: "aspiring_angel", label: "Aspiring Angel" },
 	{ value: "family_office", label: "Family Office" },
 ];
+
+export const fundraising_stage = [
+	{ value: "pre-seed", label: "Pre-Seed" },
+	{ value: "seed", label: "Seed" },
+	{ value: "series_a", label: "Series A" },
+	{ value: "series_b", label: "Series B" },
+	{ value: "series_c", label: "Series C" },
+];

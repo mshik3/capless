@@ -1,9 +1,14 @@
 .settings {
+	background-color: white;
 	position: relative;
 	margin-top: 30px;
 	padding: 5px;
 	margin-left: 10%;
 	width: 80%;
+	margin-top: 110px;
+	border-radius: 10px;
+	box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+	padding: 20px;
 
 	.button {
 		background-color: white;
@@ -12,63 +17,178 @@
 		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 		height: 50px;
 		border-radius: 5px;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+				"Droid Sans", "Helvetica Neue", sans-serif;
 	}
 
 	h3,
 	p {
 		color: #222;
 	}
+
+	.button-last {
+		background-color: white;
+		width: 32%;
+		margin-right: 0 !important;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+		height: 50px;
+		border-radius: 5px;
+	}
+
+	
+	#name {
+		position: absolute;
+	}
+	
+	#three-dots {
+		position: absolute;
+		right: 35px;
+		font-size: 50px;
+		line-height: 20px;
+	}
+	
+	.settings-input {
+		border: none;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+			"Droid Sans", "Helvetica Neue", sans-serif;
+	}
+	
+	#routeToSignIn {
+		visibility: hidden;
+	}
+
+	// Form CSS
+	.form-group {
+		margin-bottom: 8px;
+		position: relative;
+	}
+	
+	.register-form {
+		height: auto;
+		max-width: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	
+	input,
+	select {
+		display: block;
+		width: 100%;
+		padding: 11px 20px;
+		box-sizing: border-box;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+			"Droid Sans", "Helvetica Neue", sans-serif;
+		font-size: 13px;
+		font-weight: 500;
+		&:focus {
+			border: 1px solid #0b426c;
+		}
+	}
+	
+	label {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+			"Droid Sans", "Helvetica Neue", sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 2px;
+		display: block;
+	}
+
+	.signup-form-radio {
+		margin-bottom: 18px;
+		input {
+			width: auto;
+			display: inline-block;
+		}
+	}
+
+	.form-select {
+		position: relative;
+	}
+	
+	select {
+		appearance: none;
+		position: relative;
+		background: 0 0;
+		z-index: 10;
+		cursor: pointer;
+	}
+
+	.z-index-5 {
+		position: relative;
+		z-index: 5;
+	}	
+
+	.z-index-4 {
+		position: relative;
+		z-index: 4;
+	}	
+	
+	.z-index-3 {
+		position: relative;
+		z-index: 3;
+	}
+	
+	.z-index-2 {
+		position: relative;
+		z-index: 2;
+	}
+	
+	.z-index-1 {
+		position: relative;
+		z-index: 1;
+	}
+
+	option {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+			"Droid Sans", "Helvetica Neue", sans-serif;
+		font-size: 13px;
+		font-weight: 500;
+		border: 1px solid #ced4da;
+	}
+	
+	.form-submit {
+		text-align: right;
+		padding-top: 27px;
+	}
+	
+	.submit {
+		width: 140px;
+		height: 40px;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+			"Droid Sans", "Helvetica Neue", sans-serif;
+		font-size: 13px;
+		font-weight: 500;
+		padding: 10px;
+		border: none;
+		cursor: pointer;
+	}
+	
+	#submit {
+		background: #0b426c;
+		color: #fff;
+		&:hover {
+			background-color: darken(#0b426c, 10%);
+		}
+	}
 }
 
-.button-last {
-	background-color: white;
-	width: 32%;
-	margin-right: 0 !important;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-	height: 50px;
-	border-radius: 5px;
-}
 
 .settings-row {
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-	height: 50px;
-	line-height: 50px;
-	font-size: 30px;
+	height: 30px;
+	width: 99%;
+	margin-left: 0.5%;
+	line-height: 30px;
+	font-size: 15px;
 	margin-bottom: 10px;
 	background-color: white;
-	border-radius: 5px;
 	padding-left: 15px;
 	cursor: pointer;
-	display: flex;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 	user-select: none; /* supported by Chrome and Opera */
 	-webkit-user-select: none; /* Safari */
 	-khtml-user-select: none; /* Konqueror HTML */
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
-}
-
-.settings-row:hover {
-	box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 10px;
-}
-
-#name {
-	position: absolute;
-}
-
-#three-dots {
-	position: absolute;
-	right: 15px;
-	font-size: 50px;
-	line-height: 20px;
-}
-
-.settings-input {
-	border: none;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-		"Droid Sans", "Helvetica Neue", sans-serif;
-}
-
-#routeToSignIn {
-	visibility: hidden;
 }
