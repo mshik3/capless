@@ -14,8 +14,8 @@ export default class SignUpView extends Component {
 			password: "",
 			user_email: "",
 			user_id: "",
-			main: true,
-			codeConfirm: false,
+			showMainView: true,
+			showCodeConfirmView: false,
 			investor_onboarding: false,
 			startup_onboarding: false,
 		};
