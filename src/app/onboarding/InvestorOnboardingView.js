@@ -120,7 +120,7 @@ const InvestorForm = (data) => {
 				<select
 					className="form-control"
 					name="investment_range"
-					{...register("investment_region", { required: true })}>
+					{...register("investment_range", { required: true })}>
 					<option value="less_than_one_thousand">&lt; $1k</option>
 					<option value="one_thousand_to_ten_thousand">$1k-10k</option>
 					<option value="ten_thousand_to_fifty_thousand">$10k-$50</option>
