@@ -164,80 +164,70 @@ const InvestorForm = (data) => {
 				</select>
 			</div>
 
-			<div className="form-row">
-				<div className="form-group max-z-index">
-					<Controller
-						name="investment_demographic"
-						control={control}
-						render={({ field }) => {
-							return (
-								<div>
-									<label>Investment Demographic</label>
-									<Select
-										name="investment_demographic"
-										placeholder="Investment Demographic"
-										options={demographic}
-										className="max-z-index"
-										isMulti
-										{...field}
-									/>
-								</div>
-							);
-						}}
-					/>
-				</div>
-
-				<div className="form-group max-z-index">
-					<Controller
-						name="investment_description"
-						control={control}
-						render={({ field }) => {
-							return (
-								<div>
-									<label>Investment Description</label>
-									<Select
-										name="investment_description"
-										placeholder="Investment Description"
-										options={investment_description}
-										className="max-z-index"
-										isMulti
-										{...field}
-									/>
-								</div>
-							);
-						}}
-					/>
-				</div>
-				<div className="form-group max-z-index">
-					<Controller
-						name="industries"
-						control={control}
-						render={({ field }) => {
-							return (
-								<div>
-									<label>Industries</label>
-									<Select
-										className="max-z-index"
-										name="industries"
-										placeholder="Industries"
-										options={industries}
-										isMulti
-										{...field}
-									/>
-								</div>
-							);
-						}}
-					/>
-				</div>
+			<div className="form-group z-index-3">
+				<Controller
+					name="investment_demographic"
+					control={control}
+					render={({ field }) => {
+						return (
+							<div>
+								<label>Investment Demographic</label>
+								<Select
+									name="investment_demographic"
+									placeholder="Investment Demographic"
+									options={demographic}
+									className="z-index-3"
+									isMulti
+									{...field}
+								/>
+							</div>
+						);
+					}}
+				/>
 			</div>
 
-			{submitted && (
-				<div>
-					Submitted Data:
-					<br />
-					{JSON.stringify(submitted)}
-				</div>
-			)}
+			<div className="form-group z-index-2">
+				<Controller
+					name="investment_description"
+					control={control}
+					render={({ field }) => {
+						return (
+							<div>
+								<label>Investment Description</label>
+								<Select
+									name="investment_description"
+									placeholder="Investment Description"
+									options={investment_description}
+									className="z-index-2"
+									isMulti
+									{...field}
+								/>
+							</div>
+						);
+					}}
+				/>
+			</div>
+			<div className="form-group z-index-1">
+				<Controller
+					name="industries"
+					control={control}
+					render={({ field }) => {
+						return (
+							<div>
+								<label>Industries</label>
+								<Select
+									className="z-index-1"
+									name="industries"
+									placeholder="Industries"
+									options={industries}
+									isMulti
+									{...field}
+								/>
+							</div>
+						);
+					}}
+				/>
+			</div>
 			<div className="form-submit">
 				<input className="form-control submit" type="submit" id="submit" />
 			</div>

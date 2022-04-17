@@ -14,8 +14,8 @@ export default class SignUpView extends Component {
 			password: "",
 			user_email: "",
 			user_id: "",
-			showMainView: true,
-			showCodeConfirmView: false,
+			main: true,
+			codeConfirm: false,
 			investor_onboarding: false,
 			startup_onboarding: false,
 		};
@@ -50,6 +50,7 @@ export default class SignUpView extends Component {
 					showMainView: false,
 					showCodeConfirmView: true,
 				});
+				alert("welcome! " + this.state.email + ", user_id: " + user.userSub);
 			}
 		});
 	}
