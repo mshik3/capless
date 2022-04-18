@@ -111,3 +111,18 @@ input {
 #routeToFeed {
 	visibility: hidden;
 }
+
+[type="checkbox"] {
+	vertical-align: middle;
+	display: inline;
+	max-width: 10px;
+	margin-right: 5px;
+}
+
+.remember-me-label {
+	display: inline;
+}
+
+.remember-me-div {
+	display: block;
+}

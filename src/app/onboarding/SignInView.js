@@ -73,13 +73,16 @@ export default class SignInView extends Component {
 										/>
 									</div>
 
-									<div className="form-group">
+									<div className="remember-me-div">
 										<input
 											type="checkbox"
+											id="remember-me"
 											value={!this.state.remember_me}
 											onChange={this.handleChange}
 										/>
-										<label>Remember me</label>
+										<label htmlFor="remember-me" className="remember-me-label">
+											Remember me
+										</label>
 									</div>
 
 									<button type="submit" className="onboarding-btn btn btn-primary btn-block">

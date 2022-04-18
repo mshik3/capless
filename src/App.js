@@ -17,14 +17,12 @@ import AboutUs from "./views/AboutUs";
 import MessageView from "./app/messages/MessageView";
 import SignInView from "./app/onboarding/SignInView";
 import SignUpView from "./app/onboarding/SignUpView";
-import OnboardingView from "./app/onboarding/InvestorOnboardingView";
+
 import Feed from "./app/feed/Feed";
 import CompanyProfile from "./app/profile/CompanyProfile";
 import UserProfile from "./app/profile/UserProfile";
 import VCProfile from "./app/profile/VCProfile";
 import Settings from "./app/settings/Settings";
-import StartupOnboardingView from "./app/onboarding/InvestorOnboardingView";
-import InvestorOnboardingView from "./app/onboarding/InvestorOnboardingView";
 
 // Amplify
 import { Amplify } from "aws-amplify";
@@ -59,13 +57,33 @@ const App = () => {
 					<AppRoute exact path={process.env.PUBLIC_URL + "/"} component={Home} layout={LayoutDefault} />
 					<AppRoute path={process.env.PUBLIC_URL + "/aboutcapless"} component={AboutUs} layout={LayoutDefault} />
 					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/feed"} component={Feed} layout={LayoutApp} />
-					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/company"} component={CompanyProfile} layout={LayoutApp} />
-					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/profile"} component={UserProfile} layout={LayoutApp} />
+					<ProtectedAppRoute
+						path={process.env.PUBLIC_URL + "/company"}
+						component={CompanyProfile}
+						layout={LayoutApp}
+					/>
+					<ProtectedAppRoute
+						path={process.env.PUBLIC_URL + "/profile"}
+						component={UserProfile}
+						layout={LayoutApp}
+					/>
 					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/vc"} component={VCProfile} layout={LayoutApp} />
-					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp}/>
-					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/messages"} component={MessageView} layout={LayoutApp} />
-					<UnProtectedAppRoute path={process.env.PUBLIC_URL + "/signin"} component={SignInView} layout={Layout_NoHeader} />
-					<UnProtectedAppRoute path={process.env.PUBLIC_URL + "/signup"} component={SignUpView} layout={Layout_NoHeader} />
+					<ProtectedAppRoute path={process.env.PUBLIC_URL + "/settings"} component={Settings} layout={LayoutApp} />
+					<ProtectedAppRoute
+						path={process.env.PUBLIC_URL + "/messages"}
+						component={MessageView}
+						layout={LayoutApp}
+					/>
+					<UnProtectedAppRoute
+						path={process.env.PUBLIC_URL + "/signin"}
+						component={SignInView}
+						layout={Layout_NoHeader}
+					/>
+					<UnProtectedAppRoute
+						path={process.env.PUBLIC_URL + "/signup"}
+						component={SignUpView}
+						layout={Layout_NoHeader}
+					/>
 				</Switch>
 			)}
 		/>
