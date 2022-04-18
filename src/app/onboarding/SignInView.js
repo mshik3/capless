@@ -26,14 +26,10 @@ export default class SignInView extends Component {
 	}
 
 	handleSubmit(event) {
-		console.log(
-			"An email was submitted: " + this.state.email + " " + this.state.password + " " + this.state.remember_me
-		);
 		event.preventDefault();
 		signIn(this.state.email, this.state.password, this.state.remember_me, this.routeToFeed).then((success) => {
 			if (success) {
 				document.getElementById("routeToFeed").click();
-				// Call lambda to start signup for user
 			}
 		});
 	}
@@ -59,6 +55,7 @@ export default class SignInView extends Component {
 											onChange={this.handleChange}
 											className="form-control"
 											placeholder="Email Address"
+											required
 										/>
 									</div>
 
@@ -70,6 +67,7 @@ export default class SignInView extends Component {
 											onChange={this.handleChange}
 											className="form-control"
 											placeholder="Password"
+											required
 										/>
 									</div>
 
@@ -79,6 +77,7 @@ export default class SignInView extends Component {
 											id="remember-me"
 											value={!this.state.remember_me}
 											onChange={this.handleChange}
+											required
 										/>
 										<label htmlFor="remember-me" className="remember-me-label">
 											Remember me
