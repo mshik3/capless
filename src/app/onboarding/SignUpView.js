@@ -117,6 +117,7 @@ export default class SignUpView extends Component {
 														<input
 															type="radio"
 															value="startup"
+															name="startup_or_investor"
 															onChange={this.onRadioChange}
 															checked={this.state.startup_or_investor === "startup"}
 															required
@@ -130,6 +131,7 @@ export default class SignUpView extends Component {
 														<input
 															type="radio"
 															value="investor"
+															name="startup_or_investor"
 															onChange={this.onRadioChange}
 															checked={this.state.startup_or_investor === "investor"}
 														/>
