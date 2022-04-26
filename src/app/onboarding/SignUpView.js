@@ -57,12 +57,12 @@ export default class SignUpView extends Component {
 
 		confirmSignUp(this.state.user_email, this.state.confirmationCode);
 
-		if (this.state.startup_or_investor == "investor") {
+		if (this.state.startup_or_investor === "investor") {
 			this.setState({
 				showCodeConfirmView: false,
 				investor_onboarding: true,
 			});
-		} else if (this.state.startup_or_investor == "startup") {
+		} else if (this.state.startup_or_investor === "startup") {
 			this.setState({
 				showCodeConfirmView: false,
 				startup_onboarding: true,

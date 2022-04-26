@@ -55,7 +55,7 @@ const Cta = ({
 			company_name: event.target.company_name.value,
 			company_email: event.target.company_email.value,
 		};
-		if (newRow.full_name != "" && newRow.company_name != "" && newRow.company_email != "") {
+		if (newRow.full_name !== "" && newRow.company_name !== "" && newRow.company_email !== "") {
 			event.target.style.visibility = "hidden";
 			submitGoogleForm(newRow);
 			document.getElementById("thank-you").style.visibility = "visible";
