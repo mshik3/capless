@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import SettingsRow from "./components/SettingsRow";
 import classNames from "classnames";
-import { sortableContainer, sortableElement } from "react-sortable-hoc";
 import Button from "../../common/elements/Button";
 import { signOut } from "../onboarding/api/UserAuth";
 import { Link } from "react-router-dom";
@@ -34,22 +32,6 @@ const Settings = () => {
 		//TODO: Update backend table with below data when save is pressed
 		console.log(data);
 		console.log(settings);
-	};
-
-	const SortableItem = sortableElement(({ value }) => <SettingsRow name={value} />);
-	const SortableContainer = sortableContainer(({ children }) => {
-		return <div>{children}</div>;
-	});
-
-	// Update array when state changes
-	const arrayMove = (array, from, to) => {
-		const newArray = array.slice();
-		newArray.splice(to < 0 ? newArray.length + to : to, 0, newArray.splice(from, 1)[0]);
-		return newArray;
-	};
-
-	const onSortEnd = ({ oldIndex, newIndex }) => {
-		setSettings(arrayMove(settings, oldIndex, newIndex));
 	};
 
 	const signOutHandler = () => {
