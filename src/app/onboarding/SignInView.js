@@ -77,7 +77,6 @@ export default class SignInView extends Component {
 											id="remember-me"
 											value={!this.state.remember_me}
 											onChange={this.handleChange}
-											required
 										/>
 										<label htmlFor="remember-me" className="remember-me-label">
 											Remember me
