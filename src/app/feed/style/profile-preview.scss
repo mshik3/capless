@@ -1,4 +1,4 @@
-.pro-pre-profile-preview {
+.profile-preview {
 	padding: 0px;
 	margin-bottom: 30px;
 	border-radius: 15px;
@@ -8,15 +8,9 @@
 	position: relative;
 }
 
-.pro-pre-profile-preview:hover {
+.profile-preview:hover {
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 10px;
-}
-
-.pro-pre-profile-preview-grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	grid-gap: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -25,26 +19,26 @@
 	}
 }
 
-.pro-pre-image-preview {
+.image-preview {
 	padding: 0px;
 	border-radius: 5px;
 	display: table-cell;
 }
 
-.pro-pre-profile-preview p {
+.profile-preview p {
 	font-size: 18px;
 	text-align: left;
 	padding-left: 15px;
 	color: #777;
 }
 
-.pro-pre-profile-preview-header {
+.profile-preview-header {
 	height: 80px;
 	display: table;
 	padding: 15px;
 }
 
-.pro-pre-profile-interested {
+.profile-interested {
 	display: table-cell;
 	float: right;
 	position: absolute;
@@ -54,7 +48,7 @@
 	padding-right: 5px !important;
 }
 
-.pro-pre-profile-name {
+.profile-name {
 	text-align: left;
 	vertical-align: middle;
 	display: table-cell;
@@ -63,33 +57,33 @@
 	color: get-color(dark, 3);
 }
 
-.pro-pre-fun-facts-container {
+.fun-facts-container {
 	display: table;
 	width: 95%;
 	margin-bottom: 10px;
 }
 
-.pro-pre-facts-header {
+.facts-header {
 	font-size: 15px !important;
 	padding-left: 15px;
 	margin: 0px;
 	color: #222;
 }
 
-.pro-pre-facts-content {
+.facts-content {
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 	margin-left: 15px;
 	font-size: 20px;
 }
 
-.pro-pre-column {
+.column {
 	float: left;
 	width: 33%;
 	border-right: 1px solid #999;
 	text-align: left;
 }
 
-.pro-pre-column-last {
+.column-last {
 	border-right: 0px solid #999;
 }

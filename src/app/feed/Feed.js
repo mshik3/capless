@@ -1,7 +1,6 @@
 import React from "react";
 import ProfilePreview from "./components/ProfilePreview";
 import { getFeed } from "./api/GetFeed";
-import "./style/profile-preview.scss";
 
 const interested = [true, true, false, true, false, false, false, false, false, false];
 
@@ -27,13 +26,9 @@ class Feed extends React.Component {
 	render() {
 		return (
 			<div className="container-app">
-				<div className="pro-pre-profile-preview-grid">
-					{this.state.vcs.map((vc, index) => {
-						return (
-							<ProfilePreview className="container-preview-profile" vc={vc} isInterested={interested[index]} />
-						);
-					})}
-				</div>
+				{this.state.vcs.map((vc, index) => {
+					return <ProfilePreview className="container-preview-profile" vc={vc} isInterested={interested[index]} />;
+				})}
 			</div>
 		);
 	}
