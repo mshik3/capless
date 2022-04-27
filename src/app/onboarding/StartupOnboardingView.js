@@ -3,15 +3,15 @@ import "./style/startup-onboarding.scss";
 import Select from "react-select";
 import { industries, demographic, investment_description } from "./constants";
 import { UpdateUser } from "./api/UpdateUser";
+import { UpdateCompany } from "./api/UpdateCompany";
+import { v4 as uuidv4 } from "uuid";
 
 import { useForm, Controller } from "react-hook-form";
-import { UpdateStartup } from "./api/UpdateStartup";
 
 const StartupForm = (data) => {
 	const [submitted, setSubmitted] = useState();
-	const username = data.username;
+	const user_email = data.user_email;
 	const user_id = data.user_id;
-	const company_email = data.company_email;
 
 	const {
 		register,
@@ -23,20 +23,17 @@ const StartupForm = (data) => {
 
 	const onSubmit = (data) => {
 		console.log("submitted full form");
-
 		setSubmitted(data);
-
-		UpdateUser(user_id, username, "startup", company_email);
-
-		UpdateStartup(username, data);
-
+		const company_id = uuidv4();
+		UpdateUser(user_id, user_email, data.firstname, data.lastname, "startup", company_id);
+		UpdateCompany(user_id, company_id, "startup", data);
 		console.log(data);
 	};
 
 	return (
 		<form className="register-form" onSubmit={handleSubmit(onSubmit)}>
-			<label>Username</label>
-			<p>{username}</p>
+			<label>User Email</label>
+			<p>{user_email}</p>
 
 			<div className="form-row">
 				<div className="form-group">
@@ -240,8 +237,6 @@ const StartupForm = (data) => {
 export default class StartupOnboardingView extends Component {
 	constructor(props) {
 		super(props);
-
-		console.log("username: " + this.props.username);
 	}
 
 	render() {
@@ -251,7 +246,7 @@ export default class StartupOnboardingView extends Component {
 					<div className="auth-middle">
 						<div className="signup-auth-inner text-xs">
 							<div className="signup-form-div">
-								<StartupForm username={this.props.username} user_id={this.props.user_id} />
+								<StartupForm user_email={this.props.user_email} user_id={this.props.user_id} />
 							</div>
 						</div>
 					</div>

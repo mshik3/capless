@@ -3,8 +3,8 @@ import "./style/investor-onboarding.scss";
 import Select from "react-select";
 import { industries, demographic, investment_description } from "./constants";
 import { UpdateUser } from "./api/UpdateUser";
-import { UpdateInvestor } from "./api/UpdateInvestor";
-import { v4 as uuidv4 } from 'uuid';
+import { UpdateCompany } from "./api/UpdateCompany";
+import { v4 as uuidv4 } from "uuid";
 
 import { useForm, Controller } from "react-hook-form";
 
@@ -26,7 +26,7 @@ const InvestorForm = (data) => {
 		setSubmitted(data);
 		const company_id = uuidv4();
 		UpdateUser(user_id, user_email, data.firstname, data.lastname, "investor", company_id);
-		UpdateInvestor(user_id, company_id, data);
+		UpdateCompany(user_id, company_id, "investor", data);
 		console.log(data);
 	};
 
@@ -235,8 +235,6 @@ const InvestorForm = (data) => {
 export default class InvestorOnboardingView extends Component {
 	constructor(props) {
 		super(props);
-
-		console.log("user_email: " + this.props.user_email);
 	}
 
 	render() {
