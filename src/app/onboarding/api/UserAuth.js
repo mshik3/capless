@@ -6,8 +6,8 @@ const signUp = async (email, password, startup_or_investor) => {
 			username: email,
 			password,
 			attributes: {
-				'custom:startup_or_investor': startup_or_investor
-			}
+				"custom:startup_or_investor": startup_or_investor,
+			},
 		});
 		console.log("created user: " + JSON.stringify(user));
 		return user;
@@ -43,8 +43,10 @@ const confirmSignUp = async (email, code) => {
 	try {
 		await Auth.confirmSignUp(email, code);
 		console.log("successfully confirmed the user");
+		return true;
 	} catch (error) {
 		console.log("error confirming sign up", error);
+		return false;
 	}
 };
 

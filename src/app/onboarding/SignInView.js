@@ -27,7 +27,7 @@ export default class SignInView extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		signIn(this.state.email, this.state.password, this.state.remember_me, this.routeToFeed).then((success) => {
+		signIn(this.state.email, this.state.password, this.state.remember_me).then((success) => {
 			if (success) {
 				document.getElementById("routeToFeed").click();
 			}

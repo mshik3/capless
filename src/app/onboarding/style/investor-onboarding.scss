@@ -153,17 +153,17 @@ select {
 }
 
 .z-index-3 {
-	position:relative;
+	position: relative;
 	z-index: 3;
 }
 
 .z-index-2 {
-	position:relative;
+	position: relative;
 	z-index: 2;
 }
 
 .z-index-1 {
-	position:relative;
+	position: relative;
 	z-index: 1;
 }
 
@@ -199,4 +199,8 @@ option {
 	&:hover {
 		background-color: darken(#0b426c, 10%);
 	}
+}
+
+#routeToFeed {
+	visibility: hidden;
 }

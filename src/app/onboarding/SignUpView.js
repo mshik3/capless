@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./style/signup.scss";
-import { signUp, confirmSignUp } from "./api/UserAuth";
+import { signUp, confirmSignUp, signIn } from "./api/UserAuth";
 import Image from "../../common/elements/Image";
 import InvestorOnboardingView from "./InvestorOnboardingView";
 import StartupOnboardingView from "./StartupOnboardingView";
@@ -54,20 +54,27 @@ export default class SignUpView extends Component {
 
 	handleConfirmationCodeSubmit(event) {
 		event.preventDefault();
-
-		confirmSignUp(this.state.user_email, this.state.confirmationCode);
-
-		if (this.state.startup_or_investor === "investor") {
-			this.setState({
-				showCodeConfirmView: false,
-				investor_onboarding: true,
-			});
-		} else if (this.state.startup_or_investor === "startup") {
-			this.setState({
-				showCodeConfirmView: false,
-				startup_onboarding: true,
-			});
-		}
+		confirmSignUp(this.state.user_email, this.state.confirmationCode).then((success) => {
+			// Auto sign-in if account verified
+			if (success) {
+				signIn(this.state.user_email, this.state.password).then((success) => {
+					if (success) {
+						// Move on to onboarding
+						if (this.state.startup_or_investor === "investor") {
+							this.setState({
+								showCodeConfirmView: false,
+								investor_onboarding: true,
+							});
+						} else if (this.state.startup_or_investor === "startup") {
+							this.setState({
+								showCodeConfirmView: false,
+								startup_onboarding: true,
+							});
+						}
+					}
+				});
+			}
+		});
 	}
 
 	render() {

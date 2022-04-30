@@ -25,7 +25,7 @@ const UpdateCompany = async (user_id, company_id, startup_or_investor, data) => 
 		body: json_body,
 	};
 	const endpoint = startup_or_investor === "startup" ? STARTUP_ENDPOINT : INVESTOR_ENDPOINT;
-	fetch(endpoint, requestOptions)
+	let response = await fetch(endpoint, requestOptions)
 		.then(async (response) => {
 			const isJson = response.headers.get("content-type")?.includes("application/json");
 			console.log(isJson);
@@ -44,6 +44,7 @@ const UpdateCompany = async (user_id, company_id, startup_or_investor, data) => 
 		.catch((error) => {
 			console.error("There was an error!", error);
 		});
+	return response;
 };
 
 export { UpdateCompany };

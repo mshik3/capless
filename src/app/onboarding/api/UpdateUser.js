@@ -7,7 +7,7 @@ const UpdateUser = async (user_id, user_email, firstname, lastname, startup_or_i
 		firstname: firstname,
 		lastname: lastname,
 		company_id: company_id,
-		startup_or_investor: startup_or_investor
+		startup_or_investor: startup_or_investor,
 	};
 	var json_body = JSON.stringify(full_json);
 
@@ -18,7 +18,7 @@ const UpdateUser = async (user_id, user_email, firstname, lastname, startup_or_i
 		headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
 		body: json_body,
 	};
-	fetch(USER_ENDPOINT, requestOptions)
+	let response = await fetch(USER_ENDPOINT, requestOptions)
 		.then(async (response) => {
 			const isJson = response.headers.get("content-type")?.includes("application/json");
 			console.log(isJson);
@@ -37,6 +37,7 @@ const UpdateUser = async (user_id, user_email, firstname, lastname, startup_or_i
 		.catch((error) => {
 			console.error("There was an error!", error);
 		});
+	return response;
 };
 
 export { UpdateUser };

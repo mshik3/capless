@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import "./style/investor-onboarding.scss";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 import { industries, demographic, investment_description } from "./constants";
 import { UpdateUser } from "./api/UpdateUser";
 import { UpdateCompany } from "./api/UpdateCompany";
@@ -9,7 +10,6 @@ import { v4 as uuidv4 } from "uuid";
 import { useForm, Controller } from "react-hook-form";
 
 const InvestorForm = (data) => {
-	const [submitted, setSubmitted] = useState();
 	const user_email = data.user_email;
 	const user_id = data.user_id;
 
@@ -22,12 +22,14 @@ const InvestorForm = (data) => {
 	} = useForm({ mode: "onChange" });
 
 	const onSubmit = (data) => {
-		console.log("submitted full form");
-		setSubmitted(data);
 		const company_id = uuidv4();
-		UpdateUser(user_id, user_email, data.firstname, data.lastname, "investor", company_id);
-		UpdateCompany(user_id, company_id, "investor", data);
-		console.log(data);
+		UpdateUser(user_id, user_email, data.firstname, data.lastname, "investor", company_id).then((userResponse) => {
+			UpdateCompany(user_id, company_id, "investor", data).then((companyResponse) => {
+				if (userResponse.ok && companyResponse.ok) {
+					document.getElementById("routeToFeed").click();
+				}
+			});
+		});
 	};
 
 	return (
@@ -249,6 +251,7 @@ export default class InvestorOnboardingView extends Component {
 						</div>
 					</div>
 				</div>
+				<Link to={{ pathname: "/feed" }} id="routeToFeed"></Link>
 			</div>
 		);
 	}
