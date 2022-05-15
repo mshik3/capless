@@ -9,17 +9,6 @@ import Select from "react-select";
 import "./style/settings.scss";
 
 const Settings = () => {
-	const [settings, setSettings] = useState([
-		"Industry",
-		"Investment Description",
-		"Investment Demographic",
-		"Fundraising Stage",
-		"Investment Region",
-		"Venture Experience",
-		"Investment Range",
-		"Investment Check Size",
-	]);
-
 	const {
 		register,
 		getValues,
@@ -28,10 +17,29 @@ const Settings = () => {
 		handleSubmit,
 	} = useForm({ mode: "onSubmit" });
 
+	const [priorityMap, setPriorityMap] = useState({
+		industries: "low",
+		investment_description: "low",
+		investment_demographic: "low",
+		fundraising_stage: "low",
+		investment_region: "low",
+		venture_experience: "low",
+		investment_range: "low",
+		investment_check_size: "low",
+	});
+
+	const onRadioChange = (e) => {
+		let [name, priority] = e.target.value.split("-");
+		setPriorityMap((prevPriorityMap) => ({
+			...prevPriorityMap,
+			[name]: priority,
+		}));
+	};
+
 	const onSubmit = (data) => {
 		//TODO: Update backend table with below data when save is pressed
 		console.log(data);
-		console.log(settings);
+		console.log(priorityMap);
 	};
 
 	const signOutHandler = () => {
@@ -42,17 +50,38 @@ const Settings = () => {
 		});
 	};
 
-	const PriorityRadio = () => {
+	const PriorityRadio = ({ name }) => {
 		return (
 			<div className="priority-radio">
 				<fieldset>
-					<div class="toggle">
-						<input type="radio" name="priority" value="low" id="low" />
-						<label for="low">Low</label>
-						<input type="radio" name="priority" value="medium" id="medium" />
-						<label for="medium">Medium</label>
-						<input type="radio" name="priority" value="high" id="high" />
-						<label for="high">High</label>
+					<div className="toggle">
+						<input
+							type="radio"
+							name={name + "priority"}
+							value={name + "-low"}
+							id={name + "-low"}
+							checked={priorityMap[name] === "low"}
+							onChange={onRadioChange}
+						/>
+						<label for={name + "-low"}>Low</label>
+						<input
+							type="radio"
+							name={name + "priority"}
+							value={name + "-medium"}
+							id={name + "-medium"}
+							checked={priorityMap[name] === "medium"}
+							onChange={onRadioChange}
+						/>
+						<label for={name + "-medium"}>Medium</label>
+						<input
+							type="radio"
+							name={name + "priority"}
+							value={name + "-high"}
+							id={name + "-high"}
+							checked={priorityMap[name] === "high"}
+							onChange={onRadioChange}
+						/>
+						<label for={name + "-high"}>High</label>
 					</div>
 				</fieldset>
 			</div>
@@ -63,7 +92,7 @@ const Settings = () => {
 		return (
 			<form className="register-form" onSubmit={handleSubmit(onSubmit)}>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="industries" />
 					<div className="priority-choice form-group z-index-5">
 						<Controller
 							name="industries"
@@ -87,7 +116,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="investment_description" />
 					<div className="priority-choice form-group z-index-4">
 						<Controller
 							name="investment_description"
@@ -111,7 +140,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="investment_demographic" />
 					<div className="priority-choice form-group z-index-3">
 						<Controller
 							name="investment_demographic"
@@ -137,7 +166,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="fundraising_stage" />
 					<div className="priority-choice form-group z-index-2">
 						<Controller
 							name="fundraising_stage"
@@ -163,7 +192,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="investment_region" />
 					<div className="priority-choice form-group z-index-1">
 						<label>Investment Region</label>
 						<select
@@ -181,7 +210,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="venture_experience" />
 					<div className="priority-choice form-group z-index-1">
 						<label>Venture Experience</label>
 						<select
@@ -197,7 +226,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="investment_range" />
 					<div className="priority-choice form-group z-index-1">
 						<label>Investment Range</label>
 						<select
@@ -215,7 +244,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className="priority-group">
-					<PriorityRadio />
+					<PriorityRadio name="investment_check_size" />
 					<div className="priority-choice form-group z-index-1">
 						<label>Investment Check Size</label>
 						<select
