@@ -172,25 +172,6 @@
 	}
 }
 
-.settings-row {
-	height: 30px;
-	width: 99%;
-	margin-left: 0.5%;
-	line-height: 30px;
-	font-size: 15px;
-	margin-bottom: 10px;
-	background-color: white;
-	padding-left: 15px;
-	cursor: pointer;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
-	user-select: none; /* supported by Chrome and Opera */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-}
-
 .centered-header {
 	text-align: center;
 }
@@ -289,6 +270,7 @@ body:not(:-moz-handler-blocked) fieldset {
 	}
 	input:hover + label {
 		border-color: $darkNavy;
+		cursor: pointer;
 	}
 	input:checked + label {
 		background-color: $teal2;
